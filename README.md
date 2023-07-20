@@ -43,9 +43,9 @@ Finally add this to the Gemfile:
 
 ### Install from Git
 
-If the Ruby gem is hosted at a git repository: https://github.com/circuitid/circuitid-${lang[$key]}, then add the following in the Gemfile:
+If the Ruby gem is hosted at a git repository: https://github.com/circuitid/circuitid-ruby, then add the following in the Gemfile:
 
-    gem 'circuitid-ruby', :git => 'https://github.com/circuitid/circuitid-${lang[$key]}.git'
+    gem 'circuitid-ruby', :git => 'https://github.com/circuitid/circuitid-ruby.git'
 
 ### Include the Ruby code directly
 
