@@ -1,0 +1,383 @@
+# CircuitIDAPIClient::HolidaysApi
+
+All URIs are relative to *https://cloud9.circuitid.com*
+
+| Method | HTTP request | Description |
+| ------ | ------------ | ----------- |
+| [**create_holiday**](HolidaysApi.md#create_holiday) | **POST** /holidays | Create a new object |
+| [**find_holidays**](HolidaysApi.md#find_holidays) | **GET** /holidays | Find multiple objects |
+| [**get_holiday**](HolidaysApi.md#get_holiday) | **GET** /holidays/{id} | Get object by id |
+| [**patch_holiday**](HolidaysApi.md#patch_holiday) | **PATCH** /holidays/{id} | Patch object&#39;s data |
+| [**remove_holiday**](HolidaysApi.md#remove_holiday) | **DELETE** /holidays/{id} | Delete object by id |
+
+
+## create_holiday
+
+> Object create_holiday(holidays)
+
+Create a new object
+
+Add a new object to the system.
+
+### Examples
+
+```ruby
+require 'time'
+require 'circuitid_ruby'
+# setup authorization
+CircuitIDAPIClient.configure do |config|
+  # Configure API key authorization: jwt
+  config.api_key['jwt'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['jwt'] = 'Bearer'
+end
+
+api_instance = CircuitIDAPIClient::HolidaysApi.new
+holidays = CircuitIDAPIClient::Holidays.new({name: 3.56, object: 3.56, object_ref: 3.56, date_time_ranges: 3.56, destination_type: announcements}) # Holidays | The JSON object that will be posted to the REST API endpoint.
+
+begin
+  # Create a new object
+  result = api_instance.create_holiday(holidays)
+  p result
+rescue CircuitIDAPIClient::ApiError => e
+  puts "Error when calling HolidaysApi->create_holiday: #{e}"
+end
+```
+
+#### Using the create_holiday_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(Object, Integer, Hash)> create_holiday_with_http_info(holidays)
+
+```ruby
+begin
+  # Create a new object
+  data, status_code, headers = api_instance.create_holiday_with_http_info(holidays)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => Object
+rescue CircuitIDAPIClient::ApiError => e
+  puts "Error when calling HolidaysApi->create_holiday_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **holidays** | [**Holidays**](Holidays.md) | The JSON object that will be posted to the REST API endpoint. |  |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## find_holidays
+
+> <FindHolidays200Response> find_holidays(opts)
+
+Find multiple objects
+
+Search and retrieve multiple objects simultaneously. 
+
+### Examples
+
+```ruby
+require 'time'
+require 'circuitid_ruby'
+# setup authorization
+CircuitIDAPIClient.configure do |config|
+  # Configure API key authorization: jwt
+  config.api_key['jwt'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['jwt'] = 'Bearer'
+end
+
+api_instance = CircuitIDAPIClient::HolidaysApi.new
+opts = {
+  search: TODO, # Object | Filter results by the specified value.
+  limit: TODO, # Object | $limit will return only the number of results you specify.
+  skip: TODO, # Object | $skip will skip the specified number of results.
+  sort: TODO, # Object | $sort will sort based on the object you provide. It can contain a list of properties by which to sort mapped to the order (1 ascending, -1 descending).
+  select: TODO, # Object | $select allows to pick which fields to include in the result.
+  _or: TODO, # Object | Find all records that match any of the given criteria.
+  _and: TODO # Object | Find all records that match all of the given criteria.
+}
+
+begin
+  # Find multiple objects
+  result = api_instance.find_holidays(opts)
+  p result
+rescue CircuitIDAPIClient::ApiError => e
+  puts "Error when calling HolidaysApi->find_holidays: #{e}"
+end
+```
+
+#### Using the find_holidays_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<FindHolidays200Response>, Integer, Hash)> find_holidays_with_http_info(opts)
+
+```ruby
+begin
+  # Find multiple objects
+  data, status_code, headers = api_instance.find_holidays_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <FindHolidays200Response>
+rescue CircuitIDAPIClient::ApiError => e
+  puts "Error when calling HolidaysApi->find_holidays_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **search** | [**Object**](.md) | Filter results by the specified value. | [optional] |
+| **limit** | [**Object**](.md) | $limit will return only the number of results you specify. | [optional] |
+| **skip** | [**Object**](.md) | $skip will skip the specified number of results. | [optional] |
+| **sort** | [**Object**](.md) | $sort will sort based on the object you provide. It can contain a list of properties by which to sort mapped to the order (1 ascending, -1 descending). | [optional] |
+| **select** | [**Object**](.md) | $select allows to pick which fields to include in the result. | [optional] |
+| **_or** | [**Object**](.md) | Find all records that match any of the given criteria. | [optional] |
+| **_and** | [**Object**](.md) | Find all records that match all of the given criteria. | [optional] |
+
+### Return type
+
+[**FindHolidays200Response**](FindHolidays200Response.md)
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## get_holiday
+
+> Object get_holiday(id)
+
+Get object by id
+
+Get an object from the REST API Endpoint by its unique id.
+
+### Examples
+
+```ruby
+require 'time'
+require 'circuitid_ruby'
+# setup authorization
+CircuitIDAPIClient.configure do |config|
+  # Configure API key authorization: jwt
+  config.api_key['jwt'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['jwt'] = 'Bearer'
+end
+
+api_instance = CircuitIDAPIClient::HolidaysApi.new
+id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
+
+begin
+  # Get object by id
+  result = api_instance.get_holiday(id)
+  p result
+rescue CircuitIDAPIClient::ApiError => e
+  puts "Error when calling HolidaysApi->get_holiday: #{e}"
+end
+```
+
+#### Using the get_holiday_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(Object, Integer, Hash)> get_holiday_with_http_info(id)
+
+```ruby
+begin
+  # Get object by id
+  data, status_code, headers = api_instance.get_holiday_with_http_info(id)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => Object
+rescue CircuitIDAPIClient::ApiError => e
+  puts "Error when calling HolidaysApi->get_holiday_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | [**Object**](.md) | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## patch_holiday
+
+> Object patch_holiday(id, holidays)
+
+Patch object's data
+
+Make updates to specific fields within the record without replacing the entire dataset.
+
+### Examples
+
+```ruby
+require 'time'
+require 'circuitid_ruby'
+# setup authorization
+CircuitIDAPIClient.configure do |config|
+  # Configure API key authorization: jwt
+  config.api_key['jwt'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['jwt'] = 'Bearer'
+end
+
+api_instance = CircuitIDAPIClient::HolidaysApi.new
+id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
+holidays = CircuitIDAPIClient::Holidays.new({name: 3.56, object: 3.56, object_ref: 3.56, date_time_ranges: 3.56, destination_type: announcements}) # Holidays | The request data.
+
+begin
+  # Patch object's data
+  result = api_instance.patch_holiday(id, holidays)
+  p result
+rescue CircuitIDAPIClient::ApiError => e
+  puts "Error when calling HolidaysApi->patch_holiday: #{e}"
+end
+```
+
+#### Using the patch_holiday_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(Object, Integer, Hash)> patch_holiday_with_http_info(id, holidays)
+
+```ruby
+begin
+  # Patch object's data
+  data, status_code, headers = api_instance.patch_holiday_with_http_info(id, holidays)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => Object
+rescue CircuitIDAPIClient::ApiError => e
+  puts "Error when calling HolidaysApi->patch_holiday_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | [**Object**](.md) | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
+| **holidays** | [**Holidays**](Holidays.md) | The request data. |  |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## remove_holiday
+
+> Object remove_holiday(id)
+
+Delete object by id
+
+Delete an object by id, removing it from the service.
+
+### Examples
+
+```ruby
+require 'time'
+require 'circuitid_ruby'
+# setup authorization
+CircuitIDAPIClient.configure do |config|
+  # Configure API key authorization: jwt
+  config.api_key['jwt'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['jwt'] = 'Bearer'
+end
+
+api_instance = CircuitIDAPIClient::HolidaysApi.new
+id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
+
+begin
+  # Delete object by id
+  result = api_instance.remove_holiday(id)
+  p result
+rescue CircuitIDAPIClient::ApiError => e
+  puts "Error when calling HolidaysApi->remove_holiday: #{e}"
+end
+```
+
+#### Using the remove_holiday_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(Object, Integer, Hash)> remove_holiday_with_http_info(id)
+
+```ruby
+begin
+  # Delete object by id
+  data, status_code, headers = api_instance.remove_holiday_with_http_info(id)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => Object
+rescue CircuitIDAPIClient::ApiError => e
+  puts "Error when calling HolidaysApi->remove_holiday_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **id** | [**Object**](.md) | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[jwt](../README.md#jwt)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
