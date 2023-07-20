@@ -14,7 +14,7 @@ Happy coding!
 
 - API version: 0.47.8
 - Package version: 1.0.0
-- Build package: org.openapitools.codegen.languages.RubyClientCodegen
+
 For more information, please visit [https://www.circuitid.com/](https://www.circuitid.com/)
 
 ## Installation
