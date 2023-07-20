@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::Usertokens
+# CircuitID::Usertokens
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::Usertokens.new(
+instance = CircuitID::Usertokens.new(
   name: null,
   user: null,
   token: null,

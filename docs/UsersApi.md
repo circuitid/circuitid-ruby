@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::UsersApi
+# CircuitID::UsersApi
 
 All URIs are relative to *https://cloud9.circuitid.com*
 
@@ -23,23 +23,23 @@ Add a new object to the system.
 
 ```ruby
 require 'time'
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 # setup authorization
-CircuitIDAPIClient.configure do |config|
+CircuitID.configure do |config|
   # Configure API key authorization: jwt
   config.api_key['jwt'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitIDAPIClient::UsersApi.new
-users = CircuitIDAPIClient::Users.new({email: 3.56, password: 3.56, sip_password: 3.56, first: 3.56, last: 3.56, timezone: 3.56}) # Users | The JSON object that will be posted to the REST API endpoint.
+api_instance = CircuitID::UsersApi.new
+users = CircuitID::Users.new({email: 3.56, password: 3.56, sip_password: 3.56, first: 3.56, last: 3.56, timezone: 3.56}) # Users | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
   result = api_instance.create_user(users)
   p result
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling UsersApi->create_user: #{e}"
 end
 ```
@@ -57,7 +57,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling UsersApi->create_user_with_http_info: #{e}"
 end
 ```
@@ -94,16 +94,16 @@ Search and retrieve multiple objects simultaneously.
 
 ```ruby
 require 'time'
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 # setup authorization
-CircuitIDAPIClient.configure do |config|
+CircuitID.configure do |config|
   # Configure API key authorization: jwt
   config.api_key['jwt'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitIDAPIClient::UsersApi.new
+api_instance = CircuitID::UsersApi.new
 opts = {
   search: TODO, # Object | Filter results by the specified value.
   limit: TODO, # Object | $limit will return only the number of results you specify.
@@ -118,7 +118,7 @@ begin
   # Find multiple objects
   result = api_instance.find_users(opts)
   p result
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling UsersApi->find_users: #{e}"
 end
 ```
@@ -136,7 +136,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <FindUsers200Response>
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling UsersApi->find_users_with_http_info: #{e}"
 end
 ```
@@ -179,23 +179,23 @@ Get an object from the REST API Endpoint by its unique id.
 
 ```ruby
 require 'time'
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 # setup authorization
-CircuitIDAPIClient.configure do |config|
+CircuitID.configure do |config|
   # Configure API key authorization: jwt
   config.api_key['jwt'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitIDAPIClient::UsersApi.new
+api_instance = CircuitID::UsersApi.new
 id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 
 begin
   # Get object by id
   result = api_instance.get_user(id)
   p result
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling UsersApi->get_user: #{e}"
 end
 ```
@@ -213,7 +213,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling UsersApi->get_user_with_http_info: #{e}"
 end
 ```
@@ -250,24 +250,24 @@ Make updates to specific fields within the record without replacing the entire d
 
 ```ruby
 require 'time'
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 # setup authorization
-CircuitIDAPIClient.configure do |config|
+CircuitID.configure do |config|
   # Configure API key authorization: jwt
   config.api_key['jwt'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitIDAPIClient::UsersApi.new
+api_instance = CircuitID::UsersApi.new
 id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-users = CircuitIDAPIClient::Users.new({email: 3.56, password: 3.56, sip_password: 3.56, first: 3.56, last: 3.56, timezone: 3.56}) # Users | The request data.
+users = CircuitID::Users.new({email: 3.56, password: 3.56, sip_password: 3.56, first: 3.56, last: 3.56, timezone: 3.56}) # Users | The request data.
 
 begin
   # Patch object's data
   result = api_instance.patch_user(id, users)
   p result
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling UsersApi->patch_user: #{e}"
 end
 ```
@@ -285,7 +285,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling UsersApi->patch_user_with_http_info: #{e}"
 end
 ```
@@ -323,23 +323,23 @@ Delete an object by id, removing it from the service.
 
 ```ruby
 require 'time'
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 # setup authorization
-CircuitIDAPIClient.configure do |config|
+CircuitID.configure do |config|
   # Configure API key authorization: jwt
   config.api_key['jwt'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitIDAPIClient::UsersApi.new
+api_instance = CircuitID::UsersApi.new
 id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 
 begin
   # Delete object by id
   result = api_instance.remove_user(id)
   p result
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling UsersApi->remove_user: #{e}"
 end
 ```
@@ -357,7 +357,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling UsersApi->remove_user_with_http_info: #{e}"
 end
 ```

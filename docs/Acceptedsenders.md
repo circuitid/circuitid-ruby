@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::Acceptedsenders
+# CircuitID::Acceptedsenders
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::Acceptedsenders.new(
+instance = CircuitID::Acceptedsenders.new(
   object: null,
   service: null,
   service_ref: null,

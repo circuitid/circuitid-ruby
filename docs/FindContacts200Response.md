@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::FindContacts200Response
+# CircuitID::FindContacts200Response
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::FindContacts200Response.new(
+instance = CircuitID::FindContacts200Response.new(
   total: null,
   limit: null,
   skip: null,

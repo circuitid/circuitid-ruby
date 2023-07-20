@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::Callqueues
+# CircuitID::Callqueues
 
 ## Properties
 
@@ -28,9 +28,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::Callqueues.new(
+instance = CircuitID::Callqueues.new(
   name: null,
   strategy: null,
   announce_position: null,

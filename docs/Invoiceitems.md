@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::Invoiceitems
+# CircuitID::Invoiceitems
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::Invoiceitems.new(
+instance = CircuitID::Invoiceitems.new(
   name: null,
   amount: null,
   setup: null,

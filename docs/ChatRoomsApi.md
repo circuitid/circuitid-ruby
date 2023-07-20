@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::ChatRoomsApi
+# CircuitID::ChatRoomsApi
 
 All URIs are relative to *https://cloud9.circuitid.com*
 
@@ -23,23 +23,23 @@ Add a new object to the system.
 
 ```ruby
 require 'time'
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 # setup authorization
-CircuitIDAPIClient.configure do |config|
+CircuitID.configure do |config|
   # Configure API key authorization: jwt
   config.api_key['jwt'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitIDAPIClient::ChatRoomsApi.new
-chatrooms = CircuitIDAPIClient::Chatrooms.new({users: 3.56}) # Chatrooms | The JSON object that will be posted to the REST API endpoint.
+api_instance = CircuitID::ChatRoomsApi.new
+chatrooms = CircuitID::Chatrooms.new({users: 3.56}) # Chatrooms | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
   result = api_instance.create_chat_room(chatrooms)
   p result
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling ChatRoomsApi->create_chat_room: #{e}"
 end
 ```
@@ -57,7 +57,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling ChatRoomsApi->create_chat_room_with_http_info: #{e}"
 end
 ```
@@ -94,16 +94,16 @@ Search and retrieve multiple objects simultaneously.
 
 ```ruby
 require 'time'
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 # setup authorization
-CircuitIDAPIClient.configure do |config|
+CircuitID.configure do |config|
   # Configure API key authorization: jwt
   config.api_key['jwt'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitIDAPIClient::ChatRoomsApi.new
+api_instance = CircuitID::ChatRoomsApi.new
 opts = {
   search: TODO, # Object | Filter results by the specified value.
   limit: TODO, # Object | $limit will return only the number of results you specify.
@@ -118,7 +118,7 @@ begin
   # Find multiple objects
   result = api_instance.find_chat_rooms(opts)
   p result
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling ChatRoomsApi->find_chat_rooms: #{e}"
 end
 ```
@@ -136,7 +136,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <FindChatRooms200Response>
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling ChatRoomsApi->find_chat_rooms_with_http_info: #{e}"
 end
 ```
@@ -179,23 +179,23 @@ Get an object from the REST API Endpoint by its unique id.
 
 ```ruby
 require 'time'
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 # setup authorization
-CircuitIDAPIClient.configure do |config|
+CircuitID.configure do |config|
   # Configure API key authorization: jwt
   config.api_key['jwt'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitIDAPIClient::ChatRoomsApi.new
+api_instance = CircuitID::ChatRoomsApi.new
 id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 
 begin
   # Get object by id
   result = api_instance.get_chat_room(id)
   p result
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling ChatRoomsApi->get_chat_room: #{e}"
 end
 ```
@@ -213,7 +213,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling ChatRoomsApi->get_chat_room_with_http_info: #{e}"
 end
 ```
@@ -250,24 +250,24 @@ Make updates to specific fields within the record without replacing the entire d
 
 ```ruby
 require 'time'
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 # setup authorization
-CircuitIDAPIClient.configure do |config|
+CircuitID.configure do |config|
   # Configure API key authorization: jwt
   config.api_key['jwt'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitIDAPIClient::ChatRoomsApi.new
+api_instance = CircuitID::ChatRoomsApi.new
 id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-chatrooms = CircuitIDAPIClient::Chatrooms.new({users: 3.56}) # Chatrooms | The request data.
+chatrooms = CircuitID::Chatrooms.new({users: 3.56}) # Chatrooms | The request data.
 
 begin
   # Patch object's data
   result = api_instance.patch_chat_room(id, chatrooms)
   p result
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling ChatRoomsApi->patch_chat_room: #{e}"
 end
 ```
@@ -285,7 +285,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling ChatRoomsApi->patch_chat_room_with_http_info: #{e}"
 end
 ```
@@ -323,23 +323,23 @@ Delete an object by id, removing it from the service.
 
 ```ruby
 require 'time'
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 # setup authorization
-CircuitIDAPIClient.configure do |config|
+CircuitID.configure do |config|
   # Configure API key authorization: jwt
   config.api_key['jwt'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitIDAPIClient::ChatRoomsApi.new
+api_instance = CircuitID::ChatRoomsApi.new
 id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 
 begin
   # Delete object by id
   result = api_instance.remove_chat_room(id)
   p result
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling ChatRoomsApi->remove_chat_room: #{e}"
 end
 ```
@@ -357,7 +357,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling ChatRoomsApi->remove_chat_room_with_http_info: #{e}"
 end
 ```

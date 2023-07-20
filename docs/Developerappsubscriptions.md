@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::Developerappsubscriptions
+# CircuitID::Developerappsubscriptions
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::Developerappsubscriptions.new(
+instance = CircuitID::Developerappsubscriptions.new(
   developer_app: null,
   object: null,
   ref: null,

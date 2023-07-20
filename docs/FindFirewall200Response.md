@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::FindFirewall200Response
+# CircuitID::FindFirewall200Response
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::FindFirewall200Response.new(
+instance = CircuitID::FindFirewall200Response.new(
   total: null,
   limit: null,
   skip: null,

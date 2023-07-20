@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::PhoneInboundRulesApi
+# CircuitID::PhoneInboundRulesApi
 
 All URIs are relative to *https://cloud9.circuitid.com*
 
@@ -23,23 +23,23 @@ Add a new object to the system.
 
 ```ruby
 require 'time'
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 # setup authorization
-CircuitIDAPIClient.configure do |config|
+CircuitID.configure do |config|
   # Configure API key authorization: jwt
   config.api_key['jwt'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitIDAPIClient::PhoneInboundRulesApi.new
-phoneinboundrules = CircuitIDAPIClient::Phoneinboundrules.new({name: 3.56}) # Phoneinboundrules | The JSON object that will be posted to the REST API endpoint.
+api_instance = CircuitID::PhoneInboundRulesApi.new
+phoneinboundrules = CircuitID::Phoneinboundrules.new({name: 3.56}) # Phoneinboundrules | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
   result = api_instance.create_phone_inbound_rule(phoneinboundrules)
   p result
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling PhoneInboundRulesApi->create_phone_inbound_rule: #{e}"
 end
 ```
@@ -57,7 +57,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling PhoneInboundRulesApi->create_phone_inbound_rule_with_http_info: #{e}"
 end
 ```
@@ -94,16 +94,16 @@ Search and retrieve multiple objects simultaneously.
 
 ```ruby
 require 'time'
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 # setup authorization
-CircuitIDAPIClient.configure do |config|
+CircuitID.configure do |config|
   # Configure API key authorization: jwt
   config.api_key['jwt'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitIDAPIClient::PhoneInboundRulesApi.new
+api_instance = CircuitID::PhoneInboundRulesApi.new
 opts = {
   search: TODO, # Object | Filter results by the specified value.
   limit: TODO, # Object | $limit will return only the number of results you specify.
@@ -118,7 +118,7 @@ begin
   # Find multiple objects
   result = api_instance.find_phone_inbound_rules(opts)
   p result
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling PhoneInboundRulesApi->find_phone_inbound_rules: #{e}"
 end
 ```
@@ -136,7 +136,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <FindPhoneInboundRules200Response>
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling PhoneInboundRulesApi->find_phone_inbound_rules_with_http_info: #{e}"
 end
 ```
@@ -179,23 +179,23 @@ Get an object from the REST API Endpoint by its unique id.
 
 ```ruby
 require 'time'
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 # setup authorization
-CircuitIDAPIClient.configure do |config|
+CircuitID.configure do |config|
   # Configure API key authorization: jwt
   config.api_key['jwt'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitIDAPIClient::PhoneInboundRulesApi.new
+api_instance = CircuitID::PhoneInboundRulesApi.new
 id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 
 begin
   # Get object by id
   result = api_instance.get_phone_inbound_rule(id)
   p result
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling PhoneInboundRulesApi->get_phone_inbound_rule: #{e}"
 end
 ```
@@ -213,7 +213,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling PhoneInboundRulesApi->get_phone_inbound_rule_with_http_info: #{e}"
 end
 ```
@@ -250,24 +250,24 @@ Make updates to specific fields within the record without replacing the entire d
 
 ```ruby
 require 'time'
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 # setup authorization
-CircuitIDAPIClient.configure do |config|
+CircuitID.configure do |config|
   # Configure API key authorization: jwt
   config.api_key['jwt'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitIDAPIClient::PhoneInboundRulesApi.new
+api_instance = CircuitID::PhoneInboundRulesApi.new
 id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-phoneinboundrules = CircuitIDAPIClient::Phoneinboundrules.new({name: 3.56}) # Phoneinboundrules | The request data.
+phoneinboundrules = CircuitID::Phoneinboundrules.new({name: 3.56}) # Phoneinboundrules | The request data.
 
 begin
   # Patch object's data
   result = api_instance.patch_phone_inbound_rule(id, phoneinboundrules)
   p result
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling PhoneInboundRulesApi->patch_phone_inbound_rule: #{e}"
 end
 ```
@@ -285,7 +285,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling PhoneInboundRulesApi->patch_phone_inbound_rule_with_http_info: #{e}"
 end
 ```
@@ -323,23 +323,23 @@ Delete an object by id, removing it from the service.
 
 ```ruby
 require 'time'
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 # setup authorization
-CircuitIDAPIClient.configure do |config|
+CircuitID.configure do |config|
   # Configure API key authorization: jwt
   config.api_key['jwt'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitIDAPIClient::PhoneInboundRulesApi.new
+api_instance = CircuitID::PhoneInboundRulesApi.new
 id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 
 begin
   # Delete object by id
   result = api_instance.remove_phone_inbound_rule(id)
   p result
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling PhoneInboundRulesApi->remove_phone_inbound_rule: #{e}"
 end
 ```
@@ -357,7 +357,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling PhoneInboundRulesApi->remove_phone_inbound_rule_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::ResponseUsers
+# CircuitID::ResponseUsers
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::ResponseUsers.new(
+instance = CircuitID::ResponseUsers.new(
   created_by_user_id: null,
   updated_by_user_id: null
 )

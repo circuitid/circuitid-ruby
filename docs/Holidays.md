@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::Holidays
+# CircuitID::Holidays
 
 ## Properties
 
@@ -17,9 +17,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::Holidays.new(
+instance = CircuitID::Holidays.new(
   name: null,
   object: null,
   object_ref: null,

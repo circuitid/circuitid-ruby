@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::Firewall
+# CircuitID::Firewall
 
 ## Properties
 
@@ -19,9 +19,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::Firewall.new(
+instance = CircuitID::Firewall.new(
   name: null,
   description: null,
   priority: null,

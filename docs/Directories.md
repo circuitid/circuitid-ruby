@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::Directories
+# CircuitID::Directories
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::Directories.new(
+instance = CircuitID::Directories.new(
   name: null,
   type: null,
   groups: null,

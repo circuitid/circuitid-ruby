@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::Numberports
+# CircuitID::Numberports
 
 ## Properties
 
@@ -23,9 +23,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::Numberports.new(
+instance = CircuitID::Numberports.new(
   name: null,
   type: null,
   type_of_service: null,

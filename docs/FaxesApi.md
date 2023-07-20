@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::FaxesApi
+# CircuitID::FaxesApi
 
 All URIs are relative to *https://cloud9.circuitid.com*
 
@@ -22,23 +22,23 @@ Add a new object to the system.
 
 ```ruby
 require 'time'
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 # setup authorization
-CircuitIDAPIClient.configure do |config|
+CircuitID.configure do |config|
   # Configure API key authorization: jwt
   config.api_key['jwt'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitIDAPIClient::FaxesApi.new
-faxes = CircuitIDAPIClient::Faxes.new({caller_id_number: 3.56, caller_destination: 3.56, status: failed, type: send, number: 3.56, fax_account: 3.56}) # Faxes | The JSON object that will be posted to the REST API endpoint.
+api_instance = CircuitID::FaxesApi.new
+faxes = CircuitID::Faxes.new({caller_id_number: 3.56, caller_destination: 3.56, status: failed, type: send, number: 3.56, fax_account: 3.56}) # Faxes | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
   result = api_instance.create_faxe(faxes)
   p result
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling FaxesApi->create_faxe: #{e}"
 end
 ```
@@ -56,7 +56,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling FaxesApi->create_faxe_with_http_info: #{e}"
 end
 ```
@@ -93,16 +93,16 @@ Search and retrieve multiple objects simultaneously.
 
 ```ruby
 require 'time'
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 # setup authorization
-CircuitIDAPIClient.configure do |config|
+CircuitID.configure do |config|
   # Configure API key authorization: jwt
   config.api_key['jwt'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitIDAPIClient::FaxesApi.new
+api_instance = CircuitID::FaxesApi.new
 opts = {
   search: TODO, # Object | Filter results by the specified value.
   limit: TODO, # Object | $limit will return only the number of results you specify.
@@ -117,7 +117,7 @@ begin
   # Find multiple objects
   result = api_instance.find_faxes(opts)
   p result
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling FaxesApi->find_faxes: #{e}"
 end
 ```
@@ -135,7 +135,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <FindFaxes200Response>
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling FaxesApi->find_faxes_with_http_info: #{e}"
 end
 ```
@@ -178,23 +178,23 @@ Get an object from the REST API Endpoint by its unique id.
 
 ```ruby
 require 'time'
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 # setup authorization
-CircuitIDAPIClient.configure do |config|
+CircuitID.configure do |config|
   # Configure API key authorization: jwt
   config.api_key['jwt'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitIDAPIClient::FaxesApi.new
+api_instance = CircuitID::FaxesApi.new
 id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 
 begin
   # Get object by id
   result = api_instance.get_faxe(id)
   p result
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling FaxesApi->get_faxe: #{e}"
 end
 ```
@@ -212,7 +212,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling FaxesApi->get_faxe_with_http_info: #{e}"
 end
 ```
@@ -249,23 +249,23 @@ Delete an object by id, removing it from the service.
 
 ```ruby
 require 'time'
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 # setup authorization
-CircuitIDAPIClient.configure do |config|
+CircuitID.configure do |config|
   # Configure API key authorization: jwt
   config.api_key['jwt'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitIDAPIClient::FaxesApi.new
+api_instance = CircuitID::FaxesApi.new
 id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 
 begin
   # Delete object by id
   result = api_instance.remove_faxe(id)
   p result
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling FaxesApi->remove_faxe: #{e}"
 end
 ```
@@ -283,7 +283,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling FaxesApi->remove_faxe_with_http_info: #{e}"
 end
 ```

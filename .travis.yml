@@ -7,5 +7,5 @@ rvm:
 script:
   - bundle install --path vendor/bundle
   - bundle exec rspec
-  - gem build circuitid_ruby.gemspec
-  - gem install ./circuitid_ruby-1.0.0.gem
+  - gem build circuitid-ruby.gemspec
+  - gem install ./circuitid-ruby-1.0.0.gem

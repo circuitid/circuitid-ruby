@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::ResponseError
+# CircuitID::ResponseError
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::ResponseError.new(
+instance = CircuitID::ResponseError.new(
   name: null,
   message: null,
   code: null,

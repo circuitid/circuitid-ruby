@@ -12,51 +12,51 @@ OpenAPI Generator version: 6.6.0
 
 require 'spec_helper'
 
-describe CircuitIDAPIClient::ApiClient do
+describe CircuitID::ApiClient do
   context 'initialization' do
     context 'URL stuff' do
       context 'host' do
         it 'removes http from host' do
-          CircuitIDAPIClient.configure { |c| c.host = 'http://example.com' }
-          expect(CircuitIDAPIClient::Configuration.default.host).to eq('example.com')
+          CircuitID.configure { |c| c.host = 'http://example.com' }
+          expect(CircuitID::Configuration.default.host).to eq('example.com')
         end
 
         it 'removes https from host' do
-          CircuitIDAPIClient.configure { |c| c.host = 'https://wookiee.com' }
-          expect(CircuitIDAPIClient::ApiClient.default.config.host).to eq('wookiee.com')
+          CircuitID.configure { |c| c.host = 'https://wookiee.com' }
+          expect(CircuitID::ApiClient.default.config.host).to eq('wookiee.com')
         end
 
         it 'removes trailing path from host' do
-          CircuitIDAPIClient.configure { |c| c.host = 'hobo.com/v4' }
-          expect(CircuitIDAPIClient::Configuration.default.host).to eq('hobo.com')
+          CircuitID.configure { |c| c.host = 'hobo.com/v4' }
+          expect(CircuitID::Configuration.default.host).to eq('hobo.com')
         end
       end
 
       context 'base_path' do
         it "prepends a slash to base_path" do
-          CircuitIDAPIClient.configure { |c| c.base_path = 'v4/dog' }
-          expect(CircuitIDAPIClient::Configuration.default.base_path).to eq('/v4/dog')
+          CircuitID.configure { |c| c.base_path = 'v4/dog' }
+          expect(CircuitID::Configuration.default.base_path).to eq('/v4/dog')
         end
 
         it "doesn't prepend a slash if one is already there" do
-          CircuitIDAPIClient.configure { |c| c.base_path = '/v4/dog' }
-          expect(CircuitIDAPIClient::Configuration.default.base_path).to eq('/v4/dog')
+          CircuitID.configure { |c| c.base_path = '/v4/dog' }
+          expect(CircuitID::Configuration.default.base_path).to eq('/v4/dog')
         end
 
         it "ends up as a blank string if nil" do
-          CircuitIDAPIClient.configure { |c| c.base_path = nil }
-          expect(CircuitIDAPIClient::Configuration.default.base_path).to eq('')
+          CircuitID.configure { |c| c.base_path = nil }
+          expect(CircuitID::Configuration.default.base_path).to eq('')
         end
       end
     end
   end
 
   describe 'params_encoding in #build_request' do
-    let(:config) { CircuitIDAPIClient::Configuration.new }
-    let(:api_client) { CircuitIDAPIClient::ApiClient.new(config) }
+    let(:config) { CircuitID::Configuration.new }
+    let(:api_client) { CircuitID::ApiClient.new(config) }
 
     it 'defaults to nil' do
-      expect(CircuitIDAPIClient::Configuration.default.params_encoding).to eq(nil)
+      expect(CircuitID::Configuration.default.params_encoding).to eq(nil)
       expect(config.params_encoding).to eq(nil)
 
       request = api_client.build_request(:get, '/test')
@@ -71,11 +71,11 @@ describe CircuitIDAPIClient::ApiClient do
   end
 
   describe 'timeout in #build_request' do
-    let(:config) { CircuitIDAPIClient::Configuration.new }
-    let(:api_client) { CircuitIDAPIClient::ApiClient.new(config) }
+    let(:config) { CircuitID::Configuration.new }
+    let(:api_client) { CircuitID::ApiClient.new(config) }
 
     it 'defaults to 0' do
-      expect(CircuitIDAPIClient::Configuration.default.timeout).to eq(0)
+      expect(CircuitID::Configuration.default.timeout).to eq(0)
       expect(config.timeout).to eq(0)
 
       request = api_client.build_request(:get, '/test')
@@ -93,7 +93,7 @@ describe CircuitIDAPIClient::ApiClient do
 
   describe '#deserialize' do
     it "handles Array<Integer>" do
-      api_client = CircuitIDAPIClient::ApiClient.new
+      api_client = CircuitID::ApiClient.new
       headers = { 'Content-Type' => 'application/json' }
       response = double('response', headers: headers, body: '[12, 34]')
       data = api_client.deserialize(response, 'Array<Integer>')
@@ -102,7 +102,7 @@ describe CircuitIDAPIClient::ApiClient do
     end
 
     it 'handles Array<Array<Integer>>' do
-      api_client = CircuitIDAPIClient::ApiClient.new
+      api_client = CircuitID::ApiClient.new
       headers = { 'Content-Type' => 'application/json' }
       response = double('response', headers: headers, body: '[[12, 34], [56]]')
       data = api_client.deserialize(response, 'Array<Array<Integer>>')
@@ -111,7 +111,7 @@ describe CircuitIDAPIClient::ApiClient do
     end
 
     it 'handles Hash<String, String>' do
-      api_client = CircuitIDAPIClient::ApiClient.new
+      api_client = CircuitID::ApiClient.new
       headers = { 'Content-Type' => 'application/json' }
       response = double('response', headers: headers, body: '{"message": "Hello"}')
       data = api_client.deserialize(response, 'Hash<String, String>')
@@ -123,8 +123,8 @@ describe CircuitIDAPIClient::ApiClient do
   describe "#object_to_hash" do
     it 'ignores nils and includes empty arrays' do
       # uncomment below to test object_to_hash for model
-      # api_client = CircuitIDAPIClient::ApiClient.new
-      # _model = CircuitIDAPIClient::ModelName.new
+      # api_client = CircuitID::ApiClient.new
+      # _model = CircuitID::ModelName.new
       # update the model attribute below
       # _model.id = 1
       # update the expected value (hash) below
@@ -135,7 +135,7 @@ describe CircuitIDAPIClient::ApiClient do
 
   describe '#build_collection_param' do
     let(:param) { ['aa', 'bb', 'cc'] }
-    let(:api_client) { CircuitIDAPIClient::ApiClient.new }
+    let(:api_client) { CircuitID::ApiClient.new }
 
     it 'works for csv' do
       expect(api_client.build_collection_param(param, :csv)).to eq('aa,bb,cc')
@@ -163,7 +163,7 @@ describe CircuitIDAPIClient::ApiClient do
   end
 
   describe '#json_mime?' do
-    let(:api_client) { CircuitIDAPIClient::ApiClient.new }
+    let(:api_client) { CircuitID::ApiClient.new }
 
     it 'works' do
       expect(api_client.json_mime?(nil)).to eq false
@@ -180,7 +180,7 @@ describe CircuitIDAPIClient::ApiClient do
   end
 
   describe '#select_header_accept' do
-    let(:api_client) { CircuitIDAPIClient::ApiClient.new }
+    let(:api_client) { CircuitID::ApiClient.new }
 
     it 'works' do
       expect(api_client.select_header_accept(nil)).to be_nil
@@ -196,7 +196,7 @@ describe CircuitIDAPIClient::ApiClient do
   end
 
   describe '#select_header_content_type' do
-    let(:api_client) { CircuitIDAPIClient::ApiClient.new }
+    let(:api_client) { CircuitID::ApiClient.new }
 
     it 'works' do
       expect(api_client.select_header_content_type(nil)).to be_nil
@@ -211,7 +211,7 @@ describe CircuitIDAPIClient::ApiClient do
   end
 
   describe '#sanitize_filename' do
-    let(:api_client) { CircuitIDAPIClient::ApiClient.new }
+    let(:api_client) { CircuitID::ApiClient.new }
 
     it 'works' do
       expect(api_client.sanitize_filename('sun')).to eq('sun')

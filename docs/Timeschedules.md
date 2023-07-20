@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::Timeschedules
+# CircuitID::Timeschedules
 
 ## Properties
 
@@ -17,9 +17,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::Timeschedules.new(
+instance = CircuitID::Timeschedules.new(
   name: null,
   timezone: null,
   sunday: null,

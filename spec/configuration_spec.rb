@@ -12,14 +12,14 @@ OpenAPI Generator version: 6.6.0
 
 require 'spec_helper'
 
-describe CircuitIDAPIClient::Configuration do
-  let(:config) { CircuitIDAPIClient::Configuration.default }
+describe CircuitID::Configuration do
+  let(:config) { CircuitID::Configuration.default }
 
   before(:each) do
     # uncomment below to setup host and base_path
     # require 'URI'
     # uri = URI.parse("https://cloud9.circuitid.com")
-    # CircuitIDAPIClient.configure do |c|
+    # CircuitID.configure do |c|
     #   c.host = uri.host
     #   c.base_path = uri.path
     # end

@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::Faxes
+# CircuitID::Faxes
 
 ## Properties
 
@@ -25,9 +25,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::Faxes.new(
+instance = CircuitID::Faxes.new(
   caller_id_number: null,
   caller_destination: null,
   pages: null,

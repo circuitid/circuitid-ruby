@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::Conversationmessages
+# CircuitID::Conversationmessages
 
 ## Properties
 
@@ -16,9 +16,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::Conversationmessages.new(
+instance = CircuitID::Conversationmessages.new(
   conversation: null,
   from: null,
   from_number: null,

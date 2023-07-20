@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::Groups
+# CircuitID::Groups
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::Groups.new(
+instance = CircuitID::Groups.new(
   name: null,
   description: null,
   status: null

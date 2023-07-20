@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::AuthenticationApi
+# CircuitID::AuthenticationApi
 
 All URIs are relative to *https://cloud9.circuitid.com*
 
@@ -19,23 +19,23 @@ Add a new object to the system.
 
 ```ruby
 require 'time'
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 # setup authorization
-CircuitIDAPIClient.configure do |config|
+CircuitID.configure do |config|
   # Configure API key authorization: jwt
   config.api_key['jwt'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitIDAPIClient::AuthenticationApi.new
-authentication = CircuitIDAPIClient::Authentication.new({username: 3.56, password: 3.56, strategy: local}) # Authentication | The JSON object that will be posted to the REST API endpoint.
+api_instance = CircuitID::AuthenticationApi.new
+authentication = CircuitID::Authentication.new({username: 3.56, password: 3.56, strategy: local}) # Authentication | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
   result = api_instance.create_authentication(authentication)
   p result
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling AuthenticationApi->create_authentication: #{e}"
 end
 ```
@@ -53,7 +53,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling AuthenticationApi->create_authentication_with_http_info: #{e}"
 end
 ```

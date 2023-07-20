@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::Authentication
+# CircuitID::Authentication
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::Authentication.new(
+instance = CircuitID::Authentication.new(
   username: null,
   password: null,
   strategy: null

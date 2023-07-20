@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::Faxaccounts
+# CircuitID::Faxaccounts
 
 ## Properties
 
@@ -13,9 +13,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::Faxaccounts.new(
+instance = CircuitID::Faxaccounts.new(
   name: null,
   order: null,
   inbound_notification: null,

@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::ResponseDate
+# CircuitID::ResponseDate
 
 ## Properties
 
@@ -10,9 +10,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::ResponseDate.new(
+instance = CircuitID::ResponseDate.new(
   created_at: null,
   updated_at: null
 )

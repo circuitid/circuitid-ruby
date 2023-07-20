@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::FindFaxAccount200Response
+# CircuitID::FindFaxAccount200Response
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::FindFaxAccount200Response.new(
+instance = CircuitID::FindFaxAccount200Response.new(
   total: null,
   limit: null,
   skip: null,

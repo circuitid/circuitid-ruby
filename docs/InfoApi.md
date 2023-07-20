@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::InfoApi
+# CircuitID::InfoApi
 
 All URIs are relative to *https://cloud9.circuitid.com*
 
@@ -19,22 +19,22 @@ Returns an object containing the requested information.
 
 ```ruby
 require 'time'
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 # setup authorization
-CircuitIDAPIClient.configure do |config|
+CircuitID.configure do |config|
   # Configure API key authorization: jwt
   config.api_key['jwt'] = 'YOUR API KEY'
   # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitIDAPIClient::InfoApi.new
+api_instance = CircuitID::InfoApi.new
 
 begin
   # Get object
   result = api_instance.find_info
   p result
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling InfoApi->find_info: #{e}"
 end
 ```
@@ -52,7 +52,7 @@ begin
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
-rescue CircuitIDAPIClient::ApiError => e
+rescue CircuitID::ApiError => e
   puts "Error when calling InfoApi->find_info_with_http_info: #{e}"
 end
 ```

@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::Find
+# CircuitID::Find
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::Find.new(
+instance = CircuitID::Find.new(
   total: null,
   limit: null,
   skip: null

@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::FindVirtualExtensions200Response
+# CircuitID::FindVirtualExtensions200Response
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::FindVirtualExtensions200Response.new(
+instance = CircuitID::FindVirtualExtensions200Response.new(
   total: null,
   limit: null,
   skip: null,

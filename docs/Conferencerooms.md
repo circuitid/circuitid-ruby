@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::Conferencerooms
+# CircuitID::Conferencerooms
 
 ## Properties
 
@@ -17,9 +17,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::Conferencerooms.new(
+instance = CircuitID::Conferencerooms.new(
   name: null,
   passcode: null,
   dial_in_pin: null,

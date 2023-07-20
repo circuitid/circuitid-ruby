@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::Announcements
+# CircuitID::Announcements
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::Announcements.new(
+instance = CircuitID::Announcements.new(
   name: null,
   type: null,
   voice: null,

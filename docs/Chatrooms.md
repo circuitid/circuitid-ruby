@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::Chatrooms
+# CircuitID::Chatrooms
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::Chatrooms.new(
+instance = CircuitID::Chatrooms.new(
   name: null,
   users: null,
   avatar: null,

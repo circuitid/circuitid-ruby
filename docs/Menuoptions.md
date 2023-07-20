@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::Menuoptions
+# CircuitID::Menuoptions
 
 ## Properties
 
@@ -15,9 +15,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::Menuoptions.new(
+instance = CircuitID::Menuoptions.new(
   name: null,
   digit: null,
   menus: null,

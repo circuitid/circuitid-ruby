@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::Contacts
+# CircuitID::Contacts
 
 ## Properties
 
@@ -18,9 +18,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::Contacts.new(
+instance = CircuitID::Contacts.new(
   email: null,
   first: null,
   last: null,

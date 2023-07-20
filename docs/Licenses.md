@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::Licenses
+# CircuitID::Licenses
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::Licenses.new(
+instance = CircuitID::Licenses.new(
   order: null,
   object: null,
   ref: null,

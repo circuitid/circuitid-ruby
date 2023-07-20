@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::FindPhoneOutboundRuleActions200Response
+# CircuitID::FindPhoneOutboundRuleActions200Response
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::FindPhoneOutboundRuleActions200Response.new(
+instance = CircuitID::FindPhoneOutboundRuleActions200Response.new(
   total: null,
   limit: null,
   skip: null,

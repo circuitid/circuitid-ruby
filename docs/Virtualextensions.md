@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::Virtualextensions
+# CircuitID::Virtualextensions
 
 ## Properties
 
@@ -11,9 +11,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::Virtualextensions.new(
+instance = CircuitID::Virtualextensions.new(
   name: null,
   extension: null,
   phoneinboundrule: null

@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::FindTimeSchedules200Response
+# CircuitID::FindTimeSchedules200Response
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::FindTimeSchedules200Response.new(
+instance = CircuitID::FindTimeSchedules200Response.new(
   total: null,
   limit: null,
   skip: null,

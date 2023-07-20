@@ -1,4 +1,4 @@
-# CircuitIDAPIClient::FindMenuOptions200Response
+# CircuitID::FindMenuOptions200Response
 
 ## Properties
 
@@ -12,9 +12,9 @@
 ## Example
 
 ```ruby
-require 'circuitid_ruby'
+require 'circuitid-ruby'
 
-instance = CircuitIDAPIClient::FindMenuOptions200Response.new(
+instance = CircuitID::FindMenuOptions200Response.new(
   total: null,
   limit: null,
   skip: null,
