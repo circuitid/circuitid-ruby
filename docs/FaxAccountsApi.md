@@ -1,14 +1,14 @@
-# CircuitID::FaxAccountApi
+# CircuitID::FaxAccountsApi
 
 All URIs are relative to *https://rest.circuitid.com*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**create_fax_account**](FaxAccountApi.md#create_fax_account) | **POST** /faxaccounts | Create a new object |
-| [**find_fax_account**](FaxAccountApi.md#find_fax_account) | **GET** /faxaccounts | Find multiple objects |
-| [**get_fax_account**](FaxAccountApi.md#get_fax_account) | **GET** /faxaccounts/{id} | Get object by id |
-| [**patch_fax_account**](FaxAccountApi.md#patch_fax_account) | **PATCH** /faxaccounts/{id} | Patch object&#39;s data |
-| [**remove_fax_account**](FaxAccountApi.md#remove_fax_account) | **DELETE** /faxaccounts/{id} | Delete object by id |
+| [**create_fax_account**](FaxAccountsApi.md#create_fax_account) | **POST** /faxaccounts | Create a new object |
+| [**find_fax_accounts**](FaxAccountsApi.md#find_fax_accounts) | **GET** /faxaccounts | Find multiple objects |
+| [**get_fax_account**](FaxAccountsApi.md#get_fax_account) | **GET** /faxaccounts/{id} | Get object by id |
+| [**patch_fax_account**](FaxAccountsApi.md#patch_fax_account) | **PATCH** /faxaccounts/{id} | Patch object&#39;s data |
+| [**remove_fax_account**](FaxAccountsApi.md#remove_fax_account) | **DELETE** /faxaccounts/{id} | Delete object by id |
 
 
 ## create_fax_account
@@ -32,7 +32,7 @@ CircuitID.configure do |config|
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitID::FaxAccountApi.new
+api_instance = CircuitID::FaxAccountsApi.new
 faxaccounts = CircuitID::Faxaccounts.new({name: 3.56}) # Faxaccounts | The JSON object that will be posted to the REST API endpoint.
 
 begin
@@ -40,7 +40,7 @@ begin
   result = api_instance.create_fax_account(faxaccounts)
   p result
 rescue CircuitID::ApiError => e
-  puts "Error when calling FaxAccountApi->create_fax_account: #{e}"
+  puts "Error when calling FaxAccountsApi->create_fax_account: #{e}"
 end
 ```
 
@@ -58,7 +58,7 @@ begin
   p headers # => { ... }
   p data # => Object
 rescue CircuitID::ApiError => e
-  puts "Error when calling FaxAccountApi->create_fax_account_with_http_info: #{e}"
+  puts "Error when calling FaxAccountsApi->create_fax_account_with_http_info: #{e}"
 end
 ```
 
@@ -82,9 +82,9 @@ end
 - **Accept**: application/json
 
 
-## find_fax_account
+## find_fax_accounts
 
-> <FindFaxAccount200Response> find_fax_account(opts)
+> <FindFaxAccounts200Response> find_fax_accounts(opts)
 
 Find multiple objects
 
@@ -103,7 +103,7 @@ CircuitID.configure do |config|
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitID::FaxAccountApi.new
+api_instance = CircuitID::FaxAccountsApi.new
 opts = {
   search: TODO, # Object | Filter results by the specified value.
   limit: TODO, # Object | $limit will return only the number of results you specify.
@@ -116,28 +116,28 @@ opts = {
 
 begin
   # Find multiple objects
-  result = api_instance.find_fax_account(opts)
+  result = api_instance.find_fax_accounts(opts)
   p result
 rescue CircuitID::ApiError => e
-  puts "Error when calling FaxAccountApi->find_fax_account: #{e}"
+  puts "Error when calling FaxAccountsApi->find_fax_accounts: #{e}"
 end
 ```
 
-#### Using the find_fax_account_with_http_info variant
+#### Using the find_fax_accounts_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<FindFaxAccount200Response>, Integer, Hash)> find_fax_account_with_http_info(opts)
+> <Array(<FindFaxAccounts200Response>, Integer, Hash)> find_fax_accounts_with_http_info(opts)
 
 ```ruby
 begin
   # Find multiple objects
-  data, status_code, headers = api_instance.find_fax_account_with_http_info(opts)
+  data, status_code, headers = api_instance.find_fax_accounts_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => <FindFaxAccount200Response>
+  p data # => <FindFaxAccounts200Response>
 rescue CircuitID::ApiError => e
-  puts "Error when calling FaxAccountApi->find_fax_account_with_http_info: #{e}"
+  puts "Error when calling FaxAccountsApi->find_fax_accounts_with_http_info: #{e}"
 end
 ```
 
@@ -155,7 +155,7 @@ end
 
 ### Return type
 
-[**FindFaxAccount200Response**](FindFaxAccount200Response.md)
+[**FindFaxAccounts200Response**](FindFaxAccounts200Response.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ CircuitID.configure do |config|
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitID::FaxAccountApi.new
+api_instance = CircuitID::FaxAccountsApi.new
 id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 
 begin
@@ -196,7 +196,7 @@ begin
   result = api_instance.get_fax_account(id)
   p result
 rescue CircuitID::ApiError => e
-  puts "Error when calling FaxAccountApi->get_fax_account: #{e}"
+  puts "Error when calling FaxAccountsApi->get_fax_account: #{e}"
 end
 ```
 
@@ -214,7 +214,7 @@ begin
   p headers # => { ... }
   p data # => Object
 rescue CircuitID::ApiError => e
-  puts "Error when calling FaxAccountApi->get_fax_account_with_http_info: #{e}"
+  puts "Error when calling FaxAccountsApi->get_fax_account_with_http_info: #{e}"
 end
 ```
 
@@ -259,7 +259,7 @@ CircuitID.configure do |config|
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitID::FaxAccountApi.new
+api_instance = CircuitID::FaxAccountsApi.new
 id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 faxaccounts = CircuitID::Faxaccounts.new({name: 3.56}) # Faxaccounts | The request data.
 
@@ -268,7 +268,7 @@ begin
   result = api_instance.patch_fax_account(id, faxaccounts)
   p result
 rescue CircuitID::ApiError => e
-  puts "Error when calling FaxAccountApi->patch_fax_account: #{e}"
+  puts "Error when calling FaxAccountsApi->patch_fax_account: #{e}"
 end
 ```
 
@@ -286,7 +286,7 @@ begin
   p headers # => { ... }
   p data # => Object
 rescue CircuitID::ApiError => e
-  puts "Error when calling FaxAccountApi->patch_fax_account_with_http_info: #{e}"
+  puts "Error when calling FaxAccountsApi->patch_fax_account_with_http_info: #{e}"
 end
 ```
 
@@ -332,7 +332,7 @@ CircuitID.configure do |config|
   # config.api_key_prefix['jwt'] = 'Bearer'
 end
 
-api_instance = CircuitID::FaxAccountApi.new
+api_instance = CircuitID::FaxAccountsApi.new
 id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 
 begin
@@ -340,7 +340,7 @@ begin
   result = api_instance.remove_fax_account(id)
   p result
 rescue CircuitID::ApiError => e
-  puts "Error when calling FaxAccountApi->remove_fax_account: #{e}"
+  puts "Error when calling FaxAccountsApi->remove_fax_account: #{e}"
 end
 ```
 
@@ -358,7 +358,7 @@ begin
   p headers # => { ... }
   p data # => Object
 rescue CircuitID::ApiError => e
-  puts "Error when calling FaxAccountApi->remove_fax_account_with_http_info: #{e}"
+  puts "Error when calling FaxAccountsApi->remove_fax_account_with_http_info: #{e}"
 end
 ```
 

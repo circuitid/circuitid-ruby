@@ -4,16 +4,16 @@ All URIs are relative to *https://rest.circuitid.com*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**create_directorie**](DirectoriesApi.md#create_directorie) | **POST** /directories | Create a new object |
+| [**createdirectory**](DirectoriesApi.md#createdirectory) | **POST** /directories | Create a new object |
 | [**find_directories**](DirectoriesApi.md#find_directories) | **GET** /directories | Find multiple objects |
-| [**get_directorie**](DirectoriesApi.md#get_directorie) | **GET** /directories/{id} | Get object by id |
-| [**patch_directorie**](DirectoriesApi.md#patch_directorie) | **PATCH** /directories/{id} | Patch object&#39;s data |
-| [**remove_directorie**](DirectoriesApi.md#remove_directorie) | **DELETE** /directories/{id} | Delete object by id |
+| [**getdirectory**](DirectoriesApi.md#getdirectory) | **GET** /directories/{id} | Get object by id |
+| [**patchdirectory**](DirectoriesApi.md#patchdirectory) | **PATCH** /directories/{id} | Patch object&#39;s data |
+| [**removedirectory**](DirectoriesApi.md#removedirectory) | **DELETE** /directories/{id} | Delete object by id |
 
 
-## create_directorie
+## createdirectory
 
-> Object create_directorie(directories)
+> Object createdirectory(directories)
 
 Create a new object
 
@@ -37,28 +37,28 @@ directories = CircuitID::Directories.new({name: 3.56, type: customers}) # Direct
 
 begin
   # Create a new object
-  result = api_instance.create_directorie(directories)
+  result = api_instance.createdirectory(directories)
   p result
 rescue CircuitID::ApiError => e
-  puts "Error when calling DirectoriesApi->create_directorie: #{e}"
+  puts "Error when calling DirectoriesApi->createdirectory: #{e}"
 end
 ```
 
-#### Using the create_directorie_with_http_info variant
+#### Using the createdirectory_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> create_directorie_with_http_info(directories)
+> <Array(Object, Integer, Hash)> createdirectory_with_http_info(directories)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_directorie_with_http_info(directories)
+  data, status_code, headers = api_instance.createdirectory_with_http_info(directories)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
 rescue CircuitID::ApiError => e
-  puts "Error when calling DirectoriesApi->create_directorie_with_http_info: #{e}"
+  puts "Error when calling DirectoriesApi->createdirectory_with_http_info: #{e}"
 end
 ```
 
@@ -167,9 +167,9 @@ end
 - **Accept**: application/json
 
 
-## get_directorie
+## getdirectory
 
-> Object get_directorie(id)
+> Object getdirectory(id)
 
 Get object by id
 
@@ -193,28 +193,28 @@ id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like 
 
 begin
   # Get object by id
-  result = api_instance.get_directorie(id)
+  result = api_instance.getdirectory(id)
   p result
 rescue CircuitID::ApiError => e
-  puts "Error when calling DirectoriesApi->get_directorie: #{e}"
+  puts "Error when calling DirectoriesApi->getdirectory: #{e}"
 end
 ```
 
-#### Using the get_directorie_with_http_info variant
+#### Using the getdirectory_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> get_directorie_with_http_info(id)
+> <Array(Object, Integer, Hash)> getdirectory_with_http_info(id)
 
 ```ruby
 begin
   # Get object by id
-  data, status_code, headers = api_instance.get_directorie_with_http_info(id)
+  data, status_code, headers = api_instance.getdirectory_with_http_info(id)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
 rescue CircuitID::ApiError => e
-  puts "Error when calling DirectoriesApi->get_directorie_with_http_info: #{e}"
+  puts "Error when calling DirectoriesApi->getdirectory_with_http_info: #{e}"
 end
 ```
 
@@ -238,9 +238,9 @@ end
 - **Accept**: application/json
 
 
-## patch_directorie
+## patchdirectory
 
-> Object patch_directorie(id, directories)
+> Object patchdirectory(id, directories)
 
 Patch object's data
 
@@ -265,28 +265,28 @@ directories = CircuitID::Directories.new({name: 3.56, type: customers}) # Direct
 
 begin
   # Patch object's data
-  result = api_instance.patch_directorie(id, directories)
+  result = api_instance.patchdirectory(id, directories)
   p result
 rescue CircuitID::ApiError => e
-  puts "Error when calling DirectoriesApi->patch_directorie: #{e}"
+  puts "Error when calling DirectoriesApi->patchdirectory: #{e}"
 end
 ```
 
-#### Using the patch_directorie_with_http_info variant
+#### Using the patchdirectory_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> patch_directorie_with_http_info(id, directories)
+> <Array(Object, Integer, Hash)> patchdirectory_with_http_info(id, directories)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_directorie_with_http_info(id, directories)
+  data, status_code, headers = api_instance.patchdirectory_with_http_info(id, directories)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
 rescue CircuitID::ApiError => e
-  puts "Error when calling DirectoriesApi->patch_directorie_with_http_info: #{e}"
+  puts "Error when calling DirectoriesApi->patchdirectory_with_http_info: #{e}"
 end
 ```
 
@@ -311,9 +311,9 @@ end
 - **Accept**: application/json
 
 
-## remove_directorie
+## removedirectory
 
-> Object remove_directorie(id)
+> Object removedirectory(id)
 
 Delete object by id
 
@@ -337,28 +337,28 @@ id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like 
 
 begin
   # Delete object by id
-  result = api_instance.remove_directorie(id)
+  result = api_instance.removedirectory(id)
   p result
 rescue CircuitID::ApiError => e
-  puts "Error when calling DirectoriesApi->remove_directorie: #{e}"
+  puts "Error when calling DirectoriesApi->removedirectory: #{e}"
 end
 ```
 
-#### Using the remove_directorie_with_http_info variant
+#### Using the removedirectory_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> remove_directorie_with_http_info(id)
+> <Array(Object, Integer, Hash)> removedirectory_with_http_info(id)
 
 ```ruby
 begin
   # Delete object by id
-  data, status_code, headers = api_instance.remove_directorie_with_http_info(id)
+  data, status_code, headers = api_instance.removedirectory_with_http_info(id)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
 rescue CircuitID::ApiError => e
-  puts "Error when calling DirectoriesApi->remove_directorie_with_http_info: #{e}"
+  puts "Error when calling DirectoriesApi->removedirectory_with_http_info: #{e}"
 end
 ```
 

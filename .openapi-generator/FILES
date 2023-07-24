@@ -43,7 +43,7 @@ docs/Directories.md
 docs/DirectoriesApi.md
 docs/Domains.md
 docs/DomainsApi.md
-docs/FaxAccountApi.md
+docs/FaxAccountsApi.md
 docs/Faxaccounts.md
 docs/Faxes.md
 docs/FaxesApi.md
@@ -63,7 +63,7 @@ docs/FindDeveloperAppSubscriptions200Response.md
 docs/FindDeveloperApps200Response.md
 docs/FindDirectories200Response.md
 docs/FindDomains200Response.md
-docs/FindFaxAccount200Response.md
+docs/FindFaxAccounts200Response.md
 docs/FindFaxes200Response.md
 docs/FindFirewall200Response.md
 docs/FindGroupMembers200Response.md
@@ -164,7 +164,7 @@ lib/circuitid-ruby/api/developer_apps_api.rb
 lib/circuitid-ruby/api/directories_api.rb
 lib/circuitid-ruby/api/dns_records_api.rb
 lib/circuitid-ruby/api/domains_api.rb
-lib/circuitid-ruby/api/fax_account_api.rb
+lib/circuitid-ruby/api/fax_accounts_api.rb
 lib/circuitid-ruby/api/faxes_api.rb
 lib/circuitid-ruby/api/find_numbers_api.rb
 lib/circuitid-ruby/api/firewall_api.rb
@@ -230,7 +230,7 @@ lib/circuitid-ruby/models/find_developer_app_subscriptions200_response.rb
 lib/circuitid-ruby/models/find_developer_apps200_response.rb
 lib/circuitid-ruby/models/find_directories200_response.rb
 lib/circuitid-ruby/models/find_domains200_response.rb
-lib/circuitid-ruby/models/find_fax_account200_response.rb
+lib/circuitid-ruby/models/find_fax_accounts200_response.rb
 lib/circuitid-ruby/models/find_faxes200_response.rb
 lib/circuitid-ruby/models/find_firewall200_response.rb
 lib/circuitid-ruby/models/find_group_members200_response.rb
@@ -303,7 +303,7 @@ spec/api/developer_apps_api_spec.rb
 spec/api/directories_api_spec.rb
 spec/api/dns_records_api_spec.rb
 spec/api/domains_api_spec.rb
-spec/api/fax_account_api_spec.rb
+spec/api/fax_accounts_api_spec.rb
 spec/api/faxes_api_spec.rb
 spec/api/find_numbers_api_spec.rb
 spec/api/firewall_api_spec.rb
@@ -367,7 +367,7 @@ spec/models/find_developer_app_subscriptions200_response_spec.rb
 spec/models/find_developer_apps200_response_spec.rb
 spec/models/find_directories200_response_spec.rb
 spec/models/find_domains200_response_spec.rb
-spec/models/find_fax_account200_response_spec.rb
+spec/models/find_fax_accounts200_response_spec.rb
 spec/models/find_faxes200_response_spec.rb
 spec/models/find_firewall200_response_spec.rb
 spec/models/find_group_members200_response_spec.rb

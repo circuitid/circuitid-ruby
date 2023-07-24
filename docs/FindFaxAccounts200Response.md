@@ -1,4 +1,4 @@
-# CircuitID::FindFaxAccount200Response
+# CircuitID::FindFaxAccounts200Response
 
 ## Properties
 
@@ -14,7 +14,7 @@
 ```ruby
 require 'circuitid-ruby'
 
-instance = CircuitID::FindFaxAccount200Response.new(
+instance = CircuitID::FindFaxAccounts200Response.new(
   total: null,
   limit: null,
   skip: null,

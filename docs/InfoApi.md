@@ -4,12 +4,12 @@ All URIs are relative to *https://rest.circuitid.com*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**find_info**](InfoApi.md#find_info) | **GET** /info | Get object |
+| [**get_info**](InfoApi.md#get_info) | **GET** /info | Get object |
 
 
-## find_info
+## get_info
 
-> Object find_info
+> Object get_info
 
 Get object
 
@@ -32,28 +32,28 @@ api_instance = CircuitID::InfoApi.new
 
 begin
   # Get object
-  result = api_instance.find_info
+  result = api_instance.get_info
   p result
 rescue CircuitID::ApiError => e
-  puts "Error when calling InfoApi->find_info: #{e}"
+  puts "Error when calling InfoApi->get_info: #{e}"
 end
 ```
 
-#### Using the find_info_with_http_info variant
+#### Using the get_info_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> find_info_with_http_info
+> <Array(Object, Integer, Hash)> get_info_with_http_info
 
 ```ruby
 begin
   # Get object
-  data, status_code, headers = api_instance.find_info_with_http_info
+  data, status_code, headers = api_instance.get_info_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
 rescue CircuitID::ApiError => e
-  puts "Error when calling InfoApi->find_info_with_http_info: #{e}"
+  puts "Error when calling InfoApi->get_info_with_http_info: #{e}"
 end
 ```
 

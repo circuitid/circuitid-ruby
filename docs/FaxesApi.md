@@ -4,15 +4,15 @@ All URIs are relative to *https://rest.circuitid.com*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**create_faxe**](FaxesApi.md#create_faxe) | **POST** /faxes | Create a new object |
+| [**create_fax**](FaxesApi.md#create_fax) | **POST** /faxes | Create a new object |
 | [**find_faxes**](FaxesApi.md#find_faxes) | **GET** /faxes | Find multiple objects |
-| [**get_faxe**](FaxesApi.md#get_faxe) | **GET** /faxes/{id} | Get object by id |
-| [**remove_faxe**](FaxesApi.md#remove_faxe) | **DELETE** /faxes/{id} | Delete object by id |
+| [**get_fax**](FaxesApi.md#get_fax) | **GET** /faxes/{id} | Get object by id |
+| [**remove_fax**](FaxesApi.md#remove_fax) | **DELETE** /faxes/{id} | Delete object by id |
 
 
-## create_faxe
+## create_fax
 
-> Object create_faxe(faxes)
+> Object create_fax(faxes)
 
 Create a new object
 
@@ -36,28 +36,28 @@ faxes = CircuitID::Faxes.new({caller_id_number: 3.56, caller_destination: 3.56, 
 
 begin
   # Create a new object
-  result = api_instance.create_faxe(faxes)
+  result = api_instance.create_fax(faxes)
   p result
 rescue CircuitID::ApiError => e
-  puts "Error when calling FaxesApi->create_faxe: #{e}"
+  puts "Error when calling FaxesApi->create_fax: #{e}"
 end
 ```
 
-#### Using the create_faxe_with_http_info variant
+#### Using the create_fax_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> create_faxe_with_http_info(faxes)
+> <Array(Object, Integer, Hash)> create_fax_with_http_info(faxes)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_faxe_with_http_info(faxes)
+  data, status_code, headers = api_instance.create_fax_with_http_info(faxes)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
 rescue CircuitID::ApiError => e
-  puts "Error when calling FaxesApi->create_faxe_with_http_info: #{e}"
+  puts "Error when calling FaxesApi->create_fax_with_http_info: #{e}"
 end
 ```
 
@@ -166,9 +166,9 @@ end
 - **Accept**: application/json
 
 
-## get_faxe
+## get_fax
 
-> Object get_faxe(id)
+> Object get_fax(id)
 
 Get object by id
 
@@ -192,28 +192,28 @@ id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like 
 
 begin
   # Get object by id
-  result = api_instance.get_faxe(id)
+  result = api_instance.get_fax(id)
   p result
 rescue CircuitID::ApiError => e
-  puts "Error when calling FaxesApi->get_faxe: #{e}"
+  puts "Error when calling FaxesApi->get_fax: #{e}"
 end
 ```
 
-#### Using the get_faxe_with_http_info variant
+#### Using the get_fax_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> get_faxe_with_http_info(id)
+> <Array(Object, Integer, Hash)> get_fax_with_http_info(id)
 
 ```ruby
 begin
   # Get object by id
-  data, status_code, headers = api_instance.get_faxe_with_http_info(id)
+  data, status_code, headers = api_instance.get_fax_with_http_info(id)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
 rescue CircuitID::ApiError => e
-  puts "Error when calling FaxesApi->get_faxe_with_http_info: #{e}"
+  puts "Error when calling FaxesApi->get_fax_with_http_info: #{e}"
 end
 ```
 
@@ -237,9 +237,9 @@ end
 - **Accept**: application/json
 
 
-## remove_faxe
+## remove_fax
 
-> Object remove_faxe(id)
+> Object remove_fax(id)
 
 Delete object by id
 
@@ -263,28 +263,28 @@ id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like 
 
 begin
   # Delete object by id
-  result = api_instance.remove_faxe(id)
+  result = api_instance.remove_fax(id)
   p result
 rescue CircuitID::ApiError => e
-  puts "Error when calling FaxesApi->remove_faxe: #{e}"
+  puts "Error when calling FaxesApi->remove_fax: #{e}"
 end
 ```
 
-#### Using the remove_faxe_with_http_info variant
+#### Using the remove_fax_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> remove_faxe_with_http_info(id)
+> <Array(Object, Integer, Hash)> remove_fax_with_http_info(id)
 
 ```ruby
 begin
   # Delete object by id
-  data, status_code, headers = api_instance.remove_faxe_with_http_info(id)
+  data, status_code, headers = api_instance.remove_fax_with_http_info(id)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => Object
 rescue CircuitID::ApiError => e
-  puts "Error when calling FaxesApi->remove_faxe_with_http_info: #{e}"
+  puts "Error when calling FaxesApi->remove_fax_with_http_info: #{e}"
 end
 ```
 

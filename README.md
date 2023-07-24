@@ -12,7 +12,7 @@ We are excited to have you on board and are confident that this documentation si
 Happy coding!
 
 
-- API version: 0.47.15
+- API version: 0.47.16
 - Package version: 1.0.0
 
 For more information, please visit [https://www.circuitid.com/](https://www.circuitid.com/)
@@ -159,25 +159,25 @@ Class | Method | HTTP request | Description
 *CircuitID::DeveloperAppsApi* | [**get_developer_app**](docs/DeveloperAppsApi.md#get_developer_app) | **GET** /developerapps/{id} | Get object by id
 *CircuitID::DeveloperAppsApi* | [**patch_developer_app**](docs/DeveloperAppsApi.md#patch_developer_app) | **PATCH** /developerapps/{id} | Patch object's data
 *CircuitID::DeveloperAppsApi* | [**remove_developer_app**](docs/DeveloperAppsApi.md#remove_developer_app) | **DELETE** /developerapps/{id} | Delete object by id
-*CircuitID::DirectoriesApi* | [**create_directorie**](docs/DirectoriesApi.md#create_directorie) | **POST** /directories | Create a new object
+*CircuitID::DirectoriesApi* | [**createdirectory**](docs/DirectoriesApi.md#createdirectory) | **POST** /directories | Create a new object
 *CircuitID::DirectoriesApi* | [**find_directories**](docs/DirectoriesApi.md#find_directories) | **GET** /directories | Find multiple objects
-*CircuitID::DirectoriesApi* | [**get_directorie**](docs/DirectoriesApi.md#get_directorie) | **GET** /directories/{id} | Get object by id
-*CircuitID::DirectoriesApi* | [**patch_directorie**](docs/DirectoriesApi.md#patch_directorie) | **PATCH** /directories/{id} | Patch object's data
-*CircuitID::DirectoriesApi* | [**remove_directorie**](docs/DirectoriesApi.md#remove_directorie) | **DELETE** /directories/{id} | Delete object by id
+*CircuitID::DirectoriesApi* | [**getdirectory**](docs/DirectoriesApi.md#getdirectory) | **GET** /directories/{id} | Get object by id
+*CircuitID::DirectoriesApi* | [**patchdirectory**](docs/DirectoriesApi.md#patchdirectory) | **PATCH** /directories/{id} | Patch object's data
+*CircuitID::DirectoriesApi* | [**removedirectory**](docs/DirectoriesApi.md#removedirectory) | **DELETE** /directories/{id} | Delete object by id
 *CircuitID::DomainsApi* | [**create_domain**](docs/DomainsApi.md#create_domain) | **POST** /domains | Create a new object
 *CircuitID::DomainsApi* | [**find_domains**](docs/DomainsApi.md#find_domains) | **GET** /domains | Find multiple objects
 *CircuitID::DomainsApi* | [**get_domain**](docs/DomainsApi.md#get_domain) | **GET** /domains/{id} | Get object by id
 *CircuitID::DomainsApi* | [**patch_domain**](docs/DomainsApi.md#patch_domain) | **PATCH** /domains/{id} | Patch object's data
 *CircuitID::DomainsApi* | [**remove_domain**](docs/DomainsApi.md#remove_domain) | **DELETE** /domains/{id} | Delete object by id
-*CircuitID::FaxAccountApi* | [**create_fax_account**](docs/FaxAccountApi.md#create_fax_account) | **POST** /faxaccounts | Create a new object
-*CircuitID::FaxAccountApi* | [**find_fax_account**](docs/FaxAccountApi.md#find_fax_account) | **GET** /faxaccounts | Find multiple objects
-*CircuitID::FaxAccountApi* | [**get_fax_account**](docs/FaxAccountApi.md#get_fax_account) | **GET** /faxaccounts/{id} | Get object by id
-*CircuitID::FaxAccountApi* | [**patch_fax_account**](docs/FaxAccountApi.md#patch_fax_account) | **PATCH** /faxaccounts/{id} | Patch object's data
-*CircuitID::FaxAccountApi* | [**remove_fax_account**](docs/FaxAccountApi.md#remove_fax_account) | **DELETE** /faxaccounts/{id} | Delete object by id
-*CircuitID::FaxesApi* | [**create_faxe**](docs/FaxesApi.md#create_faxe) | **POST** /faxes | Create a new object
+*CircuitID::FaxAccountsApi* | [**create_fax_account**](docs/FaxAccountsApi.md#create_fax_account) | **POST** /faxaccounts | Create a new object
+*CircuitID::FaxAccountsApi* | [**find_fax_accounts**](docs/FaxAccountsApi.md#find_fax_accounts) | **GET** /faxaccounts | Find multiple objects
+*CircuitID::FaxAccountsApi* | [**get_fax_account**](docs/FaxAccountsApi.md#get_fax_account) | **GET** /faxaccounts/{id} | Get object by id
+*CircuitID::FaxAccountsApi* | [**patch_fax_account**](docs/FaxAccountsApi.md#patch_fax_account) | **PATCH** /faxaccounts/{id} | Patch object's data
+*CircuitID::FaxAccountsApi* | [**remove_fax_account**](docs/FaxAccountsApi.md#remove_fax_account) | **DELETE** /faxaccounts/{id} | Delete object by id
+*CircuitID::FaxesApi* | [**create_fax**](docs/FaxesApi.md#create_fax) | **POST** /faxes | Create a new object
 *CircuitID::FaxesApi* | [**find_faxes**](docs/FaxesApi.md#find_faxes) | **GET** /faxes | Find multiple objects
-*CircuitID::FaxesApi* | [**get_faxe**](docs/FaxesApi.md#get_faxe) | **GET** /faxes/{id} | Get object by id
-*CircuitID::FaxesApi* | [**remove_faxe**](docs/FaxesApi.md#remove_faxe) | **DELETE** /faxes/{id} | Delete object by id
+*CircuitID::FaxesApi* | [**get_fax**](docs/FaxesApi.md#get_fax) | **GET** /faxes/{id} | Get object by id
+*CircuitID::FaxesApi* | [**remove_fax**](docs/FaxesApi.md#remove_fax) | **DELETE** /faxes/{id} | Delete object by id
 *CircuitID::FindNumbersApi* | [**find_find_numbers**](docs/FindNumbersApi.md#find_find_numbers) | **GET** /findnumbers | Find multiple objects
 *CircuitID::FirewallApi* | [**create_firewall**](docs/FirewallApi.md#create_firewall) | **POST** /firewall | Create a new object
 *CircuitID::FirewallApi* | [**find_firewall**](docs/FirewallApi.md#find_firewall) | **GET** /firewall | Find multiple objects
@@ -199,7 +199,7 @@ Class | Method | HTTP request | Description
 *CircuitID::HolidaysApi* | [**get_holiday**](docs/HolidaysApi.md#get_holiday) | **GET** /holidays/{id} | Get object by id
 *CircuitID::HolidaysApi* | [**patch_holiday**](docs/HolidaysApi.md#patch_holiday) | **PATCH** /holidays/{id} | Patch object's data
 *CircuitID::HolidaysApi* | [**remove_holiday**](docs/HolidaysApi.md#remove_holiday) | **DELETE** /holidays/{id} | Delete object by id
-*CircuitID::InfoApi* | [**find_info**](docs/InfoApi.md#find_info) | **GET** /info | Get object
+*CircuitID::InfoApi* | [**get_info**](docs/InfoApi.md#get_info) | **GET** /info | Get object
 *CircuitID::InvoiceItemsApi* | [**find_invoice_items**](docs/InvoiceItemsApi.md#find_invoice_items) | **GET** /invoiceitems | Find multiple objects
 *CircuitID::InvoiceItemsApi* | [**get_invoice_item**](docs/InvoiceItemsApi.md#get_invoice_item) | **GET** /invoiceitems/{id} | Get object by id
 *CircuitID::InvoicesApi* | [**find_invoices**](docs/InvoicesApi.md#find_invoices) | **GET** /invoices | Find multiple objects
@@ -328,7 +328,7 @@ Class | Method | HTTP request | Description
  - [CircuitID::FindDeveloperApps200Response](docs/FindDeveloperApps200Response.md)
  - [CircuitID::FindDirectories200Response](docs/FindDirectories200Response.md)
  - [CircuitID::FindDomains200Response](docs/FindDomains200Response.md)
- - [CircuitID::FindFaxAccount200Response](docs/FindFaxAccount200Response.md)
+ - [CircuitID::FindFaxAccounts200Response](docs/FindFaxAccounts200Response.md)
  - [CircuitID::FindFaxes200Response](docs/FindFaxes200Response.md)
  - [CircuitID::FindFirewall200Response](docs/FindFirewall200Response.md)
  - [CircuitID::FindGroupMembers200Response](docs/FindGroupMembers200Response.md)
