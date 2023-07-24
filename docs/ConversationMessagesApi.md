@@ -1,6 +1,6 @@
 # CircuitID::ConversationMessagesApi
 
-All URIs are relative to *https://cloud9.circuitid.com*
+All URIs are relative to *https://rest.circuitid.com*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |

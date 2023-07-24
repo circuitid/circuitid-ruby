@@ -12,7 +12,7 @@ We are excited to have you on board and are confident that this documentation si
 Happy coding!
 
 
-- API version: 0.47.8
+- API version: 0.47.15
 - Package version: 1.0.0
 
 For more information, please visit [https://www.circuitid.com/](https://www.circuitid.com/)
@@ -86,7 +86,7 @@ end
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://cloud9.circuitid.com*
+All URIs are relative to *https://rest.circuitid.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
