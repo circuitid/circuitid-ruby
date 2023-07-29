@@ -4,13 +4,13 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **developer_app** | **Object** | ObjectId (unique 12 bytes ID) |  |
-| **object** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **ref** | **Object** |  | [optional] |
+| **developer_app** | **String** | ObjectId (unique 12 bytes ID) |  |
+| **object** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **ref** | **String** |  | [optional] |
 | **permissions** | **Object** |  | [optional] |
-| **require_id** | **Object** |  | [optional] |
-| **services** | **Object** |  |  |
-| **events** | **Object** |  | [optional] |
+| **require_id** | **Integer** |  | [optional][default to REQUIRE_ID::N0] |
+| **services** | **Array&lt;String&gt;** |  |  |
+| **events** | **Array&lt;String&gt;** |  | [optional] |
 
 ## Example
 

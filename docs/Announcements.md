@@ -4,10 +4,11 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  |  |
-| **type** | **Object** |  |  |
-| **voice** | **Object** |  | [optional] |
-| **text** | **Object** |  | [optional] |
+| **attachments** | **Array&lt;String&gt;** |  | [optional] |
+| **name** | **String** |  |  |
+| **type** | **String** |  |  |
+| **voice** | **String** |  | [optional] |
+| **text** | **String** |  | [optional] |
 
 ## Example
 
@@ -15,6 +16,7 @@
 require 'circuitid-ruby'
 
 instance = CircuitID::Announcements.new(
+  attachments: null,
   name: null,
   type: null,
   voice: null,

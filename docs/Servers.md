@@ -4,20 +4,20 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  |  |
-| **host** | **Object** |  |  |
-| **port** | **Object** |  |  |
-| **caller_id** | **Object** |  | [optional] |
-| **type** | **Object** |  |  |
-| **domestic_outbound_call_limit** | **Object** |  |  |
-| **domestic_inbound_call_limit** | **Object** |  |  |
-| **international_outbound_call_limit** | **Object** |  |  |
-| **toll_free_channel_limit** | **Object** |  |  |
-| **inbound_sip_trunking_order** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **outbound_sip_trunking_order** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **no_instant_ring_back** | **Object** |  | [optional] |
-| **bypass_media** | **Object** |  | [optional] |
-| **disable_rtp_auto_adjust** | **Object** |  | [optional] |
+| **name** | **String** |  |  |
+| **host** | **String** |  |  |
+| **port** | **Integer** |  | [default to 5060] |
+| **caller_id** | **String** |  | [optional] |
+| **type** | **String** |  |  |
+| **domestic_outbound_call_limit** | **Integer** |  | [default to 10] |
+| **domestic_inbound_call_limit** | **Integer** |  | [default to 10] |
+| **international_outbound_call_limit** | **Integer** |  | [default to 10] |
+| **toll_free_channel_limit** | **Integer** |  | [default to 10] |
+| **inbound_sip_trunking_order** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **outbound_sip_trunking_order** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **no_instant_ring_back** | **Integer** |  | [optional] |
+| **bypass_media** | **Integer** |  | [optional][default to BYPASS_MEDIA::N0] |
+| **disable_rtp_auto_adjust** | **Integer** |  | [optional][default to DISABLE_RTP_AUTO_ADJUST::N0] |
 
 ## Example
 

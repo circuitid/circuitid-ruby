@@ -4,24 +4,24 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  |  |
-| **max_extension_length** | **Object** |  |  |
-| **speech_recognition** | **Object** |  | [optional] |
-| **directory** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **greeting_type** | **Object** |  |  |
-| **greeting_tts** | **Object** |  | [optional] |
-| **menu_voice** | **Object** |  | [optional] |
-| **exit_sound** | **Object** |  | [optional] |
-| **transfer_announcement** | **Object** |  | [optional] |
-| **max_failures** | **Object** |  | [optional] |
-| **max_timeouts** | **Object** |  | [optional] |
-| **timeout** | **Object** |  | [optional] |
-| **touch_tone_terminators** | **Object** |  | [optional] |
-| **timeschedule** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **destination_type** | **Object** |  | [optional] |
-| **destination** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **ref** | **Object** |  | [optional] |
-| **call_forwarding_destination** | **Object** |  | [optional] |
+| **name** | **String** |  |  |
+| **max_extension_length** | **Integer** |  | [default to 4] |
+| **speech_recognition** | **Integer** |  | [optional][default to SPEECH_RECOGNITION::N0] |
+| **directory** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **greeting_type** | **String** |  |  |
+| **greeting_tts** | **String** |  | [optional] |
+| **menu_voice** | **String** |  | [optional] |
+| **exit_sound** | **String** |  | [optional][default to &#39;default&#39;] |
+| **transfer_announcement** | **String** |  | [optional][default to &#39;default&#39;] |
+| **max_failures** | **Integer** |  | [optional][default to 3] |
+| **max_timeouts** | **Integer** |  | [optional][default to 3] |
+| **timeout** | **Integer** |  | [optional][default to 10] |
+| **touch_tone_terminators** | **Integer** |  | [optional][default to TOUCH_TONE_TERMINATORS::N1] |
+| **timeschedule** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **destination_type** | **String** |  | [optional] |
+| **destination** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **ref** | **String** |  | [optional] |
+| **call_forwarding_destination** | **String** |  | [optional] |
 
 ## Example
 

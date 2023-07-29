@@ -31,13 +31,13 @@ end
 
 api_instance = CircuitID::InvoicesApi.new
 opts = {
-  search: TODO, # Object | Filter results by the specified value.
-  limit: TODO, # Object | $limit will return only the number of results you specify.
-  skip: TODO, # Object | $skip will skip the specified number of results.
-  sort: TODO, # Object | $sort will sort based on the object you provide. It can contain a list of properties by which to sort mapped to the order (1 ascending, -1 descending).
-  select: TODO, # Object | $select allows to pick which fields to include in the result.
-  _or: TODO, # Object | Find all records that match any of the given criteria.
-  _and: TODO # Object | Find all records that match all of the given criteria.
+  search: 'search_example', # String | Filter results by the specified value.
+  limit: 56, # Integer | $limit will return only the number of results you specify.
+  skip: 56, # Integer | $skip will skip the specified number of results.
+  sort: { ... }, # Object | $sort will sort based on the object you provide. It can contain a list of properties by which to sort mapped to the order (1 ascending, -1 descending).
+  select: ['inner_example'], # Array<String> | $select allows to pick which fields to include in the result.
+  _or: [3.56], # Array<Object> | Find all records that match any of the given criteria.
+  _and: [3.56] # Array<Object> | Find all records that match all of the given criteria.
 }
 
 begin
@@ -71,13 +71,13 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **search** | [**Object**](.md) | Filter results by the specified value. | [optional] |
-| **limit** | [**Object**](.md) | $limit will return only the number of results you specify. | [optional] |
-| **skip** | [**Object**](.md) | $skip will skip the specified number of results. | [optional] |
+| **search** | **String** | Filter results by the specified value. | [optional] |
+| **limit** | **Integer** | $limit will return only the number of results you specify. | [optional] |
+| **skip** | **Integer** | $skip will skip the specified number of results. | [optional] |
 | **sort** | [**Object**](.md) | $sort will sort based on the object you provide. It can contain a list of properties by which to sort mapped to the order (1 ascending, -1 descending). | [optional] |
-| **select** | [**Object**](.md) | $select allows to pick which fields to include in the result. | [optional] |
-| **_or** | [**Object**](.md) | Find all records that match any of the given criteria. | [optional] |
-| **_and** | [**Object**](.md) | Find all records that match all of the given criteria. | [optional] |
+| **select** | [**Array&lt;String&gt;**](String.md) | $select allows to pick which fields to include in the result. | [optional] |
+| **_or** | [**Array&lt;Object&gt;**](Object.md) | Find all records that match any of the given criteria. | [optional] |
+| **_and** | [**Array&lt;Object&gt;**](Object.md) | Find all records that match all of the given criteria. | [optional] |
 
 ### Return type
 
@@ -95,7 +95,7 @@ end
 
 ## get_invoice
 
-> Object get_invoice(id)
+> <GetInvoice200Response> get_invoice(id)
 
 Get object by id
 
@@ -115,7 +115,7 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::InvoicesApi.new
-id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
+id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 
 begin
   # Get object by id
@@ -130,7 +130,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> get_invoice_with_http_info(id)
+> <Array(<GetInvoice200Response>, Integer, Hash)> get_invoice_with_http_info(id)
 
 ```ruby
 begin
@@ -138,7 +138,7 @@ begin
   data, status_code, headers = api_instance.get_invoice_with_http_info(id)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => Object
+  p data # => <GetInvoice200Response>
 rescue CircuitID::ApiError => e
   puts "Error when calling InvoicesApi->get_invoice_with_http_info: #{e}"
 end
@@ -148,11 +148,11 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | [**Object**](.md) | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
+| **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
 
 ### Return type
 
-**Object**
+[**GetInvoice200Response**](GetInvoice200Response.md)
 
 ### Authorization
 

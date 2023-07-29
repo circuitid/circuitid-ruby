@@ -4,11 +4,11 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **npa** | **Object** |  |  |
-| **nxx** | **Object** |  |  |
-| **lata** | **Object** |  |  |
-| **loc_state** | **Object** |  |  |
-| **rc_abbre** | **Object** |  |  |
+| **npa** | **String** |  |  |
+| **nxx** | **String** |  |  |
+| **lata** | **String** |  |  |
+| **loc_state** | **String** |  |  |
+| **rc_abbre** | **String** |  |  |
 
 ## Example
 

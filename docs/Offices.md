@@ -4,19 +4,19 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  |  |
-| **street_number** | **Object** |  |  |
-| **street_name** | **Object** |  |  |
-| **pre_direction** | **Object** |  | [optional] |
-| **street_suffix** | **Object** |  |  |
-| **city** | **Object** |  |  |
-| **state** | **Object** |  | [optional] |
-| **zip** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **zip_code** | **Object** |  | [optional] |
-| **address2** | **Object** |  | [optional] |
-| **country** | **Object** |  |  |
+| **name** | **String** |  |  |
+| **street_number** | **String** |  |  |
+| **street_name** | **String** |  |  |
+| **pre_direction** | **String** |  | [optional] |
+| **street_suffix** | **String** |  |  |
+| **city** | **String** |  |  |
+| **state** | **String** |  | [optional] |
+| **zip** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **zip_code** | **String** |  | [optional] |
+| **address2** | **String** |  | [optional] |
+| **country** | **String** |  |  |
 | **providers** | **Object** |  | [optional] |
-| **region** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
+| **region** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 
 ## Example
 

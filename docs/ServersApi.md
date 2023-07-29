@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_server
 
-> Object create_server(servers)
+> <GetServer200Response> create_server(servers)
 
 Create a new object
 
@@ -33,7 +33,7 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::ServersApi.new
-servers = CircuitID::Servers.new({name: 3.56, host: 3.56, port: 3.56, type: sip, domestic_outbound_call_limit: 3.56, domestic_inbound_call_limit: 3.56, international_outbound_call_limit: 3.56, toll_free_channel_limit: 3.56}) # Servers | The JSON object that will be posted to the REST API endpoint.
+servers = CircuitID::Servers.new({name: 'name_example', host: 'host_example', port: 37, type: 'sip', domestic_outbound_call_limit: 37, domestic_inbound_call_limit: 37, international_outbound_call_limit: 37, toll_free_channel_limit: 37}) # Servers | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
@@ -48,7 +48,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> create_server_with_http_info(servers)
+> <Array(<GetServer200Response>, Integer, Hash)> create_server_with_http_info(servers)
 
 ```ruby
 begin
@@ -56,7 +56,7 @@ begin
   data, status_code, headers = api_instance.create_server_with_http_info(servers)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => Object
+  p data # => <GetServer200Response>
 rescue CircuitID::ApiError => e
   puts "Error when calling ServersApi->create_server_with_http_info: #{e}"
 end
@@ -70,7 +70,7 @@ end
 
 ### Return type
 
-**Object**
+[**GetServer200Response**](GetServer200Response.md)
 
 ### Authorization
 
@@ -105,13 +105,13 @@ end
 
 api_instance = CircuitID::ServersApi.new
 opts = {
-  search: TODO, # Object | Filter results by the specified value.
-  limit: TODO, # Object | $limit will return only the number of results you specify.
-  skip: TODO, # Object | $skip will skip the specified number of results.
-  sort: TODO, # Object | $sort will sort based on the object you provide. It can contain a list of properties by which to sort mapped to the order (1 ascending, -1 descending).
-  select: TODO, # Object | $select allows to pick which fields to include in the result.
-  _or: TODO, # Object | Find all records that match any of the given criteria.
-  _and: TODO # Object | Find all records that match all of the given criteria.
+  search: 'search_example', # String | Filter results by the specified value.
+  limit: 56, # Integer | $limit will return only the number of results you specify.
+  skip: 56, # Integer | $skip will skip the specified number of results.
+  sort: { ... }, # Object | $sort will sort based on the object you provide. It can contain a list of properties by which to sort mapped to the order (1 ascending, -1 descending).
+  select: ['inner_example'], # Array<String> | $select allows to pick which fields to include in the result.
+  _or: [3.56], # Array<Object> | Find all records that match any of the given criteria.
+  _and: [3.56] # Array<Object> | Find all records that match all of the given criteria.
 }
 
 begin
@@ -145,13 +145,13 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **search** | [**Object**](.md) | Filter results by the specified value. | [optional] |
-| **limit** | [**Object**](.md) | $limit will return only the number of results you specify. | [optional] |
-| **skip** | [**Object**](.md) | $skip will skip the specified number of results. | [optional] |
+| **search** | **String** | Filter results by the specified value. | [optional] |
+| **limit** | **Integer** | $limit will return only the number of results you specify. | [optional] |
+| **skip** | **Integer** | $skip will skip the specified number of results. | [optional] |
 | **sort** | [**Object**](.md) | $sort will sort based on the object you provide. It can contain a list of properties by which to sort mapped to the order (1 ascending, -1 descending). | [optional] |
-| **select** | [**Object**](.md) | $select allows to pick which fields to include in the result. | [optional] |
-| **_or** | [**Object**](.md) | Find all records that match any of the given criteria. | [optional] |
-| **_and** | [**Object**](.md) | Find all records that match all of the given criteria. | [optional] |
+| **select** | [**Array&lt;String&gt;**](String.md) | $select allows to pick which fields to include in the result. | [optional] |
+| **_or** | [**Array&lt;Object&gt;**](Object.md) | Find all records that match any of the given criteria. | [optional] |
+| **_and** | [**Array&lt;Object&gt;**](Object.md) | Find all records that match all of the given criteria. | [optional] |
 
 ### Return type
 
@@ -169,7 +169,7 @@ end
 
 ## get_server
 
-> Object get_server(id)
+> <GetServer200Response> get_server(id)
 
 Get object by id
 
@@ -189,7 +189,7 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::ServersApi.new
-id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
+id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 
 begin
   # Get object by id
@@ -204,7 +204,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> get_server_with_http_info(id)
+> <Array(<GetServer200Response>, Integer, Hash)> get_server_with_http_info(id)
 
 ```ruby
 begin
@@ -212,7 +212,7 @@ begin
   data, status_code, headers = api_instance.get_server_with_http_info(id)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => Object
+  p data # => <GetServer200Response>
 rescue CircuitID::ApiError => e
   puts "Error when calling ServersApi->get_server_with_http_info: #{e}"
 end
@@ -222,11 +222,11 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | [**Object**](.md) | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
+| **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
 
 ### Return type
 
-**Object**
+[**GetServer200Response**](GetServer200Response.md)
 
 ### Authorization
 
@@ -240,7 +240,7 @@ end
 
 ## patch_server
 
-> Object patch_server(id, servers)
+> <GetServer200Response> patch_server(id, servers)
 
 Patch object's data
 
@@ -260,8 +260,8 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::ServersApi.new
-id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-servers = CircuitID::Servers.new({name: 3.56, host: 3.56, port: 3.56, type: sip, domestic_outbound_call_limit: 3.56, domestic_inbound_call_limit: 3.56, international_outbound_call_limit: 3.56, toll_free_channel_limit: 3.56}) # Servers | The request data.
+id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
+servers = CircuitID::Servers.new({name: 'name_example', host: 'host_example', port: 37, type: 'sip', domestic_outbound_call_limit: 37, domestic_inbound_call_limit: 37, international_outbound_call_limit: 37, toll_free_channel_limit: 37}) # Servers | The request data.
 
 begin
   # Patch object's data
@@ -276,7 +276,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> patch_server_with_http_info(id, servers)
+> <Array(<GetServer200Response>, Integer, Hash)> patch_server_with_http_info(id, servers)
 
 ```ruby
 begin
@@ -284,7 +284,7 @@ begin
   data, status_code, headers = api_instance.patch_server_with_http_info(id, servers)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => Object
+  p data # => <GetServer200Response>
 rescue CircuitID::ApiError => e
   puts "Error when calling ServersApi->patch_server_with_http_info: #{e}"
 end
@@ -294,12 +294,12 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | [**Object**](.md) | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
+| **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
 | **servers** | [**Servers**](Servers.md) | The request data. |  |
 
 ### Return type
 
-**Object**
+[**GetServer200Response**](GetServer200Response.md)
 
 ### Authorization
 
@@ -313,7 +313,7 @@ end
 
 ## remove_server
 
-> Object remove_server(id)
+> <GetServer200Response> remove_server(id)
 
 Delete object by id
 
@@ -333,7 +333,7 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::ServersApi.new
-id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
+id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 
 begin
   # Delete object by id
@@ -348,7 +348,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> remove_server_with_http_info(id)
+> <Array(<GetServer200Response>, Integer, Hash)> remove_server_with_http_info(id)
 
 ```ruby
 begin
@@ -356,7 +356,7 @@ begin
   data, status_code, headers = api_instance.remove_server_with_http_info(id)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => Object
+  p data # => <GetServer200Response>
 rescue CircuitID::ApiError => e
   puts "Error when calling ServersApi->remove_server_with_http_info: #{e}"
 end
@@ -366,11 +366,11 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | [**Object**](.md) | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
+| **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
 
 ### Return type
 
-**Object**
+[**GetServer200Response**](GetServer200Response.md)
 
 ### Authorization
 

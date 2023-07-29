@@ -4,26 +4,26 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  |  |
-| **strategy** | **Object** |  |  |
-| **announce_position** | **Object** |  | [optional] |
-| **moh** | **Object** |  |  |
-| **caller_resume_timeout** | **Object** |  |  |
-| **max_wait_time** | **Object** |  |  |
-| **max_wait_time_no_agent** | **Object** |  |  |
-| **max_no_answer** | **Object** |  |  |
-| **no_answer_delay_timeout** | **Object** |  | [optional] |
-| **reject_timeout** | **Object** |  | [optional] |
-| **busy_timeout** | **Object** |  | [optional] |
-| **wrap_up_timeout** | **Object** |  | [optional] |
-| **time_based_score** | **Object** |  |  |
-| **tier_rules_apply** | **Object** |  |  |
-| **tier_rule_no_agent_no_wait** | **Object** |  |  |
-| **tier_rule_wait_second** | **Object** |  | [optional] |
-| **tier_rule_wait_multiply_level** | **Object** |  |  |
-| **abandoned_resume_allowed** | **Object** |  |  |
-| **discard_abandoned_after** | **Object** |  | [optional] |
-| **max_wait_time_no_agent_time_reached** | **Object** |  |  |
+| **name** | **String** |  |  |
+| **strategy** | **String** |  |  |
+| **announce_position** | **Integer** |  | [optional] |
+| **moh** | **String** |  | [default to &#39;deafult&#39;] |
+| **caller_resume_timeout** | **Integer** |  | [default to 3600] |
+| **max_wait_time** | **Integer** |  | [default to 300] |
+| **max_wait_time_no_agent** | **Integer** |  | [default to 300] |
+| **max_no_answer** | **Integer** |  | [default to 1000000] |
+| **no_answer_delay_timeout** | **Integer** |  | [optional][default to 60] |
+| **reject_timeout** | **Integer** |  | [optional][default to 60] |
+| **busy_timeout** | **Integer** |  | [optional][default to 60] |
+| **wrap_up_timeout** | **Integer** |  | [optional][default to 10] |
+| **time_based_score** | **String** |  | [default to &#39;queue&#39;] |
+| **tier_rules_apply** | **Boolean** |  | [default to false] |
+| **tier_rule_no_agent_no_wait** | **Boolean** |  | [default to true] |
+| **tier_rule_wait_second** | **Integer** |  | [optional][default to 300] |
+| **tier_rule_wait_multiply_level** | **Boolean** |  | [default to true] |
+| **abandoned_resume_allowed** | **Boolean** |  | [default to true] |
+| **discard_abandoned_after** | **Integer** |  | [optional][default to 14400] |
+| **max_wait_time_no_agent_time_reached** | **Integer** |  | [default to 5] |
 
 ## Example
 

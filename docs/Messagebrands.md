@@ -4,19 +4,19 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  |  |
-| **brand_id** | **Object** |  | [optional] |
-| **ein** | **Object** |  |  |
-| **user** | **Object** | ObjectId (unique 12 bytes ID) |  |
-| **order** | **Object** | ObjectId (unique 12 bytes ID) |  |
-| **status** | **Object** |  | [optional] |
-| **brand_relationship** | **Object** |  | [optional] |
-| **vertical** | **Object** |  | [optional] |
-| **entity_type** | **Object** |  | [optional] |
-| **csp_id** | **Object** |  | [optional] |
-| **ein_issuing_country** | **Object** |  | [optional] |
-| **universal_ein** | **Object** |  | [optional] |
-| **reference_id** | **Object** |  | [optional] |
+| **name** | **String** |  |  |
+| **brand_id** | **String** |  | [optional] |
+| **ein** | **String** |  |  |
+| **user** | **String** | ObjectId (unique 12 bytes ID) |  |
+| **order** | **String** | ObjectId (unique 12 bytes ID) |  |
+| **status** | **String** |  | [optional] |
+| **brand_relationship** | **String** |  | [optional] |
+| **vertical** | **String** |  | [optional] |
+| **entity_type** | **String** |  | [optional] |
+| **csp_id** | **String** |  | [optional] |
+| **ein_issuing_country** | **String** |  | [optional] |
+| **universal_ein** | **String** |  | [optional] |
+| **reference_id** | **String** |  | [optional] |
 
 ## Example
 

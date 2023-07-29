@@ -4,43 +4,43 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **in_use** | **Object** |  | [optional] |
-| **name** | **Object** |  |  |
-| **country_code** | **Object** |  |  |
-| **amount** | **Object** |  | [optional] |
-| **per_minute_rate** | **Object** |  | [optional] |
-| **provider** | **Object** | ObjectId (unique 12 bytes ID) |  |
-| **original_provider** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **provider_order_id** | **Object** |  | [optional] |
-| **fax** | **Object** |  | [optional] |
-| **voice** | **Object** |  | [optional] |
-| **status** | **Object** |  | [optional] |
-| **sms** | **Object** |  | [optional] |
-| **mms** | **Object** |  | [optional] |
-| **change_region_order_id** | **Object** |  | [optional] |
-| **change_region_order_date** | **Object** |  | [optional] |
-| **directory_listing** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **directory_listing_order_id** | **Object** |  | [optional] |
-| **directory_listing_order_date** | **Object** |  | [optional] |
-| **caller_name** | **Object** |  | [optional] |
-| **caller_name_order_id** | **Object** |  | [optional] |
-| **caller_name_order_date** | **Object** |  | [optional] |
-| **e911** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **e911_order_id** | **Object** |  | [optional] |
-| **e911_order_date** | **Object** |  | [optional] |
-| **message_campaign** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **message_class** | **Object** |  | [optional] |
-| **message_type** | **Object** |  | [optional] |
-| **message_campaign_order_id** | **Object** |  | [optional] |
-| **message_campaign_order_date** | **Object** |  | [optional] |
-| **e911_supported** | **Object** |  | [optional] |
-| **caller_name_supported** | **Object** |  | [optional] |
-| **directory_listing_supported** | **Object** |  | [optional] |
-| **messaging_supported** | **Object** |  | [optional] |
-| **destination_type** | **Object** |  |  |
-| **destination** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **ref** | **Object** |  | [optional] |
-| **call_forwarding_destination** | **Object** |  | [optional] |
+| **in_use** | **Integer** |  | [optional][default to IN_USE::N1] |
+| **name** | **String** |  |  |
+| **country_code** | **String** |  |  |
+| **amount** | **Integer** |  | [optional] |
+| **per_minute_rate** | **Integer** |  | [optional] |
+| **provider** | **String** | ObjectId (unique 12 bytes ID) |  |
+| **original_provider** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **provider_order_id** | **String** |  | [optional] |
+| **fax** | **Integer** |  | [optional][default to FAX::N0] |
+| **voice** | **Integer** |  | [optional][default to VOICE::N0] |
+| **status** | **Integer** |  | [optional][default to STATUS::N1] |
+| **sms** | **Integer** |  | [optional][default to SMS::N0] |
+| **mms** | **Integer** |  | [optional][default to MMS::N0] |
+| **change_region_order_id** | **String** |  | [optional] |
+| **change_region_order_date** | **Time** |  | [optional] |
+| **directory_listing** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **directory_listing_order_id** | **String** |  | [optional] |
+| **directory_listing_order_date** | **Time** |  | [optional] |
+| **caller_name** | **String** |  | [optional] |
+| **caller_name_order_id** | **String** |  | [optional] |
+| **caller_name_order_date** | **Time** |  | [optional] |
+| **e911** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **e911_order_id** | **String** |  | [optional] |
+| **e911_order_date** | **Time** |  | [optional] |
+| **message_campaign** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **message_class** | **String** |  | [optional] |
+| **message_type** | **String** |  | [optional] |
+| **message_campaign_order_id** | **String** |  | [optional] |
+| **message_campaign_order_date** | **Time** |  | [optional] |
+| **e911_supported** | **Integer** |  | [optional][default to E911_SUPPORTED::N0] |
+| **caller_name_supported** | **Integer** |  | [optional][default to CALLER_NAME_SUPPORTED::N0] |
+| **directory_listing_supported** | **Integer** |  | [optional][default to DIRECTORY_LISTING_SUPPORTED::N0] |
+| **messaging_supported** | **Integer** |  | [optional][default to MESSAGING_SUPPORTED::N0] |
+| **destination_type** | **String** |  | [default to &#39;park&#39;] |
+| **destination** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **ref** | **String** |  | [optional] |
+| **call_forwarding_destination** | **String** |  | [optional] |
 
 ## Example
 

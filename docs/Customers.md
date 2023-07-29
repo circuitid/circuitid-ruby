@@ -4,33 +4,33 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  |  |
-| **status** | **Object** |  | [optional] |
-| **website_url** | **Object** |  | [optional] |
-| **logo** | **Object** |  | [optional] |
-| **credit** | **Object** |  | [optional] |
-| **admin_user_id** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **billing_user_id** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **call_recording_user_id** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **call_forwarding_call_limit** | **Object** |  | [optional] |
-| **support_user_id** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **automatic_refill_amount** | **Object** |  | [optional] |
-| **low_balance_alert_amount** | **Object** |  | [optional] |
-| **low_balance_alert_at** | **Object** |  | [optional] |
-| **low_balance_alert_count** | **Object** |  | [optional] |
-| **last_automatic_refill_invoice** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **international_calling** | **Object** |  | [optional] |
-| **created_by_ip** | **Object** |  | [optional] |
-| **call_debug** | **Object** |  | [optional] |
-| **media_bypass** | **Object** |  | [optional] |
-| **account_lock** | **Object** |  | [optional] |
-| **call_recording** | **Object** |  | [optional] |
-| **cdr_retention** | **Object** |  | [optional] |
-| **cnam_look_ups** | **Object** |  | [optional] |
-| **hold_music** | **Object** |  | [optional] |
-| **transcribe_calls** | **Object** |  | [optional] |
-| **max_outbound_call_rate** | **Object** |  | [optional] |
-| **default_bill_method** | **Object** |  |  |
+| **name** | **String** |  |  |
+| **status** | **String** |  | [optional][default to &#39;active&#39;] |
+| **website_url** | **String** |  | [optional] |
+| **logo** | **String** |  | [optional] |
+| **credit** | **Integer** |  | [optional][default to 0] |
+| **admin_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **billing_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **call_recording_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **call_forwarding_call_limit** | **Integer** |  | [optional][default to 10] |
+| **support_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **automatic_refill_amount** | **Integer** |  | [optional][default to 0] |
+| **low_balance_alert_amount** | **Integer** |  | [optional][default to 0] |
+| **low_balance_alert_at** | **Time** |  | [optional] |
+| **low_balance_alert_count** | **Integer** |  | [optional][default to 0] |
+| **last_automatic_refill_invoice** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **international_calling** | **Integer** |  | [optional][default to INTERNATIONAL_CALLING::N0] |
+| **created_by_ip** | **String** |  | [optional] |
+| **call_debug** | **Integer** |  | [optional][default to CALL_DEBUG::N0] |
+| **media_bypass** | **Integer** |  | [optional][default to MEDIA_BYPASS::N0] |
+| **account_lock** | **Integer** |  | [optional][default to ACCOUNT_LOCK::N1] |
+| **call_recording** | **Integer** |  | [optional][default to CALL_RECORDING::N0] |
+| **cdr_retention** | **Integer** |  | [optional][default to 12] |
+| **cnam_look_ups** | **Integer** |  | [optional][default to CNAM_LOOK_UPS::N0] |
+| **hold_music** | **Integer** |  | [optional][default to HOLD_MUSIC::N0] |
+| **transcribe_calls** | **Integer** |  | [optional] |
+| **max_outbound_call_rate** | **Integer** |  | [optional][default to 1] |
+| **default_bill_method** | **String** |  | [default to &#39;credit&#39;] |
 
 ## Example
 

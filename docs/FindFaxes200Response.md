@@ -4,10 +4,10 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **total** | **Object** |  |  |
-| **limit** | **Object** |  |  |
-| **skip** | **Object** |  |  |
-| **data** | **Object** |  |  |
+| **total** | **Integer** |  |  |
+| **limit** | **Integer** |  |  |
+| **skip** | **Integer** |  |  |
+| **data** | [**Array&lt;Faxes&gt;**](Faxes.md) |  |  |
 
 ## Example
 

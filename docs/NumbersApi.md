@@ -32,13 +32,13 @@ end
 
 api_instance = CircuitID::NumbersApi.new
 opts = {
-  search: TODO, # Object | Filter results by the specified value.
-  limit: TODO, # Object | $limit will return only the number of results you specify.
-  skip: TODO, # Object | $skip will skip the specified number of results.
-  sort: TODO, # Object | $sort will sort based on the object you provide. It can contain a list of properties by which to sort mapped to the order (1 ascending, -1 descending).
-  select: TODO, # Object | $select allows to pick which fields to include in the result.
-  _or: TODO, # Object | Find all records that match any of the given criteria.
-  _and: TODO # Object | Find all records that match all of the given criteria.
+  search: 'search_example', # String | Filter results by the specified value.
+  limit: 56, # Integer | $limit will return only the number of results you specify.
+  skip: 56, # Integer | $skip will skip the specified number of results.
+  sort: { ... }, # Object | $sort will sort based on the object you provide. It can contain a list of properties by which to sort mapped to the order (1 ascending, -1 descending).
+  select: ['inner_example'], # Array<String> | $select allows to pick which fields to include in the result.
+  _or: [3.56], # Array<Object> | Find all records that match any of the given criteria.
+  _and: [3.56] # Array<Object> | Find all records that match all of the given criteria.
 }
 
 begin
@@ -72,13 +72,13 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **search** | [**Object**](.md) | Filter results by the specified value. | [optional] |
-| **limit** | [**Object**](.md) | $limit will return only the number of results you specify. | [optional] |
-| **skip** | [**Object**](.md) | $skip will skip the specified number of results. | [optional] |
+| **search** | **String** | Filter results by the specified value. | [optional] |
+| **limit** | **Integer** | $limit will return only the number of results you specify. | [optional] |
+| **skip** | **Integer** | $skip will skip the specified number of results. | [optional] |
 | **sort** | [**Object**](.md) | $sort will sort based on the object you provide. It can contain a list of properties by which to sort mapped to the order (1 ascending, -1 descending). | [optional] |
-| **select** | [**Object**](.md) | $select allows to pick which fields to include in the result. | [optional] |
-| **_or** | [**Object**](.md) | Find all records that match any of the given criteria. | [optional] |
-| **_and** | [**Object**](.md) | Find all records that match all of the given criteria. | [optional] |
+| **select** | [**Array&lt;String&gt;**](String.md) | $select allows to pick which fields to include in the result. | [optional] |
+| **_or** | [**Array&lt;Object&gt;**](Object.md) | Find all records that match any of the given criteria. | [optional] |
+| **_and** | [**Array&lt;Object&gt;**](Object.md) | Find all records that match all of the given criteria. | [optional] |
 
 ### Return type
 
@@ -96,7 +96,7 @@ end
 
 ## get_number
 
-> Object get_number(id)
+> <GetNumber200Response> get_number(id)
 
 Get object by id
 
@@ -116,7 +116,7 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::NumbersApi.new
-id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
+id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 
 begin
   # Get object by id
@@ -131,7 +131,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> get_number_with_http_info(id)
+> <Array(<GetNumber200Response>, Integer, Hash)> get_number_with_http_info(id)
 
 ```ruby
 begin
@@ -139,7 +139,7 @@ begin
   data, status_code, headers = api_instance.get_number_with_http_info(id)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => Object
+  p data # => <GetNumber200Response>
 rescue CircuitID::ApiError => e
   puts "Error when calling NumbersApi->get_number_with_http_info: #{e}"
 end
@@ -149,11 +149,11 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | [**Object**](.md) | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
+| **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
 
 ### Return type
 
-**Object**
+[**GetNumber200Response**](GetNumber200Response.md)
 
 ### Authorization
 
@@ -167,7 +167,7 @@ end
 
 ## patch_number
 
-> Object patch_number(id, numbers)
+> <GetNumber200Response> patch_number(id, numbers)
 
 Patch object's data
 
@@ -187,8 +187,8 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::NumbersApi.new
-id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-numbers = CircuitID::Numbers.new({name: 3.56, country_code: 3.56, provider: 3.56, destination_type: announcements}) # Numbers | The request data.
+id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
+numbers = CircuitID::Numbers.new({name: 'name_example', country_code: 'country_code_example', provider: 'provider_example', destination_type: 'announcements'}) # Numbers | The request data.
 
 begin
   # Patch object's data
@@ -203,7 +203,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> patch_number_with_http_info(id, numbers)
+> <Array(<GetNumber200Response>, Integer, Hash)> patch_number_with_http_info(id, numbers)
 
 ```ruby
 begin
@@ -211,7 +211,7 @@ begin
   data, status_code, headers = api_instance.patch_number_with_http_info(id, numbers)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => Object
+  p data # => <GetNumber200Response>
 rescue CircuitID::ApiError => e
   puts "Error when calling NumbersApi->patch_number_with_http_info: #{e}"
 end
@@ -221,12 +221,12 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | [**Object**](.md) | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
+| **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
 | **numbers** | [**Numbers**](Numbers.md) | The request data. |  |
 
 ### Return type
 
-**Object**
+[**GetNumber200Response**](GetNumber200Response.md)
 
 ### Authorization
 

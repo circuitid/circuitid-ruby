@@ -4,17 +4,17 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  |  |
-| **description** | **Object** |  | [optional] |
-| **priority** | **Object** |  |  |
-| **type** | **Object** |  |  |
-| **target** | **Object** |  |  |
-| **direction** | **Object** |  | [optional] |
-| **param** | **Object** |  |  |
-| **hits** | **Object** |  | [optional] |
-| **ai** | **Object** |  | [optional] |
-| **status** | **Object** |  | [optional] |
-| **notification_hits** | **Object** |  | [optional] |
+| **name** | **String** |  |  |
+| **description** | **String** |  | [optional] |
+| **priority** | **Integer** |  |  |
+| **type** | **String** |  |  |
+| **target** | **String** |  |  |
+| **direction** | **String** |  | [optional] |
+| **param** | **String** |  |  |
+| **hits** | **Integer** |  | [optional] |
+| **ai** | **Integer** |  | [optional][default to AI::N0] |
+| **status** | **Integer** |  | [optional][default to STATUS::N1] |
+| **notification_hits** | **Integer** |  | [optional][default to 1] |
 
 ## Example
 

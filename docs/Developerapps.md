@@ -4,27 +4,27 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  |  |
-| **description** | **Object** |  | [optional] |
-| **type** | **Object** |  |  |
-| **visibility** | **Object** |  |  |
-| **require_id** | **Object** |  | [optional] |
-| **is_free** | **Object** |  | [optional] |
-| **fee_description** | **Object** |  | [optional] |
-| **integration_type** | **Object** |  |  |
-| **services** | **Object** |  |  |
-| **events** | **Object** |  | [optional] |
-| **user** | **Object** | ObjectId (unique 12 bytes ID) |  |
-| **webhook_url** | **Object** |  | [optional] |
-| **terms_of_service_url** | **Object** |  | [optional] |
-| **privacy_policy_url** | **Object** |  | [optional] |
+| **name** | **String** |  |  |
+| **description** | **String** |  | [optional] |
+| **type** | **String** |  |  |
+| **visibility** | **String** |  |  |
+| **require_id** | **Integer** |  | [optional][default to REQUIRE_ID::N0] |
+| **is_free** | **Integer** |  | [optional][default to IS_FREE::N1] |
+| **fee_description** | **String** |  | [optional] |
+| **integration_type** | **String** |  |  |
+| **services** | **Array&lt;String&gt;** |  |  |
+| **events** | **Array&lt;String&gt;** |  | [optional] |
+| **user** | **String** | ObjectId (unique 12 bytes ID) |  |
+| **webhook_url** | **String** |  | [optional] |
+| **terms_of_service_url** | **String** |  | [optional] |
+| **privacy_policy_url** | **String** |  | [optional] |
 | **permissions** | **Object** |  | [optional] |
-| **status** | **Object** |  |  |
-| **webhook_auth_type** | **Object** |  | [optional] |
-| **webhook_username** | **Object** |  | [optional] |
-| **webhook_password** | **Object** |  | [optional] |
-| **webhook_token_name** | **Object** |  | [optional] |
-| **webhook_token** | **Object** |  | [optional] |
+| **status** | **String** |  | [default to &#39;pending&#39;] |
+| **webhook_auth_type** | **String** |  | [optional] |
+| **webhook_username** | **String** |  | [optional] |
+| **webhook_password** | **String** |  | [optional] |
+| **webhook_token_name** | **String** |  | [optional] |
+| **webhook_token** | **String** |  | [optional] |
 
 ## Example
 

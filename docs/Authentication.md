@@ -4,9 +4,9 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **username** | **Object** |  |  |
-| **password** | **Object** |  |  |
-| **strategy** | **Object** |  |  |
+| **username** | **String** |  |  |
+| **password** | **String** |  |  |
+| **strategy** | **String** |  |  |
 
 ## Example
 

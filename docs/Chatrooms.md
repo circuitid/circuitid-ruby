@@ -4,10 +4,10 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  | [optional] |
+| **name** | **String** |  | [optional] |
 | **users** | **Object** |  |  |
-| **avatar** | **Object** |  | [optional] |
-| **direct** | **Object** |  | [optional] |
+| **avatar** | **String** |  | [optional] |
+| **direct** | **Boolean** |  | [optional] |
 
 ## Example
 

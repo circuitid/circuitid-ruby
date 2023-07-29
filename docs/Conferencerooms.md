@@ -4,15 +4,15 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  |  |
-| **passcode** | **Object** |  | [optional] |
-| **dial_in_pin** | **Object** |  | [optional] |
-| **is_user_room** | **Object** |  | [optional] |
-| **is_chat_room** | **Object** |  | [optional] |
-| **lobby** | **Object** |  | [optional] |
-| **require_passcode** | **Object** |  | [optional] |
-| **share** | **Object** |  | [optional] |
-| **chatroom** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
+| **name** | **String** |  |  |
+| **passcode** | **String** |  | [optional] |
+| **dial_in_pin** | **Integer** |  | [optional] |
+| **is_user_room** | **Boolean** |  | [optional] |
+| **is_chat_room** | **Boolean** |  | [optional] |
+| **lobby** | **Integer** |  | [optional][default to LOBBY::N0] |
+| **require_passcode** | **Integer** |  | [optional][default to REQUIRE_PASSCODE::N0] |
+| **share** | **String** |  | [optional] |
+| **chatroom** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 
 ## Example
 

@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **created_at** | **Object** |  | [optional] |
-| **updated_at** | **Object** |  | [optional] |
+| **created_at** | **Time** |  | [optional] |
+| **updated_at** | **Time** |  | [optional] |
 
 ## Example
 

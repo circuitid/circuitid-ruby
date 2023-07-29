@@ -4,10 +4,10 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **group** | **Object** | ObjectId (unique 12 bytes ID) |  |
-| **object** | **Object** | ObjectId (unique 12 bytes ID) |  |
-| **priority** | **Object** |  | [optional] |
-| **ref** | **Object** |  |  |
+| **group** | **String** | ObjectId (unique 12 bytes ID) |  |
+| **object** | **String** | ObjectId (unique 12 bytes ID) |  |
+| **priority** | **Integer** |  | [optional] |
+| **ref** | **String** |  |  |
 
 ## Example
 

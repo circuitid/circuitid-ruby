@@ -4,28 +4,28 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  |  |
-| **campaign_id** | **Object** |  | [optional] |
-| **brand_id** | **Object** |  |  |
-| **order** | **Object** | ObjectId (unique 12 bytes ID) |  |
-| **subscriber_optin** | **Object** |  | [optional] |
-| **subscriber_optout** | **Object** |  | [optional] |
-| **subscriber_help** | **Object** |  | [optional] |
-| **number_pool** | **Object** |  | [optional] |
-| **direct_lending** | **Object** |  | [optional] |
-| **embedded_link** | **Object** |  | [optional] |
-| **embedded_phone** | **Object** |  | [optional] |
-| **affiliate_marketing** | **Object** |  | [optional] |
-| **age_gated** | **Object** |  | [optional] |
+| **name** | **String** |  |  |
+| **campaign_id** | **String** |  | [optional] |
+| **brand_id** | **String** |  |  |
+| **order** | **String** | ObjectId (unique 12 bytes ID) |  |
+| **subscriber_optin** | **Integer** |  | [optional] |
+| **subscriber_optout** | **Integer** |  | [optional] |
+| **subscriber_help** | **Integer** |  | [optional] |
+| **number_pool** | **Integer** |  | [optional] |
+| **direct_lending** | **Integer** |  | [optional] |
+| **embedded_link** | **Integer** |  | [optional] |
+| **embedded_phone** | **Integer** |  | [optional] |
+| **affiliate_marketing** | **Integer** |  | [optional] |
+| **age_gated** | **Integer** |  | [optional] |
 | **mnos** | **Object** |  | [optional] |
-| **reference_id** | **Object** |  | [optional] |
-| **use_case** | **Object** |  | [optional] |
-| **sub_use_cases** | **Object** |  | [optional] |
-| **sample1** | **Object** |  | [optional] |
-| **sample2** | **Object** |  | [optional] |
-| **sample3** | **Object** |  | [optional] |
-| **sample4** | **Object** |  | [optional] |
-| **sample5** | **Object** |  | [optional] |
+| **reference_id** | **String** |  | [optional] |
+| **use_case** | **String** |  | [optional] |
+| **sub_use_cases** | **Array&lt;Object&gt;** |  | [optional] |
+| **sample1** | **String** |  | [optional] |
+| **sample2** | **String** |  | [optional] |
+| **sample3** | **String** |  | [optional] |
+| **sample4** | **String** |  | [optional] |
+| **sample5** | **String** |  | [optional] |
 
 ## Example
 

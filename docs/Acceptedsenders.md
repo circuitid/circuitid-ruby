@@ -4,10 +4,10 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **object** | **Object** | ObjectId (unique 12 bytes ID) |  |
-| **service** | **Object** | ObjectId (unique 12 bytes ID) |  |
-| **service_ref** | **Object** |  |  |
-| **ref** | **Object** |  |  |
+| **object** | **String** | ObjectId (unique 12 bytes ID) |  |
+| **service** | **String** | ObjectId (unique 12 bytes ID) |  |
+| **service_ref** | **String** |  |  |
+| **ref** | **String** |  |  |
 
 ## Example
 

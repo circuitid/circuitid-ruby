@@ -4,11 +4,11 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  |  |
-| **order** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **inbound_notification** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **outbound_notification** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **number** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
+| **name** | **String** |  |  |
+| **order** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **inbound_notification** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **outbound_notification** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **number** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 
 ## Example
 

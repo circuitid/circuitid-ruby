@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **created_by_user_id** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **updated_by_user_id** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
+| **created_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **updated_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 
 ## Example
 

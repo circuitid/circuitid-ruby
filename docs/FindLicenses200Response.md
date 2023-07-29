@@ -4,10 +4,10 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **total** | **Object** |  |  |
-| **limit** | **Object** |  |  |
-| **skip** | **Object** |  |  |
-| **data** | **Object** |  |  |
+| **total** | **Integer** |  |  |
+| **limit** | **Integer** |  |  |
+| **skip** | **Integer** |  |  |
+| **data** | [**Array&lt;Licenses&gt;**](Licenses.md) |  |  |
 
 ## Example
 

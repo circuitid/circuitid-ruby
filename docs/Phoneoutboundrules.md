@@ -4,10 +4,10 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  |  |
-| **description** | **Object** |  | [optional] |
-| **status** | **Object** |  | [optional] |
-| **outbound_caller_id** | **Object** |  | [optional] |
+| **name** | **String** |  |  |
+| **description** | **String** |  | [optional] |
+| **status** | **Integer** |  | [optional][default to STATUS::N1] |
+| **outbound_caller_id** | **String** |  | [optional] |
 
 ## Example
 

@@ -4,11 +4,11 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  |  |
-| **user** | **Object** | ObjectId (unique 12 bytes ID) |  |
-| **token** | **Object** |  |  |
-| **expires_in_years** | **Object** |  |  |
-| **status** | **Object** |  | [optional] |
+| **name** | **String** |  |  |
+| **user** | **String** | ObjectId (unique 12 bytes ID) |  |
+| **token** | **String** |  |  |
+| **expires_in_years** | **Integer** |  | [default to 1] |
+| **status** | **Integer** |  | [optional][default to STATUS::N1] |
 
 ## Example
 

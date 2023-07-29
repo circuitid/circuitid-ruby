@@ -4,16 +4,16 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  |  |
-| **phoneinboundrule** | **Object** | ObjectId (unique 12 bytes ID) |  |
-| **timeschedule** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **timeout** | **Object** |  | [optional] |
-| **status** | **Object** |  | [optional] |
-| **priority** | **Object** |  |  |
-| **destination_type** | **Object** |  |  |
-| **destination** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **ref** | **Object** |  | [optional] |
-| **call_forwarding_destination** | **Object** |  | [optional] |
+| **name** | **String** |  |  |
+| **phoneinboundrule** | **String** | ObjectId (unique 12 bytes ID) |  |
+| **timeschedule** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **timeout** | **Integer** |  | [optional] |
+| **status** | **Integer** |  | [optional][default to STATUS::N1] |
+| **priority** | **Integer** |  | [default to 1] |
+| **destination_type** | **String** |  |  |
+| **destination** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **ref** | **String** |  | [optional] |
+| **call_forwarding_destination** | **String** |  | [optional] |
 
 ## Example
 

@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  |  |
-| **status** | **Object** |  | [optional] |
+| **name** | **String** |  |  |
+| **status** | **Integer** |  | [optional][default to STATUS::N0] |
 
 ## Example
 

@@ -4,9 +4,9 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  |  |
-| **description** | **Object** |  | [optional] |
-| **outbound_caller_id** | **Object** |  | [optional] |
+| **name** | **String** |  |  |
+| **description** | **String** |  | [optional] |
+| **outbound_caller_id** | **String** |  | [optional] |
 
 ## Example
 

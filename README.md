@@ -12,7 +12,7 @@ We are excited to have you on board and are confident that this documentation si
 Happy coding!
 
 
-- API version: 0.47.16
+- API version: 0.47.19
 - Package version: 1.0.0
 
 For more information, please visit [https://www.circuitid.com/](https://www.circuitid.com/)
@@ -72,7 +72,7 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::AcceptedSendersApi.new
-acceptedsenders = CircuitID::Acceptedsenders.new({object: 3.56, service: 3.56, service_ref: 3.56, ref: users}) # Acceptedsenders | The JSON object that will be posted to the REST API endpoint.
+acceptedsenders = CircuitID::Acceptedsenders.new({object: 'object_example', service: 'service_example', service_ref: 'service_ref_example', ref: 'users'}) # Acceptedsenders | The JSON object that will be posted to the REST API endpoint.
 
 begin
   #Create a new object
@@ -305,6 +305,7 @@ Class | Method | HTTP request | Description
  - [CircuitID::Contacts](docs/Contacts.md)
  - [CircuitID::Conversationmessages](docs/Conversationmessages.md)
  - [CircuitID::Conversations](docs/Conversations.md)
+ - [CircuitID::CreateAuthentication200Response](docs/CreateAuthentication200Response.md)
  - [CircuitID::Customers](docs/Customers.md)
  - [CircuitID::Developerapps](docs/Developerapps.md)
  - [CircuitID::Developerappsubscriptions](docs/Developerappsubscriptions.md)
@@ -315,6 +316,7 @@ Class | Method | HTTP request | Description
  - [CircuitID::Find](docs/Find.md)
  - [CircuitID::FindAcceptedSenders200Response](docs/FindAcceptedSenders200Response.md)
  - [CircuitID::FindAnnouncements200Response](docs/FindAnnouncements200Response.md)
+ - [CircuitID::FindAppMarketplace200Response](docs/FindAppMarketplace200Response.md)
  - [CircuitID::FindCallQueueAgents200Response](docs/FindCallQueueAgents200Response.md)
  - [CircuitID::FindCallQueues200Response](docs/FindCallQueues200Response.md)
  - [CircuitID::FindChatRooms200Response](docs/FindChatRooms200Response.md)
@@ -355,6 +357,47 @@ Class | Method | HTTP request | Description
  - [CircuitID::FindUsers200Response](docs/FindUsers200Response.md)
  - [CircuitID::FindVirtualExtensions200Response](docs/FindVirtualExtensions200Response.md)
  - [CircuitID::Firewall](docs/Firewall.md)
+ - [CircuitID::GetAcceptedSender200Response](docs/GetAcceptedSender200Response.md)
+ - [CircuitID::GetAnnouncement200Response](docs/GetAnnouncement200Response.md)
+ - [CircuitID::GetCallQueue200Response](docs/GetCallQueue200Response.md)
+ - [CircuitID::GetCallQueueAgent200Response](docs/GetCallQueueAgent200Response.md)
+ - [CircuitID::GetChatRoom200Response](docs/GetChatRoom200Response.md)
+ - [CircuitID::GetClient200Response](docs/GetClient200Response.md)
+ - [CircuitID::GetConferenceRoom200Response](docs/GetConferenceRoom200Response.md)
+ - [CircuitID::GetContact200Response](docs/GetContact200Response.md)
+ - [CircuitID::GetConversation200Response](docs/GetConversation200Response.md)
+ - [CircuitID::GetConversationMessage200Response](docs/GetConversationMessage200Response.md)
+ - [CircuitID::GetCustomer200Response](docs/GetCustomer200Response.md)
+ - [CircuitID::GetDeveloperApp200Response](docs/GetDeveloperApp200Response.md)
+ - [CircuitID::GetDeveloperAppSubscription200Response](docs/GetDeveloperAppSubscription200Response.md)
+ - [CircuitID::GetDomain200Response](docs/GetDomain200Response.md)
+ - [CircuitID::GetFax200Response](docs/GetFax200Response.md)
+ - [CircuitID::GetFaxAccount200Response](docs/GetFaxAccount200Response.md)
+ - [CircuitID::GetFirewall200Response](docs/GetFirewall200Response.md)
+ - [CircuitID::GetGroup200Response](docs/GetGroup200Response.md)
+ - [CircuitID::GetGroupMember200Response](docs/GetGroupMember200Response.md)
+ - [CircuitID::GetHoliday200Response](docs/GetHoliday200Response.md)
+ - [CircuitID::GetInvoice200Response](docs/GetInvoice200Response.md)
+ - [CircuitID::GetInvoiceItem200Response](docs/GetInvoiceItem200Response.md)
+ - [CircuitID::GetLicense200Response](docs/GetLicense200Response.md)
+ - [CircuitID::GetMenu200Response](docs/GetMenu200Response.md)
+ - [CircuitID::GetMenuOption200Response](docs/GetMenuOption200Response.md)
+ - [CircuitID::GetMessageBrand200Response](docs/GetMessageBrand200Response.md)
+ - [CircuitID::GetMessageCampaign200Response](docs/GetMessageCampaign200Response.md)
+ - [CircuitID::GetNumber200Response](docs/GetNumber200Response.md)
+ - [CircuitID::GetNumberPort200Response](docs/GetNumberPort200Response.md)
+ - [CircuitID::GetOffice200Response](docs/GetOffice200Response.md)
+ - [CircuitID::GetPhoneInboundRule200Response](docs/GetPhoneInboundRule200Response.md)
+ - [CircuitID::GetPhoneInboundRuleAction200Response](docs/GetPhoneInboundRuleAction200Response.md)
+ - [CircuitID::GetPhoneOutboundRule200Response](docs/GetPhoneOutboundRule200Response.md)
+ - [CircuitID::GetPhoneOutboundRuleAction200Response](docs/GetPhoneOutboundRuleAction200Response.md)
+ - [CircuitID::GetRateCenter200Response](docs/GetRateCenter200Response.md)
+ - [CircuitID::GetServer200Response](docs/GetServer200Response.md)
+ - [CircuitID::GetTimeSchedule200Response](docs/GetTimeSchedule200Response.md)
+ - [CircuitID::GetUser200Response](docs/GetUser200Response.md)
+ - [CircuitID::GetUserToken200Response](docs/GetUserToken200Response.md)
+ - [CircuitID::GetVirtualExtension200Response](docs/GetVirtualExtension200Response.md)
+ - [CircuitID::Getdirectory200Response](docs/Getdirectory200Response.md)
  - [CircuitID::Groupmembers](docs/Groupmembers.md)
  - [CircuitID::Groups](docs/Groups.md)
  - [CircuitID::Holidays](docs/Holidays.md)

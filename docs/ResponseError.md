@@ -4,11 +4,11 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  | [optional] |
-| **message** | **Object** |  | [optional] |
-| **code** | **Object** |  | [optional] |
-| **class_name** | **Object** |  | [optional] |
-| **errors** | **Object** |  | [optional] |
+| **name** | **String** |  | [optional] |
+| **message** | **String** |  | [optional] |
+| **code** | **Integer** |  | [optional] |
+| **class_name** | **String** |  | [optional] |
+| **errors** | **Array&lt;String&gt;** |  | [optional] |
 
 ## Example
 

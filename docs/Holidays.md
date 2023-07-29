@@ -4,15 +4,15 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  |  |
-| **object** | **Object** | ObjectId (unique 12 bytes ID) |  |
-| **object_ref** | **Object** |  |  |
-| **date_time_ranges** | **Object** |  |  |
-| **status** | **Object** |  | [optional] |
-| **destination_type** | **Object** |  |  |
-| **destination** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **ref** | **Object** |  | [optional] |
-| **call_forwarding_destination** | **Object** |  | [optional] |
+| **name** | **String** |  |  |
+| **object** | **String** | ObjectId (unique 12 bytes ID) |  |
+| **object_ref** | **String** |  |  |
+| **date_time_ranges** | **Array&lt;Array&lt;Time&gt;&gt;** |  |  |
+| **status** | **Integer** |  | [optional][default to STATUS::N1] |
+| **destination_type** | **String** |  |  |
+| **destination** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **ref** | **String** |  | [optional] |
+| **call_forwarding_destination** | **String** |  | [optional] |
 
 ## Example
 

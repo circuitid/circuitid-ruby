@@ -4,41 +4,41 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **email** | **Object** |  |  |
-| **password** | **Object** |  |  |
-| **sip_password** | **Object** |  |  |
-| **turn_password** | **Object** |  | [optional] |
-| **first** | **Object** |  |  |
-| **last** | **Object** |  |  |
-| **mobile_phone** | **Object** |  | [optional] |
-| **business_phone** | **Object** |  | [optional] |
-| **extension** | **Object** |  | [optional] |
-| **custom_caller_id** | **Object** |  | [optional] |
-| **job_title** | **Object** |  | [optional] |
-| **department** | **Object** |  | [optional] |
-| **office** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **avatar** | **Object** |  | [optional] |
-| **language** | **Object** |  | [optional] |
-| **is_primary** | **Object** |  | [optional] |
-| **status** | **Object** |  | [optional] |
-| **vm_greeting_type** | **Object** |  | [optional] |
-| **vm_timeout** | **Object** |  | [optional] |
-| **vm_file** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **vm_playback_number** | **Object** |  | [optional] |
-| **pin** | **Object** |  | [optional] |
-| **number** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **region** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **caller_id_number** | **Object** |  | [optional] |
-| **admin_permission** | **Object** |  | [optional] |
-| **billing_permission** | **Object** |  | [optional] |
-| **phone_permission** | **Object** |  | [optional] |
-| **agile_permission** | **Object** |  | [optional] |
-| **job_server_permission** | **Object** |  | [optional] |
-| **media_server_permission** | **Object** |  | [optional] |
-| **mail_server_permission** | **Object** |  | [optional] |
-| **super_admin_permission** | **Object** |  | [optional] |
-| **timezone** | **Object** |  |  |
-| **vm_transcription** | **Object** |  | [optional] |
+| **email** | **String** |  |  |
+| **password** | **String** |  |  |
+| **sip_password** | **String** |  |  |
+| **turn_password** | **String** |  | [optional] |
+| **first** | **String** |  |  |
+| **last** | **String** |  |  |
+| **mobile_phone** | **String** |  | [optional] |
+| **business_phone** | **String** |  | [optional] |
+| **extension** | **Integer** |  | [optional] |
+| **custom_caller_id** | **Integer** |  | [optional] |
+| **job_title** | **String** |  | [optional] |
+| **department** | **String** |  | [optional] |
+| **office** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **avatar** | **String** |  | [optional] |
+| **language** | **String** |  | [optional][default to &#39;en&#39;] |
+| **is_primary** | **Integer** |  | [optional][default to IS_PRIMARY::N0] |
+| **status** | **String** |  | [optional][default to &#39;active&#39;] |
+| **vm_greeting_type** | **String** |  | [optional][default to &#39;default&#39;] |
+| **vm_timeout** | **Integer** |  | [optional][default to 20] |
+| **vm_file** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **vm_playback_number** | **String** |  | [optional] |
+| **pin** | **Integer** |  | [optional][default to 1234] |
+| **number** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **region** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **caller_id_number** | **String** |  | [optional] |
+| **admin_permission** | **String** |  | [optional] |
+| **billing_permission** | **String** |  | [optional] |
+| **phone_permission** | **String** |  | [optional] |
+| **agile_permission** | **String** |  | [optional] |
+| **job_server_permission** | **String** |  | [optional] |
+| **media_server_permission** | **String** |  | [optional] |
+| **mail_server_permission** | **String** |  | [optional] |
+| **super_admin_permission** | **String** |  | [optional] |
+| **timezone** | **String** |  | [default to &#39;America/New_York&#39;] |
+| **vm_transcription** | **Integer** |  | [optional][default to VM_TRANSCRIPTION::N0] |
 | **communication** | **Object** |  | [optional] |
 
 ## Example

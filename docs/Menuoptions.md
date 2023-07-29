@@ -4,13 +4,13 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  |  |
-| **digit** | **Object** |  |  |
+| **name** | **String** |  |  |
+| **digit** | **Integer** |  |  |
 | **menus** | **Object** |  |  |
-| **destination_type** | **Object** |  |  |
-| **destination** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **ref** | **Object** |  | [optional] |
-| **call_forwarding_destination** | **Object** |  | [optional] |
+| **destination_type** | **String** |  |  |
+| **destination** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **ref** | **String** |  | [optional] |
+| **call_forwarding_destination** | **String** |  | [optional] |
 
 ## Example
 

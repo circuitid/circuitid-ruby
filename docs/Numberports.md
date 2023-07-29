@@ -4,21 +4,21 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  |  |
-| **type** | **Object** |  |  |
-| **type_of_service** | **Object** |  |  |
-| **authorized_person** | **Object** |  |  |
-| **desired_due_date** | **Object** |  |  |
-| **account_number** | **Object** |  |  |
-| **account_phone_number** | **Object** |  |  |
-| **office** | **Object** | ObjectId (unique 12 bytes ID) |  |
-| **e911** | **Object** |  | [optional] |
-| **invoice** | **Object** | ObjectId (unique 12 bytes ID) |  |
-| **status** | **Object** |  |  |
-| **destination_type** | **Object** |  |  |
-| **destination** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **ref** | **Object** |  | [optional] |
-| **call_forwarding_destination** | **Object** |  | [optional] |
+| **name** | **String** |  |  |
+| **type** | **String** |  |  |
+| **type_of_service** | **String** |  |  |
+| **authorized_person** | **String** |  |  |
+| **desired_due_date** | **Time** |  |  |
+| **account_number** | **String** |  |  |
+| **account_phone_number** | **String** |  |  |
+| **office** | **String** | ObjectId (unique 12 bytes ID) |  |
+| **e911** | **Integer** |  | [optional][default to E911::N0] |
+| **invoice** | **String** | ObjectId (unique 12 bytes ID) |  |
+| **status** | **String** |  | [default to &#39;processing&#39;] |
+| **destination_type** | **String** |  |  |
+| **destination** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **ref** | **String** |  | [optional] |
+| **call_forwarding_destination** | **String** |  | [optional] |
 
 ## Example
 

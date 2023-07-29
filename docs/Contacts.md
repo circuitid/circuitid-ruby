@@ -4,16 +4,16 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **email** | **Object** |  | [optional] |
-| **first** | **Object** |  |  |
-| **last** | **Object** |  | [optional] |
-| **mobile_phone** | **Object** |  | [optional] |
-| **business_phone** | **Object** |  | [optional] |
-| **fax_phone** | **Object** |  | [optional] |
-| **extension** | **Object** |  | [optional] |
-| **job_title** | **Object** |  | [optional] |
-| **department** | **Object** |  | [optional] |
-| **avatar** | **Object** |  | [optional] |
+| **email** | **String** |  | [optional] |
+| **first** | **String** |  |  |
+| **last** | **String** |  | [optional] |
+| **mobile_phone** | **String** |  | [optional] |
+| **business_phone** | **String** |  | [optional] |
+| **fax_phone** | **String** |  | [optional] |
+| **extension** | **Integer** |  | [optional] |
+| **job_title** | **String** |  | [optional] |
+| **department** | **String** |  | [optional] |
+| **avatar** | **String** |  | [optional] |
 
 ## Example
 

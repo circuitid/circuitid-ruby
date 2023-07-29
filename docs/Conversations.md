@@ -4,12 +4,12 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **contacts** | **Object** |  | [optional] |
-| **number** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **channel** | **Object** |  |  |
-| **ref** | **Object** |  |  |
-| **object** | **Object** | ObjectId (unique 12 bytes ID) |  |
-| **status** | **Object** |  |  |
+| **contacts** | **Array&lt;Object&gt;** |  | [optional] |
+| **number** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **channel** | **String** |  |  |
+| **ref** | **String** |  |  |
+| **object** | **String** | ObjectId (unique 12 bytes ID) |  |
+| **status** | **String** |  | [default to &#39;open&#39;] |
 
 ## Example
 

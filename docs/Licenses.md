@@ -4,10 +4,10 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **order** | **Object** | ObjectId (unique 12 bytes ID) |  |
-| **object** | **Object** | ObjectId (unique 12 bytes ID) |  |
-| **ref** | **Object** |  |  |
-| **field** | **Object** |  | [optional] |
+| **order** | **String** | ObjectId (unique 12 bytes ID) |  |
+| **object** | **String** | ObjectId (unique 12 bytes ID) |  |
+| **ref** | **String** |  |  |
+| **field** | **String** |  | [optional] |
 
 ## Example
 

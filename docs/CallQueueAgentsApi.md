@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_call_queue_agent
 
-> Object create_call_queue_agent(callqueueagents)
+> <GetCallQueueAgent200Response> create_call_queue_agent(callqueueagents)
 
 Create a new object
 
@@ -33,7 +33,7 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::CallQueueAgentsApi.new
-callqueueagents = CircuitID::Callqueueagents.new({callqueue: 3.56, user: 3.56, priority: 3.56, tier: 3.56}) # Callqueueagents | The JSON object that will be posted to the REST API endpoint.
+callqueueagents = CircuitID::Callqueueagents.new({callqueue: 'callqueue_example', user: 'user_example', priority: 37, tier: 37}) # Callqueueagents | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
@@ -48,7 +48,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> create_call_queue_agent_with_http_info(callqueueagents)
+> <Array(<GetCallQueueAgent200Response>, Integer, Hash)> create_call_queue_agent_with_http_info(callqueueagents)
 
 ```ruby
 begin
@@ -56,7 +56,7 @@ begin
   data, status_code, headers = api_instance.create_call_queue_agent_with_http_info(callqueueagents)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => Object
+  p data # => <GetCallQueueAgent200Response>
 rescue CircuitID::ApiError => e
   puts "Error when calling CallQueueAgentsApi->create_call_queue_agent_with_http_info: #{e}"
 end
@@ -70,7 +70,7 @@ end
 
 ### Return type
 
-**Object**
+[**GetCallQueueAgent200Response**](GetCallQueueAgent200Response.md)
 
 ### Authorization
 
@@ -105,13 +105,13 @@ end
 
 api_instance = CircuitID::CallQueueAgentsApi.new
 opts = {
-  search: TODO, # Object | Filter results by the specified value.
-  limit: TODO, # Object | $limit will return only the number of results you specify.
-  skip: TODO, # Object | $skip will skip the specified number of results.
-  sort: TODO, # Object | $sort will sort based on the object you provide. It can contain a list of properties by which to sort mapped to the order (1 ascending, -1 descending).
-  select: TODO, # Object | $select allows to pick which fields to include in the result.
-  _or: TODO, # Object | Find all records that match any of the given criteria.
-  _and: TODO # Object | Find all records that match all of the given criteria.
+  search: 'search_example', # String | Filter results by the specified value.
+  limit: 56, # Integer | $limit will return only the number of results you specify.
+  skip: 56, # Integer | $skip will skip the specified number of results.
+  sort: { ... }, # Object | $sort will sort based on the object you provide. It can contain a list of properties by which to sort mapped to the order (1 ascending, -1 descending).
+  select: ['inner_example'], # Array<String> | $select allows to pick which fields to include in the result.
+  _or: [3.56], # Array<Object> | Find all records that match any of the given criteria.
+  _and: [3.56] # Array<Object> | Find all records that match all of the given criteria.
 }
 
 begin
@@ -145,13 +145,13 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **search** | [**Object**](.md) | Filter results by the specified value. | [optional] |
-| **limit** | [**Object**](.md) | $limit will return only the number of results you specify. | [optional] |
-| **skip** | [**Object**](.md) | $skip will skip the specified number of results. | [optional] |
+| **search** | **String** | Filter results by the specified value. | [optional] |
+| **limit** | **Integer** | $limit will return only the number of results you specify. | [optional] |
+| **skip** | **Integer** | $skip will skip the specified number of results. | [optional] |
 | **sort** | [**Object**](.md) | $sort will sort based on the object you provide. It can contain a list of properties by which to sort mapped to the order (1 ascending, -1 descending). | [optional] |
-| **select** | [**Object**](.md) | $select allows to pick which fields to include in the result. | [optional] |
-| **_or** | [**Object**](.md) | Find all records that match any of the given criteria. | [optional] |
-| **_and** | [**Object**](.md) | Find all records that match all of the given criteria. | [optional] |
+| **select** | [**Array&lt;String&gt;**](String.md) | $select allows to pick which fields to include in the result. | [optional] |
+| **_or** | [**Array&lt;Object&gt;**](Object.md) | Find all records that match any of the given criteria. | [optional] |
+| **_and** | [**Array&lt;Object&gt;**](Object.md) | Find all records that match all of the given criteria. | [optional] |
 
 ### Return type
 
@@ -169,7 +169,7 @@ end
 
 ## get_call_queue_agent
 
-> Object get_call_queue_agent(id)
+> <GetCallQueueAgent200Response> get_call_queue_agent(id)
 
 Get object by id
 
@@ -189,7 +189,7 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::CallQueueAgentsApi.new
-id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
+id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 
 begin
   # Get object by id
@@ -204,7 +204,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> get_call_queue_agent_with_http_info(id)
+> <Array(<GetCallQueueAgent200Response>, Integer, Hash)> get_call_queue_agent_with_http_info(id)
 
 ```ruby
 begin
@@ -212,7 +212,7 @@ begin
   data, status_code, headers = api_instance.get_call_queue_agent_with_http_info(id)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => Object
+  p data # => <GetCallQueueAgent200Response>
 rescue CircuitID::ApiError => e
   puts "Error when calling CallQueueAgentsApi->get_call_queue_agent_with_http_info: #{e}"
 end
@@ -222,11 +222,11 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | [**Object**](.md) | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
+| **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
 
 ### Return type
 
-**Object**
+[**GetCallQueueAgent200Response**](GetCallQueueAgent200Response.md)
 
 ### Authorization
 
@@ -240,7 +240,7 @@ end
 
 ## patch_call_queue_agent
 
-> Object patch_call_queue_agent(id, callqueueagents)
+> <GetCallQueueAgent200Response> patch_call_queue_agent(id, callqueueagents)
 
 Patch object's data
 
@@ -260,8 +260,8 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::CallQueueAgentsApi.new
-id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-callqueueagents = CircuitID::Callqueueagents.new({callqueue: 3.56, user: 3.56, priority: 3.56, tier: 3.56}) # Callqueueagents | The request data.
+id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
+callqueueagents = CircuitID::Callqueueagents.new({callqueue: 'callqueue_example', user: 'user_example', priority: 37, tier: 37}) # Callqueueagents | The request data.
 
 begin
   # Patch object's data
@@ -276,7 +276,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> patch_call_queue_agent_with_http_info(id, callqueueagents)
+> <Array(<GetCallQueueAgent200Response>, Integer, Hash)> patch_call_queue_agent_with_http_info(id, callqueueagents)
 
 ```ruby
 begin
@@ -284,7 +284,7 @@ begin
   data, status_code, headers = api_instance.patch_call_queue_agent_with_http_info(id, callqueueagents)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => Object
+  p data # => <GetCallQueueAgent200Response>
 rescue CircuitID::ApiError => e
   puts "Error when calling CallQueueAgentsApi->patch_call_queue_agent_with_http_info: #{e}"
 end
@@ -294,12 +294,12 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | [**Object**](.md) | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
+| **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
 | **callqueueagents** | [**Callqueueagents**](Callqueueagents.md) | The request data. |  |
 
 ### Return type
 
-**Object**
+[**GetCallQueueAgent200Response**](GetCallQueueAgent200Response.md)
 
 ### Authorization
 
@@ -313,7 +313,7 @@ end
 
 ## remove_call_queue_agent
 
-> Object remove_call_queue_agent(id)
+> <GetCallQueueAgent200Response> remove_call_queue_agent(id)
 
 Delete object by id
 
@@ -333,7 +333,7 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::CallQueueAgentsApi.new
-id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
+id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 
 begin
   # Delete object by id
@@ -348,7 +348,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> remove_call_queue_agent_with_http_info(id)
+> <Array(<GetCallQueueAgent200Response>, Integer, Hash)> remove_call_queue_agent_with_http_info(id)
 
 ```ruby
 begin
@@ -356,7 +356,7 @@ begin
   data, status_code, headers = api_instance.remove_call_queue_agent_with_http_info(id)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => Object
+  p data # => <GetCallQueueAgent200Response>
 rescue CircuitID::ApiError => e
   puts "Error when calling CallQueueAgentsApi->remove_call_queue_agent_with_http_info: #{e}"
 end
@@ -366,11 +366,11 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | [**Object**](.md) | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
+| **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
 
 ### Return type
 
-**Object**
+[**GetCallQueueAgent200Response**](GetCallQueueAgent200Response.md)
 
 ### Authorization
 

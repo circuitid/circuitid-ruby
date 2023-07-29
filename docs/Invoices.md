@@ -4,15 +4,15 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **amount** | **Object** |  |  |
-| **subtotal** | **Object** |  |  |
-| **tax** | **Object** |  | [optional] |
-| **setup** | **Object** |  | [optional] |
-| **discount** | **Object** |  | [optional] |
-| **closed_at** | **Object** |  | [optional] |
-| **due_at** | **Object** |  |  |
-| **status** | **Object** |  |  |
-| **error** | **Object** |  | [optional] |
+| **amount** | **Integer** |  |  |
+| **subtotal** | **Integer** |  |  |
+| **tax** | **Integer** |  | [optional] |
+| **setup** | **Integer** |  | [optional] |
+| **discount** | **Integer** |  | [optional] |
+| **closed_at** | **Time** |  | [optional] |
+| **due_at** | **Time** |  |  |
+| **status** | **String** |  | [default to &#39;open&#39;] |
+| **error** | **String** |  | [optional] |
 
 ## Example
 

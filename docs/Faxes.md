@@ -4,23 +4,23 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **caller_id_number** | **Object** |  |  |
-| **caller_destination** | **Object** |  |  |
-| **pages** | **Object** |  | [optional] |
-| **status_code** | **Object** |  | [optional] |
-| **transfered_pages** | **Object** |  | [optional] |
-| **status** | **Object** |  |  |
-| **error** | **Object** |  | [optional] |
-| **type** | **Object** |  |  |
-| **order** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **file** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **contact** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **number** | **Object** | ObjectId (unique 12 bytes ID) |  |
-| **fax_account** | **Object** | ObjectId (unique 12 bytes ID) |  |
-| **retries** | **Object** |  | [optional] |
-| **invoice** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **sender_email** | **Object** |  | [optional] |
-| **sender_name** | **Object** |  | [optional] |
+| **caller_id_number** | **String** |  |  |
+| **caller_destination** | **String** |  |  |
+| **pages** | **Integer** |  | [optional][default to 0] |
+| **status_code** | **Integer** |  | [optional] |
+| **transfered_pages** | **Integer** |  | [optional][default to 0] |
+| **status** | **String** |  | [default to &#39;processing&#39;] |
+| **error** | **String** |  | [optional] |
+| **type** | **String** |  |  |
+| **order** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **file** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **contact** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **number** | **String** | ObjectId (unique 12 bytes ID) |  |
+| **fax_account** | **String** | ObjectId (unique 12 bytes ID) |  |
+| **retries** | **Integer** |  | [optional][default to 0] |
+| **invoice** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **sender_email** | **String** |  | [optional] |
+| **sender_name** | **String** |  | [optional] |
 
 ## Example
 

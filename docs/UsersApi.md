@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_user
 
-> Object create_user(users)
+> <GetUser200Response> create_user(users)
 
 Create a new object
 
@@ -33,7 +33,7 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::UsersApi.new
-users = CircuitID::Users.new({email: 3.56, password: 3.56, sip_password: 3.56, first: 3.56, last: 3.56, timezone: 3.56}) # Users | The JSON object that will be posted to the REST API endpoint.
+users = CircuitID::Users.new({email: 'email_example', password: 'password_example', sip_password: 'sip_password_example', first: 'first_example', last: 'last_example', timezone: 'Europe/Andorra'}) # Users | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
@@ -48,7 +48,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> create_user_with_http_info(users)
+> <Array(<GetUser200Response>, Integer, Hash)> create_user_with_http_info(users)
 
 ```ruby
 begin
@@ -56,7 +56,7 @@ begin
   data, status_code, headers = api_instance.create_user_with_http_info(users)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => Object
+  p data # => <GetUser200Response>
 rescue CircuitID::ApiError => e
   puts "Error when calling UsersApi->create_user_with_http_info: #{e}"
 end
@@ -70,7 +70,7 @@ end
 
 ### Return type
 
-**Object**
+[**GetUser200Response**](GetUser200Response.md)
 
 ### Authorization
 
@@ -105,13 +105,13 @@ end
 
 api_instance = CircuitID::UsersApi.new
 opts = {
-  search: TODO, # Object | Filter results by the specified value.
-  limit: TODO, # Object | $limit will return only the number of results you specify.
-  skip: TODO, # Object | $skip will skip the specified number of results.
-  sort: TODO, # Object | $sort will sort based on the object you provide. It can contain a list of properties by which to sort mapped to the order (1 ascending, -1 descending).
-  select: TODO, # Object | $select allows to pick which fields to include in the result.
-  _or: TODO, # Object | Find all records that match any of the given criteria.
-  _and: TODO # Object | Find all records that match all of the given criteria.
+  search: 'search_example', # String | Filter results by the specified value.
+  limit: 56, # Integer | $limit will return only the number of results you specify.
+  skip: 56, # Integer | $skip will skip the specified number of results.
+  sort: { ... }, # Object | $sort will sort based on the object you provide. It can contain a list of properties by which to sort mapped to the order (1 ascending, -1 descending).
+  select: ['inner_example'], # Array<String> | $select allows to pick which fields to include in the result.
+  _or: [3.56], # Array<Object> | Find all records that match any of the given criteria.
+  _and: [3.56] # Array<Object> | Find all records that match all of the given criteria.
 }
 
 begin
@@ -145,13 +145,13 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **search** | [**Object**](.md) | Filter results by the specified value. | [optional] |
-| **limit** | [**Object**](.md) | $limit will return only the number of results you specify. | [optional] |
-| **skip** | [**Object**](.md) | $skip will skip the specified number of results. | [optional] |
+| **search** | **String** | Filter results by the specified value. | [optional] |
+| **limit** | **Integer** | $limit will return only the number of results you specify. | [optional] |
+| **skip** | **Integer** | $skip will skip the specified number of results. | [optional] |
 | **sort** | [**Object**](.md) | $sort will sort based on the object you provide. It can contain a list of properties by which to sort mapped to the order (1 ascending, -1 descending). | [optional] |
-| **select** | [**Object**](.md) | $select allows to pick which fields to include in the result. | [optional] |
-| **_or** | [**Object**](.md) | Find all records that match any of the given criteria. | [optional] |
-| **_and** | [**Object**](.md) | Find all records that match all of the given criteria. | [optional] |
+| **select** | [**Array&lt;String&gt;**](String.md) | $select allows to pick which fields to include in the result. | [optional] |
+| **_or** | [**Array&lt;Object&gt;**](Object.md) | Find all records that match any of the given criteria. | [optional] |
+| **_and** | [**Array&lt;Object&gt;**](Object.md) | Find all records that match all of the given criteria. | [optional] |
 
 ### Return type
 
@@ -169,7 +169,7 @@ end
 
 ## get_user
 
-> Object get_user(id)
+> <GetUser200Response> get_user(id)
 
 Get object by id
 
@@ -189,7 +189,7 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::UsersApi.new
-id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
+id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 
 begin
   # Get object by id
@@ -204,7 +204,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> get_user_with_http_info(id)
+> <Array(<GetUser200Response>, Integer, Hash)> get_user_with_http_info(id)
 
 ```ruby
 begin
@@ -212,7 +212,7 @@ begin
   data, status_code, headers = api_instance.get_user_with_http_info(id)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => Object
+  p data # => <GetUser200Response>
 rescue CircuitID::ApiError => e
   puts "Error when calling UsersApi->get_user_with_http_info: #{e}"
 end
@@ -222,11 +222,11 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | [**Object**](.md) | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
+| **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
 
 ### Return type
 
-**Object**
+[**GetUser200Response**](GetUser200Response.md)
 
 ### Authorization
 
@@ -240,7 +240,7 @@ end
 
 ## patch_user
 
-> Object patch_user(id, users)
+> <GetUser200Response> patch_user(id, users)
 
 Patch object's data
 
@@ -260,8 +260,8 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::UsersApi.new
-id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-users = CircuitID::Users.new({email: 3.56, password: 3.56, sip_password: 3.56, first: 3.56, last: 3.56, timezone: 3.56}) # Users | The request data.
+id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
+users = CircuitID::Users.new({email: 'email_example', password: 'password_example', sip_password: 'sip_password_example', first: 'first_example', last: 'last_example', timezone: 'Europe/Andorra'}) # Users | The request data.
 
 begin
   # Patch object's data
@@ -276,7 +276,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> patch_user_with_http_info(id, users)
+> <Array(<GetUser200Response>, Integer, Hash)> patch_user_with_http_info(id, users)
 
 ```ruby
 begin
@@ -284,7 +284,7 @@ begin
   data, status_code, headers = api_instance.patch_user_with_http_info(id, users)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => Object
+  p data # => <GetUser200Response>
 rescue CircuitID::ApiError => e
   puts "Error when calling UsersApi->patch_user_with_http_info: #{e}"
 end
@@ -294,12 +294,12 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | [**Object**](.md) | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
+| **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
 | **users** | [**Users**](Users.md) | The request data. |  |
 
 ### Return type
 
-**Object**
+[**GetUser200Response**](GetUser200Response.md)
 
 ### Authorization
 
@@ -313,7 +313,7 @@ end
 
 ## remove_user
 
-> Object remove_user(id)
+> <GetUser200Response> remove_user(id)
 
 Delete object by id
 
@@ -333,7 +333,7 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::UsersApi.new
-id = TODO # Object | The ObjectId (unique 12 bytes ID) of record you would like to GET.
+id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
 
 begin
   # Delete object by id
@@ -348,7 +348,7 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(Object, Integer, Hash)> remove_user_with_http_info(id)
+> <Array(<GetUser200Response>, Integer, Hash)> remove_user_with_http_info(id)
 
 ```ruby
 begin
@@ -356,7 +356,7 @@ begin
   data, status_code, headers = api_instance.remove_user_with_http_info(id)
   p status_code # => 2xx
   p headers # => { ... }
-  p data # => Object
+  p data # => <GetUser200Response>
 rescue CircuitID::ApiError => e
   puts "Error when calling UsersApi->remove_user_with_http_info: #{e}"
 end
@@ -366,11 +366,11 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **id** | [**Object**](.md) | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
+| **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
 
 ### Return type
 
-**Object**
+[**GetUser200Response**](GetUser200Response.md)
 
 ### Authorization
 

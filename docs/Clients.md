@@ -4,12 +4,12 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  |  |
-| **user** | **Object** | ObjectId (unique 12 bytes ID) |  |
-| **mac** | **Object** |  |  |
-| **http_user_agent** | **Object** |  | [optional] |
-| **manufacture** | **Object** |  | [optional] |
-| **status** | **Object** |  | [optional] |
+| **name** | **String** |  |  |
+| **user** | **String** | ObjectId (unique 12 bytes ID) |  |
+| **mac** | **String** |  |  |
+| **http_user_agent** | **String** |  | [optional] |
+| **manufacture** | **String** |  | [optional] |
+| **status** | **Integer** |  | [optional][default to STATUS::N1] |
 
 ## Example
 

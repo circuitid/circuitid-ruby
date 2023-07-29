@@ -4,8 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  |  |
-| **timezone** | **Object** |  |  |
+| **name** | **String** |  |  |
+| **timezone** | **String** |  | [default to &#39;America/New_York&#39;] |
 | **sunday** | **Object** |  |  |
 | **monday** | **Object** |  |  |
 | **tuesday** | **Object** |  |  |

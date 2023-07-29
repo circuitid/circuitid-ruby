@@ -4,23 +4,23 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **name** | **Object** |  |  |
-| **group** | **Object** | ObjectId (unique 12 bytes ID) | [optional] |
-| **phoneoutboundrule** | **Object** | ObjectId (unique 12 bytes ID) |  |
-| **status** | **Object** |  | [optional] |
-| **priority** | **Object** |  |  |
-| **starting_chars** | **Object** |  | [optional] |
-| **contains** | **Object** |  | [optional] |
-| **length_type** | **Object** |  | [optional] |
-| **length** | **Object** |  | [optional] |
-| **append_chars** | **Object** |  | [optional] |
-| **prepend_chars** | **Object** |  | [optional] |
-| **range_start** | **Object** |  | [optional] |
-| **range_end** | **Object** |  | [optional] |
-| **remove_starting_chars** | **Object** |  | [optional] |
-| **remove_ending_chars** | **Object** |  | [optional] |
-| **route** | **Object** |  |  |
-| **routing_type** | **Object** |  | [optional] |
+| **name** | **String** |  |  |
+| **group** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **phoneoutboundrule** | **String** | ObjectId (unique 12 bytes ID) |  |
+| **status** | **Integer** |  | [optional][default to STATUS::N1] |
+| **priority** | **Integer** |  | [default to 1] |
+| **starting_chars** | **String** |  | [optional] |
+| **contains** | **String** |  | [optional] |
+| **length_type** | **String** |  | [optional] |
+| **length** | **Integer** |  | [optional] |
+| **append_chars** | **String** |  | [optional] |
+| **prepend_chars** | **String** |  | [optional] |
+| **range_start** | **Integer** |  | [optional] |
+| **range_end** | **Integer** |  | [optional] |
+| **remove_starting_chars** | **Integer** |  | [optional] |
+| **remove_ending_chars** | **Integer** |  | [optional] |
+| **route** | **String** |  | [default to &#39;default&#39;] |
+| **routing_type** | **String** |  | [optional] |
 
 ## Example
 
