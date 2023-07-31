@@ -167,10 +167,8 @@ docs/Id.md
 docs/InfoApi.md
 docs/InvoiceItemsApi.md
 docs/Invoiceitems.md
-docs/InvoiceitemsCreateOrPatch.md
 docs/Invoices.md
 docs/InvoicesApi.md
-docs/InvoicesCreateOrPatch.md
 docs/Licenses.md
 docs/LicensesApi.md
 docs/LicensesCreateOrPatch.md
@@ -209,7 +207,6 @@ docs/Phoneoutboundrules.md
 docs/PhoneoutboundrulesCreateOrPatch.md
 docs/RateCentersApi.md
 docs/Ratecenters.md
-docs/RatecentersCreateOrPatch.md
 docs/ResponseDate.md
 docs/ResponseError.md
 docs/ResponseUsers.md
@@ -415,9 +412,7 @@ lib/circuitid-ruby/models/holidays.rb
 lib/circuitid-ruby/models/holidays_create_or_patch.rb
 lib/circuitid-ruby/models/id.rb
 lib/circuitid-ruby/models/invoiceitems.rb
-lib/circuitid-ruby/models/invoiceitems_create_or_patch.rb
 lib/circuitid-ruby/models/invoices.rb
-lib/circuitid-ruby/models/invoices_create_or_patch.rb
 lib/circuitid-ruby/models/licenses.rb
 lib/circuitid-ruby/models/licenses_create_or_patch.rb
 lib/circuitid-ruby/models/menuoptions.rb
@@ -443,7 +438,6 @@ lib/circuitid-ruby/models/phoneoutboundruleactions_create_or_patch.rb
 lib/circuitid-ruby/models/phoneoutboundrules.rb
 lib/circuitid-ruby/models/phoneoutboundrules_create_or_patch.rb
 lib/circuitid-ruby/models/ratecenters.rb
-lib/circuitid-ruby/models/ratecenters_create_or_patch.rb
 lib/circuitid-ruby/models/response_date.rb
 lib/circuitid-ruby/models/response_error.rb
 lib/circuitid-ruby/models/response_users.rb
@@ -640,9 +634,7 @@ spec/models/groups_spec.rb
 spec/models/holidays_create_or_patch_spec.rb
 spec/models/holidays_spec.rb
 spec/models/id_spec.rb
-spec/models/invoiceitems_create_or_patch_spec.rb
 spec/models/invoiceitems_spec.rb
-spec/models/invoices_create_or_patch_spec.rb
 spec/models/invoices_spec.rb
 spec/models/licenses_create_or_patch_spec.rb
 spec/models/licenses_spec.rb
@@ -668,7 +660,6 @@ spec/models/phoneoutboundruleactions_create_or_patch_spec.rb
 spec/models/phoneoutboundruleactions_spec.rb
 spec/models/phoneoutboundrules_create_or_patch_spec.rb
 spec/models/phoneoutboundrules_spec.rb
-spec/models/ratecenters_create_or_patch_spec.rb
 spec/models/ratecenters_spec.rb
 spec/models/response_date_spec.rb
 spec/models/response_error_spec.rb

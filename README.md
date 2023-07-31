@@ -12,7 +12,7 @@ We are excited to have you on board and are confident that this documentation si
 Happy coding!
 
 
-- API version: 0.47.20
+- API version: 0.47.21
 - Package version: 1.0.0
 
 For more information, please visit [https://www.circuitid.com/](https://www.circuitid.com/)
@@ -422,9 +422,7 @@ Class | Method | HTTP request | Description
  - [CircuitID::HolidaysCreateOrPatch](docs/HolidaysCreateOrPatch.md)
  - [CircuitID::Id](docs/Id.md)
  - [CircuitID::Invoiceitems](docs/Invoiceitems.md)
- - [CircuitID::InvoiceitemsCreateOrPatch](docs/InvoiceitemsCreateOrPatch.md)
  - [CircuitID::Invoices](docs/Invoices.md)
- - [CircuitID::InvoicesCreateOrPatch](docs/InvoicesCreateOrPatch.md)
  - [CircuitID::Licenses](docs/Licenses.md)
  - [CircuitID::LicensesCreateOrPatch](docs/LicensesCreateOrPatch.md)
  - [CircuitID::Menuoptions](docs/Menuoptions.md)
@@ -450,7 +448,6 @@ Class | Method | HTTP request | Description
  - [CircuitID::Phoneoutboundrules](docs/Phoneoutboundrules.md)
  - [CircuitID::PhoneoutboundrulesCreateOrPatch](docs/PhoneoutboundrulesCreateOrPatch.md)
  - [CircuitID::Ratecenters](docs/Ratecenters.md)
- - [CircuitID::RatecentersCreateOrPatch](docs/RatecentersCreateOrPatch.md)
  - [CircuitID::ResponseDate](docs/ResponseDate.md)
  - [CircuitID::ResponseError](docs/ResponseError.md)
  - [CircuitID::ResponseUsers](docs/ResponseUsers.md)
