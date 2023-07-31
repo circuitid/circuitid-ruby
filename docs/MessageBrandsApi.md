@@ -7,13 +7,11 @@ All URIs are relative to *https://rest.circuitid.com*
 | [**create_message_brand**](MessageBrandsApi.md#create_message_brand) | **POST** /messagebrands | Create a new object |
 | [**find_message_brands**](MessageBrandsApi.md#find_message_brands) | **GET** /messagebrands | Find multiple objects |
 | [**get_message_brand**](MessageBrandsApi.md#get_message_brand) | **GET** /messagebrands/{id} | Get object by id |
-| [**patch_message_brand**](MessageBrandsApi.md#patch_message_brand) | **PATCH** /messagebrands/{id} | Patch object&#39;s data |
-| [**remove_message_brand**](MessageBrandsApi.md#remove_message_brand) | **DELETE** /messagebrands/{id} | Delete object by id |
 
 
 ## create_message_brand
 
-> <GetMessageBrand200Response> create_message_brand(messagebrands)
+> <GetMessageBrand200Response> create_message_brand(messagebrands_create_or_patch)
 
 Create a new object
 
@@ -33,11 +31,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::MessageBrandsApi.new
-messagebrands = CircuitID::Messagebrands.new({name: 'name_example', ein: 'ein_example', user: 'user_example', order: 'order_example'}) # Messagebrands | The JSON object that will be posted to the REST API endpoint.
+messagebrands_create_or_patch = CircuitID::MessagebrandsCreateOrPatch.new({name: 'name_example', ein: 'ein_example', user: 'user_example', order: 'order_example'}) # MessagebrandsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_message_brand(messagebrands)
+  result = api_instance.create_message_brand(messagebrands_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling MessageBrandsApi->create_message_brand: #{e}"
@@ -48,12 +46,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetMessageBrand200Response>, Integer, Hash)> create_message_brand_with_http_info(messagebrands)
+> <Array(<GetMessageBrand200Response>, Integer, Hash)> create_message_brand_with_http_info(messagebrands_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_message_brand_with_http_info(messagebrands)
+  data, status_code, headers = api_instance.create_message_brand_with_http_info(messagebrands_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetMessageBrand200Response>
@@ -66,7 +64,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **messagebrands** | [**Messagebrands**](Messagebrands.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **messagebrands_create_or_patch** | [**MessagebrandsCreateOrPatch**](MessagebrandsCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -215,150 +213,6 @@ begin
   p data # => <GetMessageBrand200Response>
 rescue CircuitID::ApiError => e
   puts "Error when calling MessageBrandsApi->get_message_brand_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-
-### Return type
-
-[**GetMessageBrand200Response**](GetMessageBrand200Response.md)
-
-### Authorization
-
-[jwt](../README.md#jwt)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## patch_message_brand
-
-> <GetMessageBrand200Response> patch_message_brand(id, messagebrands)
-
-Patch object's data
-
-Make updates to specific fields within the record without replacing the entire dataset.
-
-### Examples
-
-```ruby
-require 'time'
-require 'circuitid-ruby'
-# setup authorization
-CircuitID.configure do |config|
-  # Configure API key authorization: jwt
-  config.api_key['jwt'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['jwt'] = 'Bearer'
-end
-
-api_instance = CircuitID::MessageBrandsApi.new
-id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-messagebrands = CircuitID::Messagebrands.new({name: 'name_example', ein: 'ein_example', user: 'user_example', order: 'order_example'}) # Messagebrands | The request data.
-
-begin
-  # Patch object's data
-  result = api_instance.patch_message_brand(id, messagebrands)
-  p result
-rescue CircuitID::ApiError => e
-  puts "Error when calling MessageBrandsApi->patch_message_brand: #{e}"
-end
-```
-
-#### Using the patch_message_brand_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<GetMessageBrand200Response>, Integer, Hash)> patch_message_brand_with_http_info(id, messagebrands)
-
-```ruby
-begin
-  # Patch object's data
-  data, status_code, headers = api_instance.patch_message_brand_with_http_info(id, messagebrands)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <GetMessageBrand200Response>
-rescue CircuitID::ApiError => e
-  puts "Error when calling MessageBrandsApi->patch_message_brand_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **messagebrands** | [**Messagebrands**](Messagebrands.md) | The request data. |  |
-
-### Return type
-
-[**GetMessageBrand200Response**](GetMessageBrand200Response.md)
-
-### Authorization
-
-[jwt](../README.md#jwt)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## remove_message_brand
-
-> <GetMessageBrand200Response> remove_message_brand(id)
-
-Delete object by id
-
-Delete an object by id, removing it from the service.
-
-### Examples
-
-```ruby
-require 'time'
-require 'circuitid-ruby'
-# setup authorization
-CircuitID.configure do |config|
-  # Configure API key authorization: jwt
-  config.api_key['jwt'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['jwt'] = 'Bearer'
-end
-
-api_instance = CircuitID::MessageBrandsApi.new
-id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-
-begin
-  # Delete object by id
-  result = api_instance.remove_message_brand(id)
-  p result
-rescue CircuitID::ApiError => e
-  puts "Error when calling MessageBrandsApi->remove_message_brand: #{e}"
-end
-```
-
-#### Using the remove_message_brand_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<GetMessageBrand200Response>, Integer, Hash)> remove_message_brand_with_http_info(id)
-
-```ruby
-begin
-  # Delete object by id
-  data, status_code, headers = api_instance.remove_message_brand_with_http_info(id)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <GetMessageBrand200Response>
-rescue CircuitID::ApiError => e
-  puts "Error when calling MessageBrandsApi->remove_message_brand_with_http_info: #{e}"
 end
 ```
 

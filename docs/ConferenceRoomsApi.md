@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_conference_room
 
-> <GetConferenceRoom200Response> create_conference_room(conferencerooms)
+> <GetConferenceRoom200Response> create_conference_room(conferencerooms_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::ConferenceRoomsApi.new
-conferencerooms = CircuitID::Conferencerooms.new({name: 'name_example'}) # Conferencerooms | The JSON object that will be posted to the REST API endpoint.
+conferencerooms_create_or_patch = CircuitID::ConferenceroomsCreateOrPatch.new({name: 'name_example'}) # ConferenceroomsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_conference_room(conferencerooms)
+  result = api_instance.create_conference_room(conferencerooms_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling ConferenceRoomsApi->create_conference_room: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetConferenceRoom200Response>, Integer, Hash)> create_conference_room_with_http_info(conferencerooms)
+> <Array(<GetConferenceRoom200Response>, Integer, Hash)> create_conference_room_with_http_info(conferencerooms_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_conference_room_with_http_info(conferencerooms)
+  data, status_code, headers = api_instance.create_conference_room_with_http_info(conferencerooms_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetConferenceRoom200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **conferencerooms** | [**Conferencerooms**](Conferencerooms.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **conferencerooms_create_or_patch** | [**ConferenceroomsCreateOrPatch**](ConferenceroomsCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patch_conference_room
 
-> <GetConferenceRoom200Response> patch_conference_room(id, conferencerooms)
+> <GetConferenceRoom200Response> patch_conference_room(id, conferencerooms_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::ConferenceRoomsApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-conferencerooms = CircuitID::Conferencerooms.new({name: 'name_example'}) # Conferencerooms | The request data.
+conferencerooms_create_or_patch = CircuitID::ConferenceroomsCreateOrPatch.new({name: 'name_example'}) # ConferenceroomsCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_conference_room(id, conferencerooms)
+  result = api_instance.patch_conference_room(id, conferencerooms_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling ConferenceRoomsApi->patch_conference_room: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetConferenceRoom200Response>, Integer, Hash)> patch_conference_room_with_http_info(id, conferencerooms)
+> <Array(<GetConferenceRoom200Response>, Integer, Hash)> patch_conference_room_with_http_info(id, conferencerooms_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_conference_room_with_http_info(id, conferencerooms)
+  data, status_code, headers = api_instance.patch_conference_room_with_http_info(id, conferencerooms_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetConferenceRoom200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **conferencerooms** | [**Conferencerooms**](Conferencerooms.md) | The request data. |  |
+| **conferencerooms_create_or_patch** | [**ConferenceroomsCreateOrPatch**](ConferenceroomsCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

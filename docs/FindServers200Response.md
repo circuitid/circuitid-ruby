@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Servers&gt;**](Servers.md) |  |  |
+| **data** | [**Array&lt;GetServer200Response&gt;**](GetServer200Response.md) |  |  |
 
 ## Example
 

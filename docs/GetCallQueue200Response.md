@@ -24,6 +24,7 @@
 | **abandoned_resume_allowed** | **Boolean** |  | [default to true] |
 | **discard_abandoned_after** | **Integer** |  | [optional][default to 14400] |
 | **max_wait_time_no_agent_time_reached** | **Integer** |  | [default to 5] |
+| **_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **updated_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_at** | **Time** |  | [optional] |
@@ -55,6 +56,7 @@ instance = CircuitID::GetCallQueue200Response.new(
   abandoned_resume_allowed: null,
   discard_abandoned_after: null,
   max_wait_time_no_agent_time_reached: null,
+  _id: null,
   created_by_user_id: null,
   updated_by_user_id: null,
   created_at: null,

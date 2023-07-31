@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_firewall
 
-> <GetFirewall200Response> create_firewall(firewall)
+> <GetFirewall200Response> create_firewall(firewall_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::FirewallApi.new
-firewall = CircuitID::Firewall.new({name: 'name_example', priority: 37, type: 'allow', target: 'numbers', param: 'param_example'}) # Firewall | The JSON object that will be posted to the REST API endpoint.
+firewall_create_or_patch = CircuitID::FirewallCreateOrPatch.new({name: 'name_example', type: 'allow', target: 'numbers', param: 'param_example'}) # FirewallCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_firewall(firewall)
+  result = api_instance.create_firewall(firewall_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling FirewallApi->create_firewall: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetFirewall200Response>, Integer, Hash)> create_firewall_with_http_info(firewall)
+> <Array(<GetFirewall200Response>, Integer, Hash)> create_firewall_with_http_info(firewall_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_firewall_with_http_info(firewall)
+  data, status_code, headers = api_instance.create_firewall_with_http_info(firewall_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetFirewall200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **firewall** | [**Firewall**](Firewall.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **firewall_create_or_patch** | [**FirewallCreateOrPatch**](FirewallCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patch_firewall
 
-> <GetFirewall200Response> patch_firewall(id, firewall)
+> <GetFirewall200Response> patch_firewall(id, firewall_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::FirewallApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-firewall = CircuitID::Firewall.new({name: 'name_example', priority: 37, type: 'allow', target: 'numbers', param: 'param_example'}) # Firewall | The request data.
+firewall_create_or_patch = CircuitID::FirewallCreateOrPatch.new({name: 'name_example', type: 'allow', target: 'numbers', param: 'param_example'}) # FirewallCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_firewall(id, firewall)
+  result = api_instance.patch_firewall(id, firewall_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling FirewallApi->patch_firewall: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetFirewall200Response>, Integer, Hash)> patch_firewall_with_http_info(id, firewall)
+> <Array(<GetFirewall200Response>, Integer, Hash)> patch_firewall_with_http_info(id, firewall_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_firewall_with_http_info(id, firewall)
+  data, status_code, headers = api_instance.patch_firewall_with_http_info(id, firewall_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetFirewall200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **firewall** | [**Firewall**](Firewall.md) | The request data. |  |
+| **firewall_create_or_patch** | [**FirewallCreateOrPatch**](FirewallCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

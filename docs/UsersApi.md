@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_user
 
-> <GetUser200Response> create_user(users)
+> <GetUser200Response> create_user(users_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::UsersApi.new
-users = CircuitID::Users.new({email: 'email_example', password: 'password_example', sip_password: 'sip_password_example', first: 'first_example', last: 'last_example', timezone: 'Europe/Andorra'}) # Users | The JSON object that will be posted to the REST API endpoint.
+users_create_or_patch = CircuitID::UsersCreateOrPatch.new({email: 'email_example', password: 'password_example', first: 'first_example', last: 'last_example', timezone: 'Europe/Andorra'}) # UsersCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_user(users)
+  result = api_instance.create_user(users_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling UsersApi->create_user: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetUser200Response>, Integer, Hash)> create_user_with_http_info(users)
+> <Array(<GetUser200Response>, Integer, Hash)> create_user_with_http_info(users_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_user_with_http_info(users)
+  data, status_code, headers = api_instance.create_user_with_http_info(users_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetUser200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **users** | [**Users**](Users.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **users_create_or_patch** | [**UsersCreateOrPatch**](UsersCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patch_user
 
-> <GetUser200Response> patch_user(id, users)
+> <GetUser200Response> patch_user(id, users_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::UsersApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-users = CircuitID::Users.new({email: 'email_example', password: 'password_example', sip_password: 'sip_password_example', first: 'first_example', last: 'last_example', timezone: 'Europe/Andorra'}) # Users | The request data.
+users_create_or_patch = CircuitID::UsersCreateOrPatch.new({email: 'email_example', password: 'password_example', first: 'first_example', last: 'last_example', timezone: 'Europe/Andorra'}) # UsersCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_user(id, users)
+  result = api_instance.patch_user(id, users_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling UsersApi->patch_user: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetUser200Response>, Integer, Hash)> patch_user_with_http_info(id, users)
+> <Array(<GetUser200Response>, Integer, Hash)> patch_user_with_http_info(id, users_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_user_with_http_info(id, users)
+  data, status_code, headers = api_instance.patch_user_with_http_info(id, users_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetUser200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **users** | [**Users**](Users.md) | The request data. |  |
+| **users_create_or_patch** | [**UsersCreateOrPatch**](UsersCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

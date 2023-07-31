@@ -11,6 +11,7 @@
 | **require_id** | **Integer** |  | [optional][default to REQUIRE_ID::N0] |
 | **services** | **Array&lt;String&gt;** |  |  |
 | **events** | **Array&lt;String&gt;** |  | [optional] |
+| **_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **updated_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_at** | **Time** |  | [optional] |
@@ -29,6 +30,7 @@ instance = CircuitID::GetDeveloperAppSubscription200Response.new(
   require_id: null,
   services: null,
   events: null,
+  _id: null,
   created_by_user_id: null,
   updated_by_user_id: null,
   created_at: null,

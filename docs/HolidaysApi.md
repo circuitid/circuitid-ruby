@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_holiday
 
-> <GetHoliday200Response> create_holiday(holidays)
+> <GetHoliday200Response> create_holiday(holidays_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::HolidaysApi.new
-holidays = CircuitID::Holidays.new({name: 'name_example', object: 'object_example', object_ref: 'object_ref_example', date_time_ranges: [[Time.now]], destination_type: 'announcements'}) # Holidays | The JSON object that will be posted to the REST API endpoint.
+holidays_create_or_patch = CircuitID::HolidaysCreateOrPatch.new({name: 'name_example', object: 'object_example', object_ref: 'object_ref_example', date_time_ranges: [[Time.now]], destination_type: 'announcements'}) # HolidaysCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_holiday(holidays)
+  result = api_instance.create_holiday(holidays_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling HolidaysApi->create_holiday: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetHoliday200Response>, Integer, Hash)> create_holiday_with_http_info(holidays)
+> <Array(<GetHoliday200Response>, Integer, Hash)> create_holiday_with_http_info(holidays_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_holiday_with_http_info(holidays)
+  data, status_code, headers = api_instance.create_holiday_with_http_info(holidays_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetHoliday200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **holidays** | [**Holidays**](Holidays.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **holidays_create_or_patch** | [**HolidaysCreateOrPatch**](HolidaysCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patch_holiday
 
-> <GetHoliday200Response> patch_holiday(id, holidays)
+> <GetHoliday200Response> patch_holiday(id, holidays_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::HolidaysApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-holidays = CircuitID::Holidays.new({name: 'name_example', object: 'object_example', object_ref: 'object_ref_example', date_time_ranges: [[Time.now]], destination_type: 'announcements'}) # Holidays | The request data.
+holidays_create_or_patch = CircuitID::HolidaysCreateOrPatch.new({name: 'name_example', object: 'object_example', object_ref: 'object_ref_example', date_time_ranges: [[Time.now]], destination_type: 'announcements'}) # HolidaysCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_holiday(id, holidays)
+  result = api_instance.patch_holiday(id, holidays_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling HolidaysApi->patch_holiday: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetHoliday200Response>, Integer, Hash)> patch_holiday_with_http_info(id, holidays)
+> <Array(<GetHoliday200Response>, Integer, Hash)> patch_holiday_with_http_info(id, holidays_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_holiday_with_http_info(id, holidays)
+  data, status_code, headers = api_instance.patch_holiday_with_http_info(id, holidays_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetHoliday200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **holidays** | [**Holidays**](Holidays.md) | The request data. |  |
+| **holidays_create_or_patch** | [**HolidaysCreateOrPatch**](HolidaysCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

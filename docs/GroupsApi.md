@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_group
 
-> <GetGroup200Response> create_group(groups)
+> <GetGroup200Response> create_group(groups_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::GroupsApi.new
-groups = CircuitID::Groups.new({name: 'name_example'}) # Groups | The JSON object that will be posted to the REST API endpoint.
+groups_create_or_patch = CircuitID::GroupsCreateOrPatch.new({name: 'name_example'}) # GroupsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_group(groups)
+  result = api_instance.create_group(groups_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling GroupsApi->create_group: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetGroup200Response>, Integer, Hash)> create_group_with_http_info(groups)
+> <Array(<GetGroup200Response>, Integer, Hash)> create_group_with_http_info(groups_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_group_with_http_info(groups)
+  data, status_code, headers = api_instance.create_group_with_http_info(groups_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetGroup200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **groups** | [**Groups**](Groups.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **groups_create_or_patch** | [**GroupsCreateOrPatch**](GroupsCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patch_group
 
-> <GetGroup200Response> patch_group(id, groups)
+> <GetGroup200Response> patch_group(id, groups_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::GroupsApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-groups = CircuitID::Groups.new({name: 'name_example'}) # Groups | The request data.
+groups_create_or_patch = CircuitID::GroupsCreateOrPatch.new({name: 'name_example'}) # GroupsCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_group(id, groups)
+  result = api_instance.patch_group(id, groups_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling GroupsApi->patch_group: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetGroup200Response>, Integer, Hash)> patch_group_with_http_info(id, groups)
+> <Array(<GetGroup200Response>, Integer, Hash)> patch_group_with_http_info(id, groups_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_group_with_http_info(id, groups)
+  data, status_code, headers = api_instance.patch_group_with_http_info(id, groups_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetGroup200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **groups** | [**Groups**](Groups.md) | The request data. |  |
+| **groups_create_or_patch** | [**GroupsCreateOrPatch**](GroupsCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

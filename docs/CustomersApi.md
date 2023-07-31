@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_customer
 
-> <GetCustomer200Response> create_customer(customers)
+> <GetCustomer200Response> create_customer(customers_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::CustomersApi.new
-customers = CircuitID::Customers.new({name: 'name_example', default_bill_method: 'credit'}) # Customers | The JSON object that will be posted to the REST API endpoint.
+customers_create_or_patch = CircuitID::CustomersCreateOrPatch.new({name: 'name_example', default_bill_method: 'credit'}) # CustomersCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_customer(customers)
+  result = api_instance.create_customer(customers_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling CustomersApi->create_customer: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetCustomer200Response>, Integer, Hash)> create_customer_with_http_info(customers)
+> <Array(<GetCustomer200Response>, Integer, Hash)> create_customer_with_http_info(customers_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_customer_with_http_info(customers)
+  data, status_code, headers = api_instance.create_customer_with_http_info(customers_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetCustomer200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **customers** | [**Customers**](Customers.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **customers_create_or_patch** | [**CustomersCreateOrPatch**](CustomersCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patch_customer
 
-> <GetCustomer200Response> patch_customer(id, customers)
+> <GetCustomer200Response> patch_customer(id, customers_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::CustomersApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-customers = CircuitID::Customers.new({name: 'name_example', default_bill_method: 'credit'}) # Customers | The request data.
+customers_create_or_patch = CircuitID::CustomersCreateOrPatch.new({name: 'name_example', default_bill_method: 'credit'}) # CustomersCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_customer(id, customers)
+  result = api_instance.patch_customer(id, customers_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling CustomersApi->patch_customer: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetCustomer200Response>, Integer, Hash)> patch_customer_with_http_info(id, customers)
+> <Array(<GetCustomer200Response>, Integer, Hash)> patch_customer_with_http_info(id, customers_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_customer_with_http_info(id, customers)
+  data, status_code, headers = api_instance.patch_customer_with_http_info(id, customers_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetCustomer200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **customers** | [**Customers**](Customers.md) | The request data. |  |
+| **customers_create_or_patch** | [**CustomersCreateOrPatch**](CustomersCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

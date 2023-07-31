@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_conversation_message
 
-> <GetConversationMessage200Response> create_conversation_message(conversationmessages)
+> <GetConversationMessage200Response> create_conversation_message(conversationmessages_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::ConversationMessagesApi.new
-conversationmessages = CircuitID::Conversationmessages.new({from: 3.56, from_number: 'from_number_example', to: [3.56], direction: 'inbound'}) # Conversationmessages | The JSON object that will be posted to the REST API endpoint.
+conversationmessages_create_or_patch = CircuitID::ConversationmessagesCreateOrPatch.new # ConversationmessagesCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_conversation_message(conversationmessages)
+  result = api_instance.create_conversation_message(conversationmessages_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling ConversationMessagesApi->create_conversation_message: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetConversationMessage200Response>, Integer, Hash)> create_conversation_message_with_http_info(conversationmessages)
+> <Array(<GetConversationMessage200Response>, Integer, Hash)> create_conversation_message_with_http_info(conversationmessages_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_conversation_message_with_http_info(conversationmessages)
+  data, status_code, headers = api_instance.create_conversation_message_with_http_info(conversationmessages_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetConversationMessage200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **conversationmessages** | [**Conversationmessages**](Conversationmessages.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **conversationmessages_create_or_patch** | [**ConversationmessagesCreateOrPatch**](ConversationmessagesCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patch_conversation_message
 
-> <GetConversationMessage200Response> patch_conversation_message(id, conversationmessages)
+> <GetConversationMessage200Response> patch_conversation_message(id, conversationmessages_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::ConversationMessagesApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-conversationmessages = CircuitID::Conversationmessages.new({from: 3.56, from_number: 'from_number_example', to: [3.56], direction: 'inbound'}) # Conversationmessages | The request data.
+conversationmessages_create_or_patch = CircuitID::ConversationmessagesCreateOrPatch.new # ConversationmessagesCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_conversation_message(id, conversationmessages)
+  result = api_instance.patch_conversation_message(id, conversationmessages_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling ConversationMessagesApi->patch_conversation_message: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetConversationMessage200Response>, Integer, Hash)> patch_conversation_message_with_http_info(id, conversationmessages)
+> <Array(<GetConversationMessage200Response>, Integer, Hash)> patch_conversation_message_with_http_info(id, conversationmessages_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_conversation_message_with_http_info(id, conversationmessages)
+  data, status_code, headers = api_instance.patch_conversation_message_with_http_info(id, conversationmessages_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetConversationMessage200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **conversationmessages** | [**Conversationmessages**](Conversationmessages.md) | The request data. |  |
+| **conversationmessages_create_or_patch** | [**ConversationmessagesCreateOrPatch**](ConversationmessagesCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_conversation
 
-> <GetConversation200Response> create_conversation(conversations)
+> <GetConversation200Response> create_conversation(conversations_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::ConversationsApi.new
-conversations = CircuitID::Conversations.new({channel: 'email', ref: 'contacts', object: 'object_example', status: 'open'}) # Conversations | The JSON object that will be posted to the REST API endpoint.
+conversations_create_or_patch = CircuitID::ConversationsCreateOrPatch.new({status: 'open'}) # ConversationsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_conversation(conversations)
+  result = api_instance.create_conversation(conversations_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling ConversationsApi->create_conversation: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetConversation200Response>, Integer, Hash)> create_conversation_with_http_info(conversations)
+> <Array(<GetConversation200Response>, Integer, Hash)> create_conversation_with_http_info(conversations_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_conversation_with_http_info(conversations)
+  data, status_code, headers = api_instance.create_conversation_with_http_info(conversations_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetConversation200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **conversations** | [**Conversations**](Conversations.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **conversations_create_or_patch** | [**ConversationsCreateOrPatch**](ConversationsCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patch_conversation
 
-> <GetConversation200Response> patch_conversation(id, conversations)
+> <GetConversation200Response> patch_conversation(id, conversations_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::ConversationsApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-conversations = CircuitID::Conversations.new({channel: 'email', ref: 'contacts', object: 'object_example', status: 'open'}) # Conversations | The request data.
+conversations_create_or_patch = CircuitID::ConversationsCreateOrPatch.new({status: 'open'}) # ConversationsCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_conversation(id, conversations)
+  result = api_instance.patch_conversation(id, conversations_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling ConversationsApi->patch_conversation: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetConversation200Response>, Integer, Hash)> patch_conversation_with_http_info(id, conversations)
+> <Array(<GetConversation200Response>, Integer, Hash)> patch_conversation_with_http_info(id, conversations_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_conversation_with_http_info(id, conversations)
+  data, status_code, headers = api_instance.patch_conversation_with_http_info(id, conversations_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetConversation200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **conversations** | [**Conversations**](Conversations.md) | The request data. |  |
+| **conversations_create_or_patch** | [**ConversationsCreateOrPatch**](ConversationsCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

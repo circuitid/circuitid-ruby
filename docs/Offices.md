@@ -11,11 +11,9 @@
 | **street_suffix** | **String** |  |  |
 | **city** | **String** |  |  |
 | **state** | **String** |  | [optional] |
-| **zip** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **zip_code** | **String** |  | [optional] |
 | **address2** | **String** |  | [optional] |
 | **country** | **String** |  |  |
-| **providers** | **Object** |  | [optional] |
 | **region** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 
 ## Example
@@ -31,11 +29,9 @@ instance = CircuitID::Offices.new(
   street_suffix: null,
   city: null,
   state: null,
-  zip: null,
   zip_code: null,
   address2: null,
   country: null,
-  providers: null,
   region: null
 )
 ```

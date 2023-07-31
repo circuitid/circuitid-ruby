@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_time_schedule
 
-> <GetTimeSchedule200Response> create_time_schedule(timeschedules)
+> <GetTimeSchedule200Response> create_time_schedule(timeschedules_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::TimeSchedulesApi.new
-timeschedules = CircuitID::Timeschedules.new({name: 'name_example', timezone: 'Europe/Andorra', sunday: 3.56, monday: 3.56, tuesday: 3.56, wednesday: 3.56, thursday: 3.56, friday: 3.56, saturday: 3.56}) # Timeschedules | The JSON object that will be posted to the REST API endpoint.
+timeschedules_create_or_patch = CircuitID::TimeschedulesCreateOrPatch.new({name: 'name_example', timezone: 'Europe/Andorra', sunday: { key: [3.56]}, monday: { key: [3.56]}, tuesday: { key: [3.56]}, wednesday: { key: [3.56]}, thursday: { key: [3.56]}, friday: { key: [3.56]}, saturday: { key: [3.56]}}) # TimeschedulesCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_time_schedule(timeschedules)
+  result = api_instance.create_time_schedule(timeschedules_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling TimeSchedulesApi->create_time_schedule: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetTimeSchedule200Response>, Integer, Hash)> create_time_schedule_with_http_info(timeschedules)
+> <Array(<GetTimeSchedule200Response>, Integer, Hash)> create_time_schedule_with_http_info(timeschedules_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_time_schedule_with_http_info(timeschedules)
+  data, status_code, headers = api_instance.create_time_schedule_with_http_info(timeschedules_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetTimeSchedule200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **timeschedules** | [**Timeschedules**](Timeschedules.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **timeschedules_create_or_patch** | [**TimeschedulesCreateOrPatch**](TimeschedulesCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patch_time_schedule
 
-> <GetTimeSchedule200Response> patch_time_schedule(id, timeschedules)
+> <GetTimeSchedule200Response> patch_time_schedule(id, timeschedules_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::TimeSchedulesApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-timeschedules = CircuitID::Timeschedules.new({name: 'name_example', timezone: 'Europe/Andorra', sunday: 3.56, monday: 3.56, tuesday: 3.56, wednesday: 3.56, thursday: 3.56, friday: 3.56, saturday: 3.56}) # Timeschedules | The request data.
+timeschedules_create_or_patch = CircuitID::TimeschedulesCreateOrPatch.new({name: 'name_example', timezone: 'Europe/Andorra', sunday: { key: [3.56]}, monday: { key: [3.56]}, tuesday: { key: [3.56]}, wednesday: { key: [3.56]}, thursday: { key: [3.56]}, friday: { key: [3.56]}, saturday: { key: [3.56]}}) # TimeschedulesCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_time_schedule(id, timeschedules)
+  result = api_instance.patch_time_schedule(id, timeschedules_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling TimeSchedulesApi->patch_time_schedule: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetTimeSchedule200Response>, Integer, Hash)> patch_time_schedule_with_http_info(id, timeschedules)
+> <Array(<GetTimeSchedule200Response>, Integer, Hash)> patch_time_schedule_with_http_info(id, timeschedules_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_time_schedule_with_http_info(id, timeschedules)
+  data, status_code, headers = api_instance.patch_time_schedule_with_http_info(id, timeschedules_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetTimeSchedule200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **timeschedules** | [**Timeschedules**](Timeschedules.md) | The request data. |  |
+| **timeschedules_create_or_patch** | [**TimeschedulesCreateOrPatch**](TimeschedulesCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

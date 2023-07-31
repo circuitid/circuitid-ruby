@@ -6,13 +6,13 @@
 | ---- | ---- | ----------- | ----- |
 | **name** | **String** |  |  |
 | **timezone** | **String** |  | [default to &#39;America/New_York&#39;] |
-| **sunday** | **Object** |  |  |
-| **monday** | **Object** |  |  |
-| **tuesday** | **Object** |  |  |
-| **wednesday** | **Object** |  |  |
-| **thursday** | **Object** |  |  |
-| **friday** | **Object** |  |  |
-| **saturday** | **Object** |  |  |
+| **sunday** | **Hash&lt;String, Array&lt;Object&gt;&gt;** |  |  |
+| **monday** | **Hash&lt;String, Array&lt;Object&gt;&gt;** |  |  |
+| **tuesday** | **Hash&lt;String, Array&lt;Object&gt;&gt;** |  |  |
+| **wednesday** | **Hash&lt;String, Array&lt;Object&gt;&gt;** |  |  |
+| **thursday** | **Hash&lt;String, Array&lt;Object&gt;&gt;** |  |  |
+| **friday** | **Hash&lt;String, Array&lt;Object&gt;&gt;** |  |  |
+| **saturday** | **Hash&lt;String, Array&lt;Object&gt;&gt;** |  |  |
 
 ## Example
 

@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Developerappsubscriptions&gt;**](Developerappsubscriptions.md) |  |  |
+| **data** | [**Array&lt;GetDeveloperAppSubscription200Response&gt;**](GetDeveloperAppSubscription200Response.md) |  |  |
 
 ## Example
 

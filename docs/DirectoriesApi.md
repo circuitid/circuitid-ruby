@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## createdirectory
 
-> <Getdirectory200Response> createdirectory(directories)
+> <Getdirectory200Response> createdirectory(directories_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::DirectoriesApi.new
-directories = CircuitID::Directories.new({name: 'name_example', type: 'customers'}) # Directories | The JSON object that will be posted to the REST API endpoint.
+directories_create_or_patch = CircuitID::DirectoriesCreateOrPatch.new({name: 'name_example', type: 'customers'}) # DirectoriesCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.createdirectory(directories)
+  result = api_instance.createdirectory(directories_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling DirectoriesApi->createdirectory: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Getdirectory200Response>, Integer, Hash)> createdirectory_with_http_info(directories)
+> <Array(<Getdirectory200Response>, Integer, Hash)> createdirectory_with_http_info(directories_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.createdirectory_with_http_info(directories)
+  data, status_code, headers = api_instance.createdirectory_with_http_info(directories_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Getdirectory200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **directories** | [**Directories**](Directories.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **directories_create_or_patch** | [**DirectoriesCreateOrPatch**](DirectoriesCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patchdirectory
 
-> <Getdirectory200Response> patchdirectory(id, directories)
+> <Getdirectory200Response> patchdirectory(id, directories_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::DirectoriesApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-directories = CircuitID::Directories.new({name: 'name_example', type: 'customers'}) # Directories | The request data.
+directories_create_or_patch = CircuitID::DirectoriesCreateOrPatch.new({name: 'name_example', type: 'customers'}) # DirectoriesCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patchdirectory(id, directories)
+  result = api_instance.patchdirectory(id, directories_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling DirectoriesApi->patchdirectory: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Getdirectory200Response>, Integer, Hash)> patchdirectory_with_http_info(id, directories)
+> <Array(<Getdirectory200Response>, Integer, Hash)> patchdirectory_with_http_info(id, directories_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patchdirectory_with_http_info(id, directories)
+  data, status_code, headers = api_instance.patchdirectory_with_http_info(id, directories_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Getdirectory200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **directories** | [**Directories**](Directories.md) | The request data. |  |
+| **directories_create_or_patch** | [**DirectoriesCreateOrPatch**](DirectoriesCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

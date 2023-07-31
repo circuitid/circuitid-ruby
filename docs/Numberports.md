@@ -4,8 +4,9 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **numbers** | **Array&lt;String&gt;** |  |  |
 | **name** | **String** |  |  |
-| **type** | **String** |  |  |
+| **type** | **String** |  | [default to &#39;port in&#39;] |
 | **type_of_service** | **String** |  |  |
 | **authorized_person** | **String** |  |  |
 | **desired_due_date** | **Time** |  |  |
@@ -26,6 +27,7 @@
 require 'circuitid-ruby'
 
 instance = CircuitID::Numberports.new(
+  numbers: null,
   name: null,
   type: null,
   type_of_service: null,

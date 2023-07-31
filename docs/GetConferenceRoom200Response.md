@@ -13,6 +13,7 @@
 | **require_passcode** | **Integer** |  | [optional][default to REQUIRE_PASSCODE::N0] |
 | **share** | **String** |  | [optional] |
 | **chatroom** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **updated_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_at** | **Time** |  | [optional] |
@@ -33,6 +34,7 @@ instance = CircuitID::GetConferenceRoom200Response.new(
   require_passcode: null,
   share: null,
   chatroom: null,
+  _id: null,
   created_by_user_id: null,
   updated_by_user_id: null,
   created_at: null,

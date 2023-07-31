@@ -9,7 +9,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_authentication
 
-> <CreateAuthentication200Response> create_authentication(authentication)
+> <CreateAuthentication200Response> create_authentication(authentication_create_or_patch)
 
 Create a new object
 
@@ -29,11 +29,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::AuthenticationApi.new
-authentication = CircuitID::Authentication.new({username: 'username_example', password: 'password_example', strategy: 'local'}) # Authentication | The JSON object that will be posted to the REST API endpoint.
+authentication_create_or_patch = CircuitID::AuthenticationCreateOrPatch.new({username: 'username_example', password: 'password_example', strategy: 'local'}) # AuthenticationCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_authentication(authentication)
+  result = api_instance.create_authentication(authentication_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling AuthenticationApi->create_authentication: #{e}"
@@ -44,12 +44,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<CreateAuthentication200Response>, Integer, Hash)> create_authentication_with_http_info(authentication)
+> <Array(<CreateAuthentication200Response>, Integer, Hash)> create_authentication_with_http_info(authentication_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_authentication_with_http_info(authentication)
+  data, status_code, headers = api_instance.create_authentication_with_http_info(authentication_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreateAuthentication200Response>
@@ -62,7 +62,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **authentication** | [**Authentication**](Authentication.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **authentication_create_or_patch** | [**AuthenticationCreateOrPatch**](AuthenticationCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 

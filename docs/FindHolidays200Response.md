@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Holidays&gt;**](Holidays.md) |  |  |
+| **data** | [**Array&lt;GetHoliday200Response&gt;**](GetHoliday200Response.md) |  |  |
 
 ## Example
 

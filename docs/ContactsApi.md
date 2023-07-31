@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_contact
 
-> <GetContact200Response> create_contact(contacts)
+> <GetContact200Response> create_contact(contacts_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::ContactsApi.new
-contacts = CircuitID::Contacts.new({first: 'first_example'}) # Contacts | The JSON object that will be posted to the REST API endpoint.
+contacts_create_or_patch = CircuitID::ContactsCreateOrPatch.new({first: 'first_example'}) # ContactsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_contact(contacts)
+  result = api_instance.create_contact(contacts_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling ContactsApi->create_contact: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetContact200Response>, Integer, Hash)> create_contact_with_http_info(contacts)
+> <Array(<GetContact200Response>, Integer, Hash)> create_contact_with_http_info(contacts_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_contact_with_http_info(contacts)
+  data, status_code, headers = api_instance.create_contact_with_http_info(contacts_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetContact200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **contacts** | [**Contacts**](Contacts.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **contacts_create_or_patch** | [**ContactsCreateOrPatch**](ContactsCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patch_contact
 
-> <GetContact200Response> patch_contact(id, contacts)
+> <GetContact200Response> patch_contact(id, contacts_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::ContactsApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-contacts = CircuitID::Contacts.new({first: 'first_example'}) # Contacts | The request data.
+contacts_create_or_patch = CircuitID::ContactsCreateOrPatch.new({first: 'first_example'}) # ContactsCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_contact(id, contacts)
+  result = api_instance.patch_contact(id, contacts_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling ContactsApi->patch_contact: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetContact200Response>, Integer, Hash)> patch_contact_with_http_info(id, contacts)
+> <Array(<GetContact200Response>, Integer, Hash)> patch_contact_with_http_info(id, contacts_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_contact_with_http_info(id, contacts)
+  data, status_code, headers = api_instance.patch_contact_with_http_info(id, contacts_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetContact200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **contacts** | [**Contacts**](Contacts.md) | The request data. |  |
+| **contacts_create_or_patch** | [**ContactsCreateOrPatch**](ContactsCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

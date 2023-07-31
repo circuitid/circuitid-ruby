@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Numbers&gt;**](Numbers.md) |  |  |
+| **data** | [**Array&lt;GetNumber200Response&gt;**](GetNumber200Response.md) |  |  |
 
 ## Example
 

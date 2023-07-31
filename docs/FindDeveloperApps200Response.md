@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Developerapps&gt;**](Developerapps.md) |  |  |
+| **data** | [**Array&lt;GetDeveloperApp200Response&gt;**](GetDeveloperApp200Response.md) |  |  |
 
 ## Example
 

@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Ratecenters&gt;**](Ratecenters.md) |  |  |
+| **data** | [**Array&lt;GetRateCenter200Response&gt;**](GetRateCenter200Response.md) |  |  |
 
 ## Example
 

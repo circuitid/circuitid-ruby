@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_license
 
-> <GetLicense200Response> create_license(licenses)
+> <GetLicense200Response> create_license(licenses_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::LicensesApi.new
-licenses = CircuitID::Licenses.new({order: 'order_example', object: 'object_example', ref: 'ref_example'}) # Licenses | The JSON object that will be posted to the REST API endpoint.
+licenses_create_or_patch = CircuitID::LicensesCreateOrPatch.new({order: 'order_example', object: 'object_example', ref: 'ref_example'}) # LicensesCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_license(licenses)
+  result = api_instance.create_license(licenses_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling LicensesApi->create_license: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetLicense200Response>, Integer, Hash)> create_license_with_http_info(licenses)
+> <Array(<GetLicense200Response>, Integer, Hash)> create_license_with_http_info(licenses_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_license_with_http_info(licenses)
+  data, status_code, headers = api_instance.create_license_with_http_info(licenses_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetLicense200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **licenses** | [**Licenses**](Licenses.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **licenses_create_or_patch** | [**LicensesCreateOrPatch**](LicensesCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patch_license
 
-> <GetLicense200Response> patch_license(id, licenses)
+> <GetLicense200Response> patch_license(id, licenses_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::LicensesApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-licenses = CircuitID::Licenses.new({order: 'order_example', object: 'object_example', ref: 'ref_example'}) # Licenses | The request data.
+licenses_create_or_patch = CircuitID::LicensesCreateOrPatch.new({order: 'order_example', object: 'object_example', ref: 'ref_example'}) # LicensesCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_license(id, licenses)
+  result = api_instance.patch_license(id, licenses_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling LicensesApi->patch_license: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetLicense200Response>, Integer, Hash)> patch_license_with_http_info(id, licenses)
+> <Array(<GetLicense200Response>, Integer, Hash)> patch_license_with_http_info(id, licenses_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_license_with_http_info(id, licenses)
+  data, status_code, headers = api_instance.patch_license_with_http_info(id, licenses_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetLicense200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **licenses** | [**Licenses**](Licenses.md) | The request data. |  |
+| **licenses_create_or_patch** | [**LicensesCreateOrPatch**](LicensesCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

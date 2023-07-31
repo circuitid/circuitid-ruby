@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_announcement
 
-> <GetAnnouncement200Response> create_announcement(announcements)
+> <GetAnnouncement200Response> create_announcement(announcements_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::AnnouncementsApi.new
-announcements = CircuitID::Announcements.new({name: 'name_example', type: 'tts'}) # Announcements | The JSON object that will be posted to the REST API endpoint.
+announcements_create_or_patch = CircuitID::AnnouncementsCreateOrPatch.new({name: 'name_example', type: 'tts'}) # AnnouncementsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_announcement(announcements)
+  result = api_instance.create_announcement(announcements_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling AnnouncementsApi->create_announcement: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetAnnouncement200Response>, Integer, Hash)> create_announcement_with_http_info(announcements)
+> <Array(<GetAnnouncement200Response>, Integer, Hash)> create_announcement_with_http_info(announcements_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_announcement_with_http_info(announcements)
+  data, status_code, headers = api_instance.create_announcement_with_http_info(announcements_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAnnouncement200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **announcements** | [**Announcements**](Announcements.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **announcements_create_or_patch** | [**AnnouncementsCreateOrPatch**](AnnouncementsCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patch_announcement
 
-> <GetAnnouncement200Response> patch_announcement(id, announcements)
+> <GetAnnouncement200Response> patch_announcement(id, announcements_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::AnnouncementsApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-announcements = CircuitID::Announcements.new({name: 'name_example', type: 'tts'}) # Announcements | The request data.
+announcements_create_or_patch = CircuitID::AnnouncementsCreateOrPatch.new({name: 'name_example', type: 'tts'}) # AnnouncementsCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_announcement(id, announcements)
+  result = api_instance.patch_announcement(id, announcements_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling AnnouncementsApi->patch_announcement: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetAnnouncement200Response>, Integer, Hash)> patch_announcement_with_http_info(id, announcements)
+> <Array(<GetAnnouncement200Response>, Integer, Hash)> patch_announcement_with_http_info(id, announcements_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_announcement_with_http_info(id, announcements)
+  data, status_code, headers = api_instance.patch_announcement_with_http_info(id, announcements_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetAnnouncement200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **announcements** | [**Announcements**](Announcements.md) | The request data. |  |
+| **announcements_create_or_patch** | [**AnnouncementsCreateOrPatch**](AnnouncementsCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

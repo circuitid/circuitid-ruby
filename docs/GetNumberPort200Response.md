@@ -4,8 +4,9 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **numbers** | **Array&lt;String&gt;** |  |  |
 | **name** | **String** |  |  |
-| **type** | **String** |  |  |
+| **type** | **String** |  | [default to &#39;port in&#39;] |
 | **type_of_service** | **String** |  |  |
 | **authorized_person** | **String** |  |  |
 | **desired_due_date** | **Time** |  |  |
@@ -19,6 +20,7 @@
 | **destination** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **ref** | **String** |  | [optional] |
 | **call_forwarding_destination** | **String** |  | [optional] |
+| **_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **updated_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_at** | **Time** |  | [optional] |
@@ -30,6 +32,7 @@
 require 'circuitid-ruby'
 
 instance = CircuitID::GetNumberPort200Response.new(
+  numbers: null,
   name: null,
   type: null,
   type_of_service: null,
@@ -45,6 +48,7 @@ instance = CircuitID::GetNumberPort200Response.new(
   destination: null,
   ref: null,
   call_forwarding_destination: null,
+  _id: null,
   created_by_user_id: null,
   updated_by_user_id: null,
   created_at: null,

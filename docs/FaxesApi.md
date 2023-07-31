@@ -12,7 +12,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_fax
 
-> <GetFax200Response> create_fax(faxes)
+> <GetFax200Response> create_fax(faxes_create_or_patch)
 
 Create a new object
 
@@ -32,11 +32,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::FaxesApi.new
-faxes = CircuitID::Faxes.new({caller_id_number: 'caller_id_number_example', caller_destination: 'caller_destination_example', status: 'failed', type: 'send', number: 'number_example', fax_account: 'fax_account_example'}) # Faxes | The JSON object that will be posted to the REST API endpoint.
+faxes_create_or_patch = CircuitID::FaxesCreateOrPatch.new({caller_destinations: ['caller_destinations_example'], number: 'number_example', fax_account: 'fax_account_example'}) # FaxesCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_fax(faxes)
+  result = api_instance.create_fax(faxes_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling FaxesApi->create_fax: #{e}"
@@ -47,12 +47,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetFax200Response>, Integer, Hash)> create_fax_with_http_info(faxes)
+> <Array(<GetFax200Response>, Integer, Hash)> create_fax_with_http_info(faxes_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_fax_with_http_info(faxes)
+  data, status_code, headers = api_instance.create_fax_with_http_info(faxes_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetFax200Response>
@@ -65,7 +65,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **faxes** | [**Faxes**](Faxes.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **faxes_create_or_patch** | [**FaxesCreateOrPatch**](FaxesCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 

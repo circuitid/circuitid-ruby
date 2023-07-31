@@ -167,7 +167,7 @@ end
 
 ## patch_number
 
-> <GetNumber200Response> patch_number(id, numbers)
+> <GetNumber200Response> patch_number(id, numbers_create_or_patch)
 
 Patch object's data
 
@@ -188,11 +188,11 @@ end
 
 api_instance = CircuitID::NumbersApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-numbers = CircuitID::Numbers.new({name: 'name_example', country_code: 'country_code_example', provider: 'provider_example', destination_type: 'announcements'}) # Numbers | The request data.
+numbers_create_or_patch = CircuitID::NumbersCreateOrPatch.new({destination_type: 'announcements'}) # NumbersCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_number(id, numbers)
+  result = api_instance.patch_number(id, numbers_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling NumbersApi->patch_number: #{e}"
@@ -203,12 +203,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetNumber200Response>, Integer, Hash)> patch_number_with_http_info(id, numbers)
+> <Array(<GetNumber200Response>, Integer, Hash)> patch_number_with_http_info(id, numbers_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_number_with_http_info(id, numbers)
+  data, status_code, headers = api_instance.patch_number_with_http_info(id, numbers_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetNumber200Response>
@@ -222,7 +222,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **numbers** | [**Numbers**](Numbers.md) | The request data. |  |
+| **numbers_create_or_patch** | [**NumbersCreateOrPatch**](NumbersCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

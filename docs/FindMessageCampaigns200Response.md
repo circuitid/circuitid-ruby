@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Messagecampaigns&gt;**](Messagecampaigns.md) |  |  |
+| **data** | [**Array&lt;GetMessageCampaign200Response&gt;**](GetMessageCampaign200Response.md) |  |  |
 
 ## Example
 

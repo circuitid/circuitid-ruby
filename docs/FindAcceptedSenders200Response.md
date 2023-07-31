@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Acceptedsenders&gt;**](Acceptedsenders.md) |  |  |
+| **data** | [**Array&lt;GetAcceptedSender200Response&gt;**](GetAcceptedSender200Response.md) |  |  |
 
 ## Example
 

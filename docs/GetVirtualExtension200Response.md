@@ -7,6 +7,7 @@
 | **name** | **String** |  |  |
 | **extension** | **Integer** |  |  |
 | **phoneinboundrule** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **updated_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_at** | **Time** |  | [optional] |
@@ -21,6 +22,7 @@ instance = CircuitID::GetVirtualExtension200Response.new(
   name: null,
   extension: null,
   phoneinboundrule: null,
+  _id: null,
   created_by_user_id: null,
   updated_by_user_id: null,
   created_at: null,

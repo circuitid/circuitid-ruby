@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Usertokens&gt;**](Usertokens.md) |  |  |
+| **data** | [**Array&lt;GetUserToken200Response&gt;**](GetUserToken200Response.md) |  |  |
 
 ## Example
 

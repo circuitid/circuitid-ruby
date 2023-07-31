@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Groupmembers&gt;**](Groupmembers.md) |  |  |
+| **data** | [**Array&lt;GetGroupMember200Response&gt;**](GetGroupMember200Response.md) |  |  |
 
 ## Example
 

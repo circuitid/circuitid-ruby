@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Clients&gt;**](Clients.md) |  |  |
+| **data** | [**Array&lt;GetClient200Response&gt;**](GetClient200Response.md) |  |  |
 
 ## Example
 

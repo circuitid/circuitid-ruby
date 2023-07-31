@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Chatrooms&gt;**](Chatrooms.md) |  |  |
+| **data** | [**Array&lt;GetChatRoom200Response&gt;**](GetChatRoom200Response.md) |  |  |
 
 ## Example
 

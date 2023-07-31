@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Domains&gt;**](Domains.md) |  |  |
+| **data** | [**Array&lt;GetDomain200Response&gt;**](GetDomain200Response.md) |  |  |
 
 ## Example
 

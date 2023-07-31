@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_menu_option
 
-> <GetMenuOption200Response> create_menu_option(menuoptions)
+> <GetMenuOption200Response> create_menu_option(menuoptions_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::MenuOptionsApi.new
-menuoptions = CircuitID::Menuoptions.new({name: 'name_example', digit: 37, menus: 3.56, destination_type: 'announcements'}) # Menuoptions | The JSON object that will be posted to the REST API endpoint.
+menuoptions_create_or_patch = CircuitID::MenuoptionsCreateOrPatch.new({name: 'name_example', digit: 37, menus: 3.56, destination_type: 'announcements'}) # MenuoptionsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_menu_option(menuoptions)
+  result = api_instance.create_menu_option(menuoptions_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling MenuOptionsApi->create_menu_option: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetMenuOption200Response>, Integer, Hash)> create_menu_option_with_http_info(menuoptions)
+> <Array(<GetMenuOption200Response>, Integer, Hash)> create_menu_option_with_http_info(menuoptions_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_menu_option_with_http_info(menuoptions)
+  data, status_code, headers = api_instance.create_menu_option_with_http_info(menuoptions_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetMenuOption200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **menuoptions** | [**Menuoptions**](Menuoptions.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **menuoptions_create_or_patch** | [**MenuoptionsCreateOrPatch**](MenuoptionsCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patch_menu_option
 
-> <GetMenuOption200Response> patch_menu_option(id, menuoptions)
+> <GetMenuOption200Response> patch_menu_option(id, menuoptions_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::MenuOptionsApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-menuoptions = CircuitID::Menuoptions.new({name: 'name_example', digit: 37, menus: 3.56, destination_type: 'announcements'}) # Menuoptions | The request data.
+menuoptions_create_or_patch = CircuitID::MenuoptionsCreateOrPatch.new({name: 'name_example', digit: 37, menus: 3.56, destination_type: 'announcements'}) # MenuoptionsCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_menu_option(id, menuoptions)
+  result = api_instance.patch_menu_option(id, menuoptions_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling MenuOptionsApi->patch_menu_option: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetMenuOption200Response>, Integer, Hash)> patch_menu_option_with_http_info(id, menuoptions)
+> <Array(<GetMenuOption200Response>, Integer, Hash)> patch_menu_option_with_http_info(id, menuoptions_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_menu_option_with_http_info(id, menuoptions)
+  data, status_code, headers = api_instance.patch_menu_option_with_http_info(id, menuoptions_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetMenuOption200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **menuoptions** | [**Menuoptions**](Menuoptions.md) | The request data. |  |
+| **menuoptions_create_or_patch** | [**MenuoptionsCreateOrPatch**](MenuoptionsCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

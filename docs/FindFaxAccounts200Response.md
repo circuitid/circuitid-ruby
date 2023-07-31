@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Faxaccounts&gt;**](Faxaccounts.md) |  |  |
+| **data** | [**Array&lt;GetFaxAccount200Response&gt;**](GetFaxAccount200Response.md) |  |  |
 
 ## Example
 

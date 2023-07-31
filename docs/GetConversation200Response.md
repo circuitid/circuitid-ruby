@@ -10,6 +10,7 @@
 | **ref** | **String** |  |  |
 | **object** | **String** | ObjectId (unique 12 bytes ID) |  |
 | **status** | **String** |  | [default to &#39;open&#39;] |
+| **_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **updated_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_at** | **Time** |  | [optional] |
@@ -27,6 +28,7 @@ instance = CircuitID::GetConversation200Response.new(
   ref: null,
   object: null,
   status: null,
+  _id: null,
   created_by_user_id: null,
   updated_by_user_id: null,
   created_at: null,

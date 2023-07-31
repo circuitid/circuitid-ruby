@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Messagebrands&gt;**](Messagebrands.md) |  |  |
+| **data** | [**Array&lt;GetMessageBrand200Response&gt;**](GetMessageBrand200Response.md) |  |  |
 
 ## Example
 

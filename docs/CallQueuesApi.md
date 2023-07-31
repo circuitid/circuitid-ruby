@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_call_queue
 
-> <GetCallQueue200Response> create_call_queue(callqueues)
+> <GetCallQueue200Response> create_call_queue(callqueues_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::CallQueuesApi.new
-callqueues = CircuitID::Callqueues.new({name: 'name_example', strategy: 'ring-all', moh: 'moh_example', caller_resume_timeout: 37, max_wait_time: 37, max_wait_time_no_agent: 37, max_no_answer: 37, time_based_score: 'queue', tier_rules_apply: false, tier_rule_no_agent_no_wait: false, tier_rule_wait_multiply_level: false, abandoned_resume_allowed: false, max_wait_time_no_agent_time_reached: 37}) # Callqueues | The JSON object that will be posted to the REST API endpoint.
+callqueues_create_or_patch = CircuitID::CallqueuesCreateOrPatch.new({name: 'name_example', strategy: 'ring-all', moh: 'moh_example', caller_resume_timeout: 37, max_wait_time: 37, max_wait_time_no_agent: 37, max_no_answer: 37, time_based_score: 'queue', tier_rules_apply: false, tier_rule_no_agent_no_wait: false, tier_rule_wait_multiply_level: false, abandoned_resume_allowed: false, max_wait_time_no_agent_time_reached: 37}) # CallqueuesCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_call_queue(callqueues)
+  result = api_instance.create_call_queue(callqueues_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling CallQueuesApi->create_call_queue: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetCallQueue200Response>, Integer, Hash)> create_call_queue_with_http_info(callqueues)
+> <Array(<GetCallQueue200Response>, Integer, Hash)> create_call_queue_with_http_info(callqueues_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_call_queue_with_http_info(callqueues)
+  data, status_code, headers = api_instance.create_call_queue_with_http_info(callqueues_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetCallQueue200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **callqueues** | [**Callqueues**](Callqueues.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **callqueues_create_or_patch** | [**CallqueuesCreateOrPatch**](CallqueuesCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patch_call_queue
 
-> <GetCallQueue200Response> patch_call_queue(id, callqueues)
+> <GetCallQueue200Response> patch_call_queue(id, callqueues_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::CallQueuesApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-callqueues = CircuitID::Callqueues.new({name: 'name_example', strategy: 'ring-all', moh: 'moh_example', caller_resume_timeout: 37, max_wait_time: 37, max_wait_time_no_agent: 37, max_no_answer: 37, time_based_score: 'queue', tier_rules_apply: false, tier_rule_no_agent_no_wait: false, tier_rule_wait_multiply_level: false, abandoned_resume_allowed: false, max_wait_time_no_agent_time_reached: 37}) # Callqueues | The request data.
+callqueues_create_or_patch = CircuitID::CallqueuesCreateOrPatch.new({name: 'name_example', strategy: 'ring-all', moh: 'moh_example', caller_resume_timeout: 37, max_wait_time: 37, max_wait_time_no_agent: 37, max_no_answer: 37, time_based_score: 'queue', tier_rules_apply: false, tier_rule_no_agent_no_wait: false, tier_rule_wait_multiply_level: false, abandoned_resume_allowed: false, max_wait_time_no_agent_time_reached: 37}) # CallqueuesCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_call_queue(id, callqueues)
+  result = api_instance.patch_call_queue(id, callqueues_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling CallQueuesApi->patch_call_queue: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetCallQueue200Response>, Integer, Hash)> patch_call_queue_with_http_info(id, callqueues)
+> <Array(<GetCallQueue200Response>, Integer, Hash)> patch_call_queue_with_http_info(id, callqueues_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_call_queue_with_http_info(id, callqueues)
+  data, status_code, headers = api_instance.patch_call_queue_with_http_info(id, callqueues_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetCallQueue200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **callqueues** | [**Callqueues**](Callqueues.md) | The request data. |  |
+| **callqueues_create_or_patch** | [**CallqueuesCreateOrPatch**](CallqueuesCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

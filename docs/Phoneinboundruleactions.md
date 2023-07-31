@@ -12,7 +12,6 @@
 | **priority** | **Integer** |  | [default to 1] |
 | **destination_type** | **String** |  |  |
 | **destination** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
-| **ref** | **String** |  | [optional] |
 | **call_forwarding_destination** | **String** |  | [optional] |
 
 ## Example
@@ -29,7 +28,6 @@ instance = CircuitID::Phoneinboundruleactions.new(
   priority: null,
   destination_type: null,
   destination: null,
-  ref: null,
   call_forwarding_destination: null
 )
 ```

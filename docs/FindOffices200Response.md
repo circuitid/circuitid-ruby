@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Offices&gt;**](Offices.md) |  |  |
+| **data** | [**Array&lt;GetOffice200Response&gt;**](GetOffice200Response.md) |  |  |
 
 ## Example
 

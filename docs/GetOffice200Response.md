@@ -11,12 +11,11 @@
 | **street_suffix** | **String** |  |  |
 | **city** | **String** |  |  |
 | **state** | **String** |  | [optional] |
-| **zip** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **zip_code** | **String** |  | [optional] |
 | **address2** | **String** |  | [optional] |
 | **country** | **String** |  |  |
-| **providers** | **Object** |  | [optional] |
 | **region** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+| **_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **updated_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_at** | **Time** |  | [optional] |
@@ -35,12 +34,11 @@ instance = CircuitID::GetOffice200Response.new(
   street_suffix: null,
   city: null,
   state: null,
-  zip: null,
   zip_code: null,
   address2: null,
   country: null,
-  providers: null,
   region: null,
+  _id: null,
   created_by_user_id: null,
   updated_by_user_id: null,
   created_at: null,

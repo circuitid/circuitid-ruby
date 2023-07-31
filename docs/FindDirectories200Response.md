@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Directories&gt;**](Directories.md) |  |  |
+| **data** | [**Array&lt;Getdirectory200Response&gt;**](Getdirectory200Response.md) |  |  |
 
 ## Example
 

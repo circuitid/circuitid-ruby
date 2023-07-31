@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_phone_outbound_rule
 
-> <GetPhoneOutboundRule200Response> create_phone_outbound_rule(phoneoutboundrules)
+> <GetPhoneOutboundRule200Response> create_phone_outbound_rule(phoneoutboundrules_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::PhoneOutboundRulesApi.new
-phoneoutboundrules = CircuitID::Phoneoutboundrules.new({name: 'name_example'}) # Phoneoutboundrules | The JSON object that will be posted to the REST API endpoint.
+phoneoutboundrules_create_or_patch = CircuitID::PhoneoutboundrulesCreateOrPatch.new({name: 'name_example'}) # PhoneoutboundrulesCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_phone_outbound_rule(phoneoutboundrules)
+  result = api_instance.create_phone_outbound_rule(phoneoutboundrules_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling PhoneOutboundRulesApi->create_phone_outbound_rule: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetPhoneOutboundRule200Response>, Integer, Hash)> create_phone_outbound_rule_with_http_info(phoneoutboundrules)
+> <Array(<GetPhoneOutboundRule200Response>, Integer, Hash)> create_phone_outbound_rule_with_http_info(phoneoutboundrules_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_phone_outbound_rule_with_http_info(phoneoutboundrules)
+  data, status_code, headers = api_instance.create_phone_outbound_rule_with_http_info(phoneoutboundrules_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetPhoneOutboundRule200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **phoneoutboundrules** | [**Phoneoutboundrules**](Phoneoutboundrules.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **phoneoutboundrules_create_or_patch** | [**PhoneoutboundrulesCreateOrPatch**](PhoneoutboundrulesCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patch_phone_outbound_rule
 
-> <GetPhoneOutboundRule200Response> patch_phone_outbound_rule(id, phoneoutboundrules)
+> <GetPhoneOutboundRule200Response> patch_phone_outbound_rule(id, phoneoutboundrules_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::PhoneOutboundRulesApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-phoneoutboundrules = CircuitID::Phoneoutboundrules.new({name: 'name_example'}) # Phoneoutboundrules | The request data.
+phoneoutboundrules_create_or_patch = CircuitID::PhoneoutboundrulesCreateOrPatch.new({name: 'name_example'}) # PhoneoutboundrulesCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_phone_outbound_rule(id, phoneoutboundrules)
+  result = api_instance.patch_phone_outbound_rule(id, phoneoutboundrules_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling PhoneOutboundRulesApi->patch_phone_outbound_rule: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetPhoneOutboundRule200Response>, Integer, Hash)> patch_phone_outbound_rule_with_http_info(id, phoneoutboundrules)
+> <Array(<GetPhoneOutboundRule200Response>, Integer, Hash)> patch_phone_outbound_rule_with_http_info(id, phoneoutboundrules_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_phone_outbound_rule_with_http_info(id, phoneoutboundrules)
+  data, status_code, headers = api_instance.patch_phone_outbound_rule_with_http_info(id, phoneoutboundrules_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetPhoneOutboundRule200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **phoneoutboundrules** | [**Phoneoutboundrules**](Phoneoutboundrules.md) | The request data. |  |
+| **phoneoutboundrules_create_or_patch** | [**PhoneoutboundrulesCreateOrPatch**](PhoneoutboundrulesCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

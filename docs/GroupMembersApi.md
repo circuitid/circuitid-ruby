@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_group_member
 
-> <GetGroupMember200Response> create_group_member(groupmembers)
+> <GetGroupMember200Response> create_group_member(groupmembers_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::GroupMembersApi.new
-groupmembers = CircuitID::Groupmembers.new({group: 'group_example', object: 'object_example', ref: 'users'}) # Groupmembers | The JSON object that will be posted to the REST API endpoint.
+groupmembers_create_or_patch = CircuitID::GroupmembersCreateOrPatch.new({group: 'group_example', object: 'object_example', ref: 'users'}) # GroupmembersCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_group_member(groupmembers)
+  result = api_instance.create_group_member(groupmembers_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling GroupMembersApi->create_group_member: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetGroupMember200Response>, Integer, Hash)> create_group_member_with_http_info(groupmembers)
+> <Array(<GetGroupMember200Response>, Integer, Hash)> create_group_member_with_http_info(groupmembers_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_group_member_with_http_info(groupmembers)
+  data, status_code, headers = api_instance.create_group_member_with_http_info(groupmembers_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetGroupMember200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **groupmembers** | [**Groupmembers**](Groupmembers.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **groupmembers_create_or_patch** | [**GroupmembersCreateOrPatch**](GroupmembersCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patch_group_member
 
-> <GetGroupMember200Response> patch_group_member(id, groupmembers)
+> <GetGroupMember200Response> patch_group_member(id, groupmembers_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::GroupMembersApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-groupmembers = CircuitID::Groupmembers.new({group: 'group_example', object: 'object_example', ref: 'users'}) # Groupmembers | The request data.
+groupmembers_create_or_patch = CircuitID::GroupmembersCreateOrPatch.new({group: 'group_example', object: 'object_example', ref: 'users'}) # GroupmembersCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_group_member(id, groupmembers)
+  result = api_instance.patch_group_member(id, groupmembers_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling GroupMembersApi->patch_group_member: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetGroupMember200Response>, Integer, Hash)> patch_group_member_with_http_info(id, groupmembers)
+> <Array(<GetGroupMember200Response>, Integer, Hash)> patch_group_member_with_http_info(id, groupmembers_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_group_member_with_http_info(id, groupmembers)
+  data, status_code, headers = api_instance.patch_group_member_with_http_info(id, groupmembers_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetGroupMember200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **groupmembers** | [**Groupmembers**](Groupmembers.md) | The request data. |  |
+| **groupmembers_create_or_patch** | [**GroupmembersCreateOrPatch**](GroupmembersCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

@@ -9,6 +9,7 @@
 | **lata** | **String** |  |  |
 | **loc_state** | **String** |  |  |
 | **rc_abbre** | **String** |  |  |
+| **_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **updated_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_at** | **Time** |  | [optional] |
@@ -25,6 +26,7 @@ instance = CircuitID::GetRateCenter200Response.new(
   lata: null,
   loc_state: null,
   rc_abbre: null,
+  _id: null,
   created_by_user_id: null,
   updated_by_user_id: null,
   created_at: null,

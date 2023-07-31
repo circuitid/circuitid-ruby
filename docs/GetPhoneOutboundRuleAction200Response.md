@@ -21,6 +21,7 @@
 | **remove_ending_chars** | **Integer** |  | [optional] |
 | **route** | **String** |  | [default to &#39;default&#39;] |
 | **routing_type** | **String** |  | [optional] |
+| **_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **updated_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_at** | **Time** |  | [optional] |
@@ -49,6 +50,7 @@ instance = CircuitID::GetPhoneOutboundRuleAction200Response.new(
   remove_ending_chars: null,
   route: null,
   routing_type: null,
+  _id: null,
   created_by_user_id: null,
   updated_by_user_id: null,
   created_at: null,

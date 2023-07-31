@@ -16,7 +16,7 @@
 | **csp_id** | **String** |  | [optional] |
 | **ein_issuing_country** | **String** |  | [optional] |
 | **universal_ein** | **String** |  | [optional] |
-| **reference_id** | **String** |  | [optional] |
+| **_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **updated_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_at** | **Time** |  | [optional] |
@@ -40,7 +40,7 @@ instance = CircuitID::GetMessageBrand200Response.new(
   csp_id: null,
   ein_issuing_country: null,
   universal_ein: null,
-  reference_id: null,
+  _id: null,
   created_by_user_id: null,
   updated_by_user_id: null,
   created_at: null,

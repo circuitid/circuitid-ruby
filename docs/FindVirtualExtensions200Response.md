@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Virtualextensions&gt;**](Virtualextensions.md) |  |  |
+| **data** | [**Array&lt;GetVirtualExtension200Response&gt;**](GetVirtualExtension200Response.md) |  |  |
 
 ## Example
 

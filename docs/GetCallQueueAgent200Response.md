@@ -8,6 +8,7 @@
 | **user** | **String** | ObjectId (unique 12 bytes ID) |  |
 | **priority** | **Integer** |  | [default to 1] |
 | **tier** | **Integer** |  | [default to 1] |
+| **_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **updated_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_at** | **Time** |  | [optional] |
@@ -23,6 +24,7 @@ instance = CircuitID::GetCallQueueAgent200Response.new(
   user: null,
   priority: null,
   tier: null,
+  _id: null,
   created_by_user_id: null,
   updated_by_user_id: null,
   created_at: null,

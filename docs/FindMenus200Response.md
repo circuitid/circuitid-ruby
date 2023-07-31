@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Menus&gt;**](Menus.md) |  |  |
+| **data** | [**Array&lt;GetMenu200Response&gt;**](GetMenu200Response.md) |  |  |
 
 ## Example
 

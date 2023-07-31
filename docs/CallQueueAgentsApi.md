@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_call_queue_agent
 
-> <GetCallQueueAgent200Response> create_call_queue_agent(callqueueagents)
+> <GetCallQueueAgent200Response> create_call_queue_agent(callqueueagents_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::CallQueueAgentsApi.new
-callqueueagents = CircuitID::Callqueueagents.new({callqueue: 'callqueue_example', user: 'user_example', priority: 37, tier: 37}) # Callqueueagents | The JSON object that will be posted to the REST API endpoint.
+callqueueagents_create_or_patch = CircuitID::CallqueueagentsCreateOrPatch.new({callqueue: 'callqueue_example', user: 'user_example', priority: 37, tier: 37}) # CallqueueagentsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_call_queue_agent(callqueueagents)
+  result = api_instance.create_call_queue_agent(callqueueagents_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling CallQueueAgentsApi->create_call_queue_agent: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetCallQueueAgent200Response>, Integer, Hash)> create_call_queue_agent_with_http_info(callqueueagents)
+> <Array(<GetCallQueueAgent200Response>, Integer, Hash)> create_call_queue_agent_with_http_info(callqueueagents_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_call_queue_agent_with_http_info(callqueueagents)
+  data, status_code, headers = api_instance.create_call_queue_agent_with_http_info(callqueueagents_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetCallQueueAgent200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **callqueueagents** | [**Callqueueagents**](Callqueueagents.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **callqueueagents_create_or_patch** | [**CallqueueagentsCreateOrPatch**](CallqueueagentsCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patch_call_queue_agent
 
-> <GetCallQueueAgent200Response> patch_call_queue_agent(id, callqueueagents)
+> <GetCallQueueAgent200Response> patch_call_queue_agent(id, callqueueagents_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::CallQueueAgentsApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-callqueueagents = CircuitID::Callqueueagents.new({callqueue: 'callqueue_example', user: 'user_example', priority: 37, tier: 37}) # Callqueueagents | The request data.
+callqueueagents_create_or_patch = CircuitID::CallqueueagentsCreateOrPatch.new({callqueue: 'callqueue_example', user: 'user_example', priority: 37, tier: 37}) # CallqueueagentsCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_call_queue_agent(id, callqueueagents)
+  result = api_instance.patch_call_queue_agent(id, callqueueagents_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling CallQueueAgentsApi->patch_call_queue_agent: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetCallQueueAgent200Response>, Integer, Hash)> patch_call_queue_agent_with_http_info(id, callqueueagents)
+> <Array(<GetCallQueueAgent200Response>, Integer, Hash)> patch_call_queue_agent_with_http_info(id, callqueueagents_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_call_queue_agent_with_http_info(id, callqueueagents)
+  data, status_code, headers = api_instance.patch_call_queue_agent_with_http_info(id, callqueueagents_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetCallQueueAgent200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **callqueueagents** | [**Callqueueagents**](Callqueueagents.md) | The request data. |  |
+| **callqueueagents_create_or_patch** | [**CallqueueagentsCreateOrPatch**](CallqueueagentsCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

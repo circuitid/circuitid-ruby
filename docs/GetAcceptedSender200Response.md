@@ -8,6 +8,7 @@
 | **service** | **String** | ObjectId (unique 12 bytes ID) |  |
 | **service_ref** | **String** |  |  |
 | **ref** | **String** |  |  |
+| **_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **updated_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_at** | **Time** |  | [optional] |
@@ -23,6 +24,7 @@ instance = CircuitID::GetAcceptedSender200Response.new(
   service: null,
   service_ref: null,
   ref: null,
+  _id: null,
   created_by_user_id: null,
   updated_by_user_id: null,
   created_at: null,

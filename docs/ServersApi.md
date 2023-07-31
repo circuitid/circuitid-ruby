@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_server
 
-> <GetServer200Response> create_server(servers)
+> <GetServer200Response> create_server(servers_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::ServersApi.new
-servers = CircuitID::Servers.new({name: 'name_example', host: 'host_example', port: 37, type: 'sip', domestic_outbound_call_limit: 37, domestic_inbound_call_limit: 37, international_outbound_call_limit: 37, toll_free_channel_limit: 37}) # Servers | The JSON object that will be posted to the REST API endpoint.
+servers_create_or_patch = CircuitID::ServersCreateOrPatch.new({name: 'name_example', host: 'host_example', port: 37, type: 'sip'}) # ServersCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_server(servers)
+  result = api_instance.create_server(servers_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling ServersApi->create_server: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetServer200Response>, Integer, Hash)> create_server_with_http_info(servers)
+> <Array(<GetServer200Response>, Integer, Hash)> create_server_with_http_info(servers_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_server_with_http_info(servers)
+  data, status_code, headers = api_instance.create_server_with_http_info(servers_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetServer200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **servers** | [**Servers**](Servers.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **servers_create_or_patch** | [**ServersCreateOrPatch**](ServersCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patch_server
 
-> <GetServer200Response> patch_server(id, servers)
+> <GetServer200Response> patch_server(id, servers_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::ServersApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-servers = CircuitID::Servers.new({name: 'name_example', host: 'host_example', port: 37, type: 'sip', domestic_outbound_call_limit: 37, domestic_inbound_call_limit: 37, international_outbound_call_limit: 37, toll_free_channel_limit: 37}) # Servers | The request data.
+servers_create_or_patch = CircuitID::ServersCreateOrPatch.new({name: 'name_example', host: 'host_example', port: 37, type: 'sip'}) # ServersCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_server(id, servers)
+  result = api_instance.patch_server(id, servers_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling ServersApi->patch_server: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetServer200Response>, Integer, Hash)> patch_server_with_http_info(id, servers)
+> <Array(<GetServer200Response>, Integer, Hash)> patch_server_with_http_info(id, servers_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_server_with_http_info(id, servers)
+  data, status_code, headers = api_instance.patch_server_with_http_info(id, servers_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetServer200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **servers** | [**Servers**](Servers.md) | The request data. |  |
+| **servers_create_or_patch** | [**ServersCreateOrPatch**](ServersCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

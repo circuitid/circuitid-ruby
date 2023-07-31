@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Invoiceitems&gt;**](Invoiceitems.md) |  |  |
+| **data** | [**Array&lt;GetInvoiceItem200Response&gt;**](GetInvoiceItem200Response.md) |  |  |
 
 ## Example
 

@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Licenses&gt;**](Licenses.md) |  |  |
+| **data** | [**Array&lt;GetLicense200Response&gt;**](GetLicense200Response.md) |  |  |
 
 ## Example
 

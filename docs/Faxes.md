@@ -4,6 +4,8 @@
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
+| **attachments** | **Array&lt;String&gt;** |  | [optional] |
+| **caller_destinations** | **Array&lt;String&gt;** |  |  |
 | **caller_id_number** | **String** |  |  |
 | **caller_destination** | **String** |  |  |
 | **pages** | **Integer** |  | [optional][default to 0] |
@@ -28,6 +30,8 @@
 require 'circuitid-ruby'
 
 instance = CircuitID::Faxes.new(
+  attachments: null,
+  caller_destinations: null,
   caller_id_number: null,
   caller_destination: null,
   pages: null,

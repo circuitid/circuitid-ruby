@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_menu
 
-> <GetMenu200Response> create_menu(menus)
+> <GetMenu200Response> create_menu(menus_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::MenusApi.new
-menus = CircuitID::Menus.new({name: 'name_example', max_extension_length: 37, greeting_type: 'tts'}) # Menus | The JSON object that will be posted to the REST API endpoint.
+menus_create_or_patch = CircuitID::MenusCreateOrPatch.new({name: 'name_example', max_extension_length: 37, greeting_type: 'tts'}) # MenusCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_menu(menus)
+  result = api_instance.create_menu(menus_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling MenusApi->create_menu: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetMenu200Response>, Integer, Hash)> create_menu_with_http_info(menus)
+> <Array(<GetMenu200Response>, Integer, Hash)> create_menu_with_http_info(menus_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_menu_with_http_info(menus)
+  data, status_code, headers = api_instance.create_menu_with_http_info(menus_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetMenu200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **menus** | [**Menus**](Menus.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **menus_create_or_patch** | [**MenusCreateOrPatch**](MenusCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patch_menu
 
-> <GetMenu200Response> patch_menu(id, menus)
+> <GetMenu200Response> patch_menu(id, menus_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::MenusApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-menus = CircuitID::Menus.new({name: 'name_example', max_extension_length: 37, greeting_type: 'tts'}) # Menus | The request data.
+menus_create_or_patch = CircuitID::MenusCreateOrPatch.new({name: 'name_example', max_extension_length: 37, greeting_type: 'tts'}) # MenusCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_menu(id, menus)
+  result = api_instance.patch_menu(id, menus_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling MenusApi->patch_menu: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetMenu200Response>, Integer, Hash)> patch_menu_with_http_info(id, menus)
+> <Array(<GetMenu200Response>, Integer, Hash)> patch_menu_with_http_info(id, menus_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_menu_with_http_info(id, menus)
+  data, status_code, headers = api_instance.patch_menu_with_http_info(id, menus_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetMenu200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **menus** | [**Menus**](Menus.md) | The request data. |  |
+| **menus_create_or_patch** | [**MenusCreateOrPatch**](MenusCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Contacts&gt;**](Contacts.md) |  |  |
+| **data** | [**Array&lt;GetContact200Response&gt;**](GetContact200Response.md) |  |  |
 
 ## Example
 

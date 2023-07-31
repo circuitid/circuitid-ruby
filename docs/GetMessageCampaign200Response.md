@@ -26,6 +26,7 @@
 | **sample3** | **String** |  | [optional] |
 | **sample4** | **String** |  | [optional] |
 | **sample5** | **String** |  | [optional] |
+| **_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **updated_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_at** | **Time** |  | [optional] |
@@ -59,6 +60,7 @@ instance = CircuitID::GetMessageCampaign200Response.new(
   sample3: null,
   sample4: null,
   sample5: null,
+  _id: null,
   created_by_user_id: null,
   updated_by_user_id: null,
   created_at: null,

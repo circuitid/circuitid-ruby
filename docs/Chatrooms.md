@@ -7,7 +7,6 @@
 | **name** | **String** |  | [optional] |
 | **users** | **Object** |  |  |
 | **avatar** | **String** |  | [optional] |
-| **direct** | **Boolean** |  | [optional] |
 
 ## Example
 
@@ -17,8 +16,7 @@ require 'circuitid-ruby'
 instance = CircuitID::Chatrooms.new(
   name: null,
   users: null,
-  avatar: null,
-  direct: null
+  avatar: null
 )
 ```
 

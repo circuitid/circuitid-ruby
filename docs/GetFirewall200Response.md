@@ -12,9 +12,8 @@
 | **direction** | **String** |  | [optional] |
 | **param** | **String** |  |  |
 | **hits** | **Integer** |  | [optional] |
-| **ai** | **Integer** |  | [optional][default to AI::N0] |
 | **status** | **Integer** |  | [optional][default to STATUS::N1] |
-| **notification_hits** | **Integer** |  | [optional][default to 1] |
+| **_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **updated_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_at** | **Time** |  | [optional] |
@@ -34,9 +33,8 @@ instance = CircuitID::GetFirewall200Response.new(
   direction: null,
   param: null,
   hits: null,
-  ai: null,
   status: null,
-  notification_hits: null,
+  _id: null,
   created_by_user_id: null,
   updated_by_user_id: null,
   created_at: null,

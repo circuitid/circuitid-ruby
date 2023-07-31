@@ -19,7 +19,6 @@
 | **terms_of_service_url** | **String** |  | [optional] |
 | **privacy_policy_url** | **String** |  | [optional] |
 | **permissions** | **Object** |  | [optional] |
-| **status** | **String** |  | [default to &#39;pending&#39;] |
 | **webhook_auth_type** | **String** |  | [optional] |
 | **webhook_username** | **String** |  | [optional] |
 | **webhook_password** | **String** |  | [optional] |
@@ -47,7 +46,6 @@ instance = CircuitID::Developerapps.new(
   terms_of_service_url: null,
   privacy_policy_url: null,
   permissions: null,
-  status: null,
   webhook_auth_type: null,
   webhook_username: null,
   webhook_password: null,

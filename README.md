@@ -12,7 +12,7 @@ We are excited to have you on board and are confident that this documentation si
 Happy coding!
 
 
-- API version: 0.47.19
+- API version: 0.47.20
 - Package version: 1.0.0
 
 For more information, please visit [https://www.circuitid.com/](https://www.circuitid.com/)
@@ -72,11 +72,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::AcceptedSendersApi.new
-acceptedsenders = CircuitID::Acceptedsenders.new({object: 'object_example', service: 'service_example', service_ref: 'service_ref_example', ref: 'users'}) # Acceptedsenders | The JSON object that will be posted to the REST API endpoint.
+acceptedsenders_create_or_patch = CircuitID::AcceptedsendersCreateOrPatch.new({object: 'object_example', service: 'service_example', service_ref: 'service_ref_example', ref: 'users'}) # AcceptedsendersCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   #Create a new object
-  result = api_instance.create_accepted_sender(acceptedsenders)
+  result = api_instance.create_accepted_sender(acceptedsenders_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Exception when calling AcceptedSendersApi->create_accepted_sender: #{e}"
@@ -222,8 +222,6 @@ Class | Method | HTTP request | Description
 *CircuitID::MessageBrandsApi* | [**create_message_brand**](docs/MessageBrandsApi.md#create_message_brand) | **POST** /messagebrands | Create a new object
 *CircuitID::MessageBrandsApi* | [**find_message_brands**](docs/MessageBrandsApi.md#find_message_brands) | **GET** /messagebrands | Find multiple objects
 *CircuitID::MessageBrandsApi* | [**get_message_brand**](docs/MessageBrandsApi.md#get_message_brand) | **GET** /messagebrands/{id} | Get object by id
-*CircuitID::MessageBrandsApi* | [**patch_message_brand**](docs/MessageBrandsApi.md#patch_message_brand) | **PATCH** /messagebrands/{id} | Patch object's data
-*CircuitID::MessageBrandsApi* | [**remove_message_brand**](docs/MessageBrandsApi.md#remove_message_brand) | **DELETE** /messagebrands/{id} | Delete object by id
 *CircuitID::MessageCampaignsApi* | [**create_message_campaign**](docs/MessageCampaignsApi.md#create_message_campaign) | **POST** /messagecampaigns | Create a new object
 *CircuitID::MessageCampaignsApi* | [**find_message_campaigns**](docs/MessageCampaignsApi.md#find_message_campaigns) | **GET** /messagecampaigns | Find multiple objects
 *CircuitID::MessageCampaignsApi* | [**get_message_campaign**](docs/MessageCampaignsApi.md#get_message_campaign) | **GET** /messagecampaigns/{id} | Get object by id
@@ -232,7 +230,6 @@ Class | Method | HTTP request | Description
 *CircuitID::NumberPortsApi* | [**create_number_port**](docs/NumberPortsApi.md#create_number_port) | **POST** /numberports | Create a new object
 *CircuitID::NumberPortsApi* | [**find_number_ports**](docs/NumberPortsApi.md#find_number_ports) | **GET** /numberports | Find multiple objects
 *CircuitID::NumberPortsApi* | [**get_number_port**](docs/NumberPortsApi.md#get_number_port) | **GET** /numberports/{id} | Get object by id
-*CircuitID::NumberPortsApi* | [**patch_number_port**](docs/NumberPortsApi.md#patch_number_port) | **PATCH** /numberports/{id} | Patch object's data
 *CircuitID::NumbersApi* | [**find_numbers**](docs/NumbersApi.md#find_numbers) | **GET** /numbers | Find multiple objects
 *CircuitID::NumbersApi* | [**get_number**](docs/NumbersApi.md#get_number) | **GET** /numbers/{id} | Get object by id
 *CircuitID::NumbersApi* | [**patch_number**](docs/NumbersApi.md#patch_number) | **PATCH** /numbers/{id} | Patch object's data
@@ -295,24 +292,42 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [CircuitID::Acceptedsenders](docs/Acceptedsenders.md)
+ - [CircuitID::AcceptedsendersCreateOrPatch](docs/AcceptedsendersCreateOrPatch.md)
  - [CircuitID::Announcements](docs/Announcements.md)
+ - [CircuitID::AnnouncementsCreateOrPatch](docs/AnnouncementsCreateOrPatch.md)
  - [CircuitID::Authentication](docs/Authentication.md)
+ - [CircuitID::AuthenticationCreateOrPatch](docs/AuthenticationCreateOrPatch.md)
  - [CircuitID::Callqueueagents](docs/Callqueueagents.md)
+ - [CircuitID::CallqueueagentsCreateOrPatch](docs/CallqueueagentsCreateOrPatch.md)
  - [CircuitID::Callqueues](docs/Callqueues.md)
+ - [CircuitID::CallqueuesCreateOrPatch](docs/CallqueuesCreateOrPatch.md)
  - [CircuitID::Chatrooms](docs/Chatrooms.md)
+ - [CircuitID::ChatroomsCreateOrPatch](docs/ChatroomsCreateOrPatch.md)
  - [CircuitID::Clients](docs/Clients.md)
+ - [CircuitID::ClientsCreateOrPatch](docs/ClientsCreateOrPatch.md)
  - [CircuitID::Conferencerooms](docs/Conferencerooms.md)
+ - [CircuitID::ConferenceroomsCreateOrPatch](docs/ConferenceroomsCreateOrPatch.md)
  - [CircuitID::Contacts](docs/Contacts.md)
+ - [CircuitID::ContactsCreateOrPatch](docs/ContactsCreateOrPatch.md)
  - [CircuitID::Conversationmessages](docs/Conversationmessages.md)
+ - [CircuitID::ConversationmessagesCreateOrPatch](docs/ConversationmessagesCreateOrPatch.md)
  - [CircuitID::Conversations](docs/Conversations.md)
+ - [CircuitID::ConversationsCreateOrPatch](docs/ConversationsCreateOrPatch.md)
  - [CircuitID::CreateAuthentication200Response](docs/CreateAuthentication200Response.md)
  - [CircuitID::Customers](docs/Customers.md)
+ - [CircuitID::CustomersCreateOrPatch](docs/CustomersCreateOrPatch.md)
  - [CircuitID::Developerapps](docs/Developerapps.md)
+ - [CircuitID::DeveloperappsCreateOrPatch](docs/DeveloperappsCreateOrPatch.md)
  - [CircuitID::Developerappsubscriptions](docs/Developerappsubscriptions.md)
+ - [CircuitID::DeveloperappsubscriptionsCreateOrPatch](docs/DeveloperappsubscriptionsCreateOrPatch.md)
  - [CircuitID::Directories](docs/Directories.md)
+ - [CircuitID::DirectoriesCreateOrPatch](docs/DirectoriesCreateOrPatch.md)
  - [CircuitID::Domains](docs/Domains.md)
+ - [CircuitID::DomainsCreateOrPatch](docs/DomainsCreateOrPatch.md)
  - [CircuitID::Faxaccounts](docs/Faxaccounts.md)
+ - [CircuitID::FaxaccountsCreateOrPatch](docs/FaxaccountsCreateOrPatch.md)
  - [CircuitID::Faxes](docs/Faxes.md)
+ - [CircuitID::FaxesCreateOrPatch](docs/FaxesCreateOrPatch.md)
  - [CircuitID::Find](docs/Find.md)
  - [CircuitID::FindAcceptedSenders200Response](docs/FindAcceptedSenders200Response.md)
  - [CircuitID::FindAnnouncements200Response](docs/FindAnnouncements200Response.md)
@@ -357,6 +372,7 @@ Class | Method | HTTP request | Description
  - [CircuitID::FindUsers200Response](docs/FindUsers200Response.md)
  - [CircuitID::FindVirtualExtensions200Response](docs/FindVirtualExtensions200Response.md)
  - [CircuitID::Firewall](docs/Firewall.md)
+ - [CircuitID::FirewallCreateOrPatch](docs/FirewallCreateOrPatch.md)
  - [CircuitID::GetAcceptedSender200Response](docs/GetAcceptedSender200Response.md)
  - [CircuitID::GetAnnouncement200Response](docs/GetAnnouncement200Response.md)
  - [CircuitID::GetCallQueue200Response](docs/GetCallQueue200Response.md)
@@ -399,31 +415,57 @@ Class | Method | HTTP request | Description
  - [CircuitID::GetVirtualExtension200Response](docs/GetVirtualExtension200Response.md)
  - [CircuitID::Getdirectory200Response](docs/Getdirectory200Response.md)
  - [CircuitID::Groupmembers](docs/Groupmembers.md)
+ - [CircuitID::GroupmembersCreateOrPatch](docs/GroupmembersCreateOrPatch.md)
  - [CircuitID::Groups](docs/Groups.md)
+ - [CircuitID::GroupsCreateOrPatch](docs/GroupsCreateOrPatch.md)
  - [CircuitID::Holidays](docs/Holidays.md)
+ - [CircuitID::HolidaysCreateOrPatch](docs/HolidaysCreateOrPatch.md)
+ - [CircuitID::Id](docs/Id.md)
  - [CircuitID::Invoiceitems](docs/Invoiceitems.md)
+ - [CircuitID::InvoiceitemsCreateOrPatch](docs/InvoiceitemsCreateOrPatch.md)
  - [CircuitID::Invoices](docs/Invoices.md)
+ - [CircuitID::InvoicesCreateOrPatch](docs/InvoicesCreateOrPatch.md)
  - [CircuitID::Licenses](docs/Licenses.md)
+ - [CircuitID::LicensesCreateOrPatch](docs/LicensesCreateOrPatch.md)
  - [CircuitID::Menuoptions](docs/Menuoptions.md)
+ - [CircuitID::MenuoptionsCreateOrPatch](docs/MenuoptionsCreateOrPatch.md)
  - [CircuitID::Menus](docs/Menus.md)
+ - [CircuitID::MenusCreateOrPatch](docs/MenusCreateOrPatch.md)
  - [CircuitID::Messagebrands](docs/Messagebrands.md)
+ - [CircuitID::MessagebrandsCreateOrPatch](docs/MessagebrandsCreateOrPatch.md)
  - [CircuitID::Messagecampaigns](docs/Messagecampaigns.md)
+ - [CircuitID::MessagecampaignsCreateOrPatch](docs/MessagecampaignsCreateOrPatch.md)
  - [CircuitID::Numberports](docs/Numberports.md)
+ - [CircuitID::NumberportsCreateOrPatch](docs/NumberportsCreateOrPatch.md)
  - [CircuitID::Numbers](docs/Numbers.md)
+ - [CircuitID::NumbersCreateOrPatch](docs/NumbersCreateOrPatch.md)
  - [CircuitID::Offices](docs/Offices.md)
+ - [CircuitID::OfficesCreateOrPatch](docs/OfficesCreateOrPatch.md)
  - [CircuitID::Phoneinboundruleactions](docs/Phoneinboundruleactions.md)
+ - [CircuitID::PhoneinboundruleactionsCreateOrPatch](docs/PhoneinboundruleactionsCreateOrPatch.md)
  - [CircuitID::Phoneinboundrules](docs/Phoneinboundrules.md)
+ - [CircuitID::PhoneinboundrulesCreateOrPatch](docs/PhoneinboundrulesCreateOrPatch.md)
  - [CircuitID::Phoneoutboundruleactions](docs/Phoneoutboundruleactions.md)
+ - [CircuitID::PhoneoutboundruleactionsCreateOrPatch](docs/PhoneoutboundruleactionsCreateOrPatch.md)
  - [CircuitID::Phoneoutboundrules](docs/Phoneoutboundrules.md)
+ - [CircuitID::PhoneoutboundrulesCreateOrPatch](docs/PhoneoutboundrulesCreateOrPatch.md)
  - [CircuitID::Ratecenters](docs/Ratecenters.md)
+ - [CircuitID::RatecentersCreateOrPatch](docs/RatecentersCreateOrPatch.md)
  - [CircuitID::ResponseDate](docs/ResponseDate.md)
  - [CircuitID::ResponseError](docs/ResponseError.md)
  - [CircuitID::ResponseUsers](docs/ResponseUsers.md)
  - [CircuitID::Servers](docs/Servers.md)
+ - [CircuitID::ServersCreateOrPatch](docs/ServersCreateOrPatch.md)
  - [CircuitID::Timeschedules](docs/Timeschedules.md)
+ - [CircuitID::TimeschedulesCreateOrPatch](docs/TimeschedulesCreateOrPatch.md)
  - [CircuitID::Users](docs/Users.md)
+ - [CircuitID::UsersCommunicationValue](docs/UsersCommunicationValue.md)
+ - [CircuitID::UsersCommunicationValueNotifications](docs/UsersCommunicationValueNotifications.md)
+ - [CircuitID::UsersCreateOrPatch](docs/UsersCreateOrPatch.md)
  - [CircuitID::Usertokens](docs/Usertokens.md)
+ - [CircuitID::UsertokensCreateOrPatch](docs/UsertokensCreateOrPatch.md)
  - [CircuitID::Virtualextensions](docs/Virtualextensions.md)
+ - [CircuitID::VirtualextensionsCreateOrPatch](docs/VirtualextensionsCreateOrPatch.md)
 
 
 ## Documentation for Authorization

@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Conferencerooms&gt;**](Conferencerooms.md) |  |  |
+| **data** | [**Array&lt;GetConferenceRoom200Response&gt;**](GetConferenceRoom200Response.md) |  |  |
 
 ## Example
 

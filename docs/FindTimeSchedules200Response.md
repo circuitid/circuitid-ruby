@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Timeschedules&gt;**](Timeschedules.md) |  |  |
+| **data** | [**Array&lt;GetTimeSchedule200Response&gt;**](GetTimeSchedule200Response.md) |  |  |
 
 ## Example
 

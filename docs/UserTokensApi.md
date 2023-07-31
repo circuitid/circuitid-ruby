@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_user_token
 
-> <GetUserToken200Response> create_user_token(usertokens)
+> <GetUserToken200Response> create_user_token(usertokens_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::UserTokensApi.new
-usertokens = CircuitID::Usertokens.new({name: 'name_example', user: 'user_example', token: 'token_example', expires_in_years: 37}) # Usertokens | The JSON object that will be posted to the REST API endpoint.
+usertokens_create_or_patch = CircuitID::UsertokensCreateOrPatch.new({name: 'name_example', user: 'user_example', expires_in_years: 37}) # UsertokensCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_user_token(usertokens)
+  result = api_instance.create_user_token(usertokens_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling UserTokensApi->create_user_token: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetUserToken200Response>, Integer, Hash)> create_user_token_with_http_info(usertokens)
+> <Array(<GetUserToken200Response>, Integer, Hash)> create_user_token_with_http_info(usertokens_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_user_token_with_http_info(usertokens)
+  data, status_code, headers = api_instance.create_user_token_with_http_info(usertokens_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetUserToken200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **usertokens** | [**Usertokens**](Usertokens.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **usertokens_create_or_patch** | [**UsertokensCreateOrPatch**](UsertokensCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patch_user_token
 
-> <GetUserToken200Response> patch_user_token(id, usertokens)
+> <GetUserToken200Response> patch_user_token(id, usertokens_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::UserTokensApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-usertokens = CircuitID::Usertokens.new({name: 'name_example', user: 'user_example', token: 'token_example', expires_in_years: 37}) # Usertokens | The request data.
+usertokens_create_or_patch = CircuitID::UsertokensCreateOrPatch.new({name: 'name_example', user: 'user_example', expires_in_years: 37}) # UsertokensCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_user_token(id, usertokens)
+  result = api_instance.patch_user_token(id, usertokens_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling UserTokensApi->patch_user_token: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetUserToken200Response>, Integer, Hash)> patch_user_token_with_http_info(id, usertokens)
+> <Array(<GetUserToken200Response>, Integer, Hash)> patch_user_token_with_http_info(id, usertokens_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_user_token_with_http_info(id, usertokens)
+  data, status_code, headers = api_instance.patch_user_token_with_http_info(id, usertokens_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetUserToken200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **usertokens** | [**Usertokens**](Usertokens.md) | The request data. |  |
+| **usertokens_create_or_patch** | [**UsertokensCreateOrPatch**](UsertokensCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

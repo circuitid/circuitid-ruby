@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Conversationmessages&gt;**](Conversationmessages.md) |  |  |
+| **data** | [**Array&lt;GetConversationMessage200Response&gt;**](GetConversationMessage200Response.md) |  |  |
 
 ## Example
 

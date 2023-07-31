@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_phone_inbound_rule_action
 
-> <GetPhoneInboundRuleAction200Response> create_phone_inbound_rule_action(phoneinboundruleactions)
+> <GetPhoneInboundRuleAction200Response> create_phone_inbound_rule_action(phoneinboundruleactions_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::PhoneInboundRuleActionsApi.new
-phoneinboundruleactions = CircuitID::Phoneinboundruleactions.new({name: 'name_example', phoneinboundrule: 'phoneinboundrule_example', priority: 37, destination_type: 'announcements'}) # Phoneinboundruleactions | The JSON object that will be posted to the REST API endpoint.
+phoneinboundruleactions_create_or_patch = CircuitID::PhoneinboundruleactionsCreateOrPatch.new({name: 'name_example', phoneinboundrule: 'phoneinboundrule_example', priority: 37, destination_type: 'announcements'}) # PhoneinboundruleactionsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_phone_inbound_rule_action(phoneinboundruleactions)
+  result = api_instance.create_phone_inbound_rule_action(phoneinboundruleactions_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling PhoneInboundRuleActionsApi->create_phone_inbound_rule_action: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetPhoneInboundRuleAction200Response>, Integer, Hash)> create_phone_inbound_rule_action_with_http_info(phoneinboundruleactions)
+> <Array(<GetPhoneInboundRuleAction200Response>, Integer, Hash)> create_phone_inbound_rule_action_with_http_info(phoneinboundruleactions_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_phone_inbound_rule_action_with_http_info(phoneinboundruleactions)
+  data, status_code, headers = api_instance.create_phone_inbound_rule_action_with_http_info(phoneinboundruleactions_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetPhoneInboundRuleAction200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **phoneinboundruleactions** | [**Phoneinboundruleactions**](Phoneinboundruleactions.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **phoneinboundruleactions_create_or_patch** | [**PhoneinboundruleactionsCreateOrPatch**](PhoneinboundruleactionsCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patch_phone_inbound_rule_action
 
-> <GetPhoneInboundRuleAction200Response> patch_phone_inbound_rule_action(id, phoneinboundruleactions)
+> <GetPhoneInboundRuleAction200Response> patch_phone_inbound_rule_action(id, phoneinboundruleactions_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::PhoneInboundRuleActionsApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-phoneinboundruleactions = CircuitID::Phoneinboundruleactions.new({name: 'name_example', phoneinboundrule: 'phoneinboundrule_example', priority: 37, destination_type: 'announcements'}) # Phoneinboundruleactions | The request data.
+phoneinboundruleactions_create_or_patch = CircuitID::PhoneinboundruleactionsCreateOrPatch.new({name: 'name_example', phoneinboundrule: 'phoneinboundrule_example', priority: 37, destination_type: 'announcements'}) # PhoneinboundruleactionsCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_phone_inbound_rule_action(id, phoneinboundruleactions)
+  result = api_instance.patch_phone_inbound_rule_action(id, phoneinboundruleactions_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling PhoneInboundRuleActionsApi->patch_phone_inbound_rule_action: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetPhoneInboundRuleAction200Response>, Integer, Hash)> patch_phone_inbound_rule_action_with_http_info(id, phoneinboundruleactions)
+> <Array(<GetPhoneInboundRuleAction200Response>, Integer, Hash)> patch_phone_inbound_rule_action_with_http_info(id, phoneinboundruleactions_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_phone_inbound_rule_action_with_http_info(id, phoneinboundruleactions)
+  data, status_code, headers = api_instance.patch_phone_inbound_rule_action_with_http_info(id, phoneinboundruleactions_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetPhoneInboundRuleAction200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **phoneinboundruleactions** | [**Phoneinboundruleactions**](Phoneinboundruleactions.md) | The request data. |  |
+| **phoneinboundruleactions_create_or_patch** | [**PhoneinboundruleactionsCreateOrPatch**](PhoneinboundruleactionsCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

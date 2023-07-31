@@ -7,12 +7,11 @@ All URIs are relative to *https://rest.circuitid.com*
 | [**create_number_port**](NumberPortsApi.md#create_number_port) | **POST** /numberports | Create a new object |
 | [**find_number_ports**](NumberPortsApi.md#find_number_ports) | **GET** /numberports | Find multiple objects |
 | [**get_number_port**](NumberPortsApi.md#get_number_port) | **GET** /numberports/{id} | Get object by id |
-| [**patch_number_port**](NumberPortsApi.md#patch_number_port) | **PATCH** /numberports/{id} | Patch object&#39;s data |
 
 
 ## create_number_port
 
-> <GetNumberPort200Response> create_number_port(numberports)
+> <GetNumberPort200Response> create_number_port(numberports_create_or_patch)
 
 Create a new object
 
@@ -32,11 +31,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::NumberPortsApi.new
-numberports = CircuitID::Numberports.new({name: 'name_example', type: 'port in', type_of_service: 'business', authorized_person: 'authorized_person_example', desired_due_date: Time.now, account_number: 'account_number_example', account_phone_number: 'account_phone_number_example', office: 'office_example', invoice: 'invoice_example', status: 'processing', destination_type: 'announcements'}) # Numberports | The JSON object that will be posted to the REST API endpoint.
+numberports_create_or_patch = CircuitID::NumberportsCreateOrPatch.new({numbers: ['numbers_example'], name: 'name_example', type_of_service: 'business', authorized_person: 'authorized_person_example', desired_due_date: Time.now, account_number: 'account_number_example', account_phone_number: 'account_phone_number_example', office: 'office_example', destination_type: 'announcements'}) # NumberportsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_number_port(numberports)
+  result = api_instance.create_number_port(numberports_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling NumberPortsApi->create_number_port: #{e}"
@@ -47,12 +46,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetNumberPort200Response>, Integer, Hash)> create_number_port_with_http_info(numberports)
+> <Array(<GetNumberPort200Response>, Integer, Hash)> create_number_port_with_http_info(numberports_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_number_port_with_http_info(numberports)
+  data, status_code, headers = api_instance.create_number_port_with_http_info(numberports_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetNumberPort200Response>
@@ -65,7 +64,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **numberports** | [**Numberports**](Numberports.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **numberports_create_or_patch** | [**NumberportsCreateOrPatch**](NumberportsCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -234,78 +233,5 @@ end
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## patch_number_port
-
-> <GetNumberPort200Response> patch_number_port(id, numberports)
-
-Patch object's data
-
-Make updates to specific fields within the record without replacing the entire dataset.
-
-### Examples
-
-```ruby
-require 'time'
-require 'circuitid-ruby'
-# setup authorization
-CircuitID.configure do |config|
-  # Configure API key authorization: jwt
-  config.api_key['jwt'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['jwt'] = 'Bearer'
-end
-
-api_instance = CircuitID::NumberPortsApi.new
-id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-numberports = CircuitID::Numberports.new({name: 'name_example', type: 'port in', type_of_service: 'business', authorized_person: 'authorized_person_example', desired_due_date: Time.now, account_number: 'account_number_example', account_phone_number: 'account_phone_number_example', office: 'office_example', invoice: 'invoice_example', status: 'processing', destination_type: 'announcements'}) # Numberports | The request data.
-
-begin
-  # Patch object's data
-  result = api_instance.patch_number_port(id, numberports)
-  p result
-rescue CircuitID::ApiError => e
-  puts "Error when calling NumberPortsApi->patch_number_port: #{e}"
-end
-```
-
-#### Using the patch_number_port_with_http_info variant
-
-This returns an Array which contains the response data, status code and headers.
-
-> <Array(<GetNumberPort200Response>, Integer, Hash)> patch_number_port_with_http_info(id, numberports)
-
-```ruby
-begin
-  # Patch object's data
-  data, status_code, headers = api_instance.patch_number_port_with_http_info(id, numberports)
-  p status_code # => 2xx
-  p headers # => { ... }
-  p data # => <GetNumberPort200Response>
-rescue CircuitID::ApiError => e
-  puts "Error when calling NumberPortsApi->patch_number_port_with_http_info: #{e}"
-end
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **numberports** | [**Numberports**](Numberports.md) | The request data. |  |
-
-### Return type
-
-[**GetNumberPort200Response**](GetNumberPort200Response.md)
-
-### Authorization
-
-[jwt](../README.md#jwt)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
 - **Accept**: application/json
 

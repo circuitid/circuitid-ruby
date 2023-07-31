@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Numberports&gt;**](Numberports.md) |  |  |
+| **data** | [**Array&lt;GetNumberPort200Response&gt;**](GetNumberPort200Response.md) |  |  |
 
 ## Example
 

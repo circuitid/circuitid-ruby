@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_office
 
-> <GetOffice200Response> create_office(offices)
+> <GetOffice200Response> create_office(offices_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::OfficesApi.new
-offices = CircuitID::Offices.new({name: 'name_example', street_number: 'street_number_example', street_name: 'street_name_example', street_suffix: 'street_suffix_example', city: 'city_example', country: 'country_example'}) # Offices | The JSON object that will be posted to the REST API endpoint.
+offices_create_or_patch = CircuitID::OfficesCreateOrPatch.new({name: 'name_example', street_number: 'street_number_example', street_name: 'street_name_example', street_suffix: 'street_suffix_example', country: 'country_example'}) # OfficesCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_office(offices)
+  result = api_instance.create_office(offices_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling OfficesApi->create_office: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetOffice200Response>, Integer, Hash)> create_office_with_http_info(offices)
+> <Array(<GetOffice200Response>, Integer, Hash)> create_office_with_http_info(offices_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_office_with_http_info(offices)
+  data, status_code, headers = api_instance.create_office_with_http_info(offices_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetOffice200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **offices** | [**Offices**](Offices.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **offices_create_or_patch** | [**OfficesCreateOrPatch**](OfficesCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patch_office
 
-> <GetOffice200Response> patch_office(id, offices)
+> <GetOffice200Response> patch_office(id, offices_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::OfficesApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-offices = CircuitID::Offices.new({name: 'name_example', street_number: 'street_number_example', street_name: 'street_name_example', street_suffix: 'street_suffix_example', city: 'city_example', country: 'country_example'}) # Offices | The request data.
+offices_create_or_patch = CircuitID::OfficesCreateOrPatch.new({name: 'name_example', street_number: 'street_number_example', street_name: 'street_name_example', street_suffix: 'street_suffix_example', country: 'country_example'}) # OfficesCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_office(id, offices)
+  result = api_instance.patch_office(id, offices_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling OfficesApi->patch_office: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetOffice200Response>, Integer, Hash)> patch_office_with_http_info(id, offices)
+> <Array(<GetOffice200Response>, Integer, Hash)> patch_office_with_http_info(id, offices_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_office_with_http_info(id, offices)
+  data, status_code, headers = api_instance.patch_office_with_http_info(id, offices_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetOffice200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **offices** | [**Offices**](Offices.md) | The request data. |  |
+| **offices_create_or_patch** | [**OfficesCreateOrPatch**](OfficesCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

@@ -6,13 +6,14 @@
 | ---- | ---- | ----------- | ----- |
 | **name** | **String** |  |  |
 | **timezone** | **String** |  | [default to &#39;America/New_York&#39;] |
-| **sunday** | **Object** |  |  |
-| **monday** | **Object** |  |  |
-| **tuesday** | **Object** |  |  |
-| **wednesday** | **Object** |  |  |
-| **thursday** | **Object** |  |  |
-| **friday** | **Object** |  |  |
-| **saturday** | **Object** |  |  |
+| **sunday** | **Hash&lt;String, Array&lt;Object&gt;&gt;** |  |  |
+| **monday** | **Hash&lt;String, Array&lt;Object&gt;&gt;** |  |  |
+| **tuesday** | **Hash&lt;String, Array&lt;Object&gt;&gt;** |  |  |
+| **wednesday** | **Hash&lt;String, Array&lt;Object&gt;&gt;** |  |  |
+| **thursday** | **Hash&lt;String, Array&lt;Object&gt;&gt;** |  |  |
+| **friday** | **Hash&lt;String, Array&lt;Object&gt;&gt;** |  |  |
+| **saturday** | **Hash&lt;String, Array&lt;Object&gt;&gt;** |  |  |
+| **_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **updated_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_at** | **Time** |  | [optional] |
@@ -33,6 +34,7 @@ instance = CircuitID::GetTimeSchedule200Response.new(
   thursday: null,
   friday: null,
   saturday: null,
+  _id: null,
   created_by_user_id: null,
   updated_by_user_id: null,
   created_at: null,

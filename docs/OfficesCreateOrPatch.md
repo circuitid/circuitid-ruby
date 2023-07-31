@@ -1,0 +1,34 @@
+# CircuitID::OfficesCreateOrPatch
+
+## Properties
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **name** | **String** |  |  |
+| **street_number** | **String** |  |  |
+| **street_name** | **String** |  |  |
+| **pre_direction** | **String** |  | [optional] |
+| **street_suffix** | **String** |  |  |
+| **zip_code** | **String** |  | [optional] |
+| **address2** | **String** |  | [optional] |
+| **country** | **String** |  |  |
+| **region** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
+
+## Example
+
+```ruby
+require 'circuitid-ruby'
+
+instance = CircuitID::OfficesCreateOrPatch.new(
+  name: null,
+  street_number: null,
+  street_name: null,
+  pre_direction: null,
+  street_suffix: null,
+  zip_code: null,
+  address2: null,
+  country: null,
+  region: null
+)
+```
+

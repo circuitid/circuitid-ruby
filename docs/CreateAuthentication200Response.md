@@ -7,6 +7,7 @@
 | **username** | **String** |  |  |
 | **password** | **String** |  |  |
 | **strategy** | **String** |  |  |
+| **_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **updated_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_at** | **Time** |  | [optional] |
@@ -21,6 +22,7 @@ instance = CircuitID::CreateAuthentication200Response.new(
   username: null,
   password: null,
   strategy: null,
+  _id: null,
   created_by_user_id: null,
   updated_by_user_id: null,
   created_at: null,

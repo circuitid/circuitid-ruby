@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Callqueueagents&gt;**](Callqueueagents.md) |  |  |
+| **data** | [**Array&lt;GetCallQueueAgent200Response&gt;**](GetCallQueueAgent200Response.md) |  |  |
 
 ## Example
 

@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Announcements&gt;**](Announcements.md) |  |  |
+| **data** | [**Array&lt;GetAnnouncement200Response&gt;**](GetAnnouncement200Response.md) |  |  |
 
 ## Example
 

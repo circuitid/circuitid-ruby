@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Firewall&gt;**](Firewall.md) |  |  |
+| **data** | [**Array&lt;GetFirewall200Response&gt;**](GetFirewall200Response.md) |  |  |
 
 ## Example
 

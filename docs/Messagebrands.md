@@ -16,7 +16,6 @@
 | **csp_id** | **String** |  | [optional] |
 | **ein_issuing_country** | **String** |  | [optional] |
 | **universal_ein** | **String** |  | [optional] |
-| **reference_id** | **String** |  | [optional] |
 
 ## Example
 
@@ -35,8 +34,7 @@ instance = CircuitID::Messagebrands.new(
   entity_type: null,
   csp_id: null,
   ein_issuing_country: null,
-  universal_ein: null,
-  reference_id: null
+  universal_ein: null
 )
 ```
 

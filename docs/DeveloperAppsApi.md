@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_developer_app
 
-> <GetDeveloperApp200Response> create_developer_app(developerapps)
+> <GetDeveloperApp200Response> create_developer_app(developerapps_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::DeveloperAppsApi.new
-developerapps = CircuitID::Developerapps.new({name: 'name_example', type: 'events', visibility: 'private', integration_type: 'webhook', services: ['calendarevents'], user: 'user_example', status: 'active'}) # Developerapps | The JSON object that will be posted to the REST API endpoint.
+developerapps_create_or_patch = CircuitID::DeveloperappsCreateOrPatch.new({name: 'name_example', type: 'events', visibility: 'private', integration_type: 'webhook', services: ['calendarevents'], user: 'user_example'}) # DeveloperappsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_developer_app(developerapps)
+  result = api_instance.create_developer_app(developerapps_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling DeveloperAppsApi->create_developer_app: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetDeveloperApp200Response>, Integer, Hash)> create_developer_app_with_http_info(developerapps)
+> <Array(<GetDeveloperApp200Response>, Integer, Hash)> create_developer_app_with_http_info(developerapps_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_developer_app_with_http_info(developerapps)
+  data, status_code, headers = api_instance.create_developer_app_with_http_info(developerapps_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetDeveloperApp200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **developerapps** | [**Developerapps**](Developerapps.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **developerapps_create_or_patch** | [**DeveloperappsCreateOrPatch**](DeveloperappsCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patch_developer_app
 
-> <GetDeveloperApp200Response> patch_developer_app(id, developerapps)
+> <GetDeveloperApp200Response> patch_developer_app(id, developerapps_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::DeveloperAppsApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-developerapps = CircuitID::Developerapps.new({name: 'name_example', type: 'events', visibility: 'private', integration_type: 'webhook', services: ['calendarevents'], user: 'user_example', status: 'active'}) # Developerapps | The request data.
+developerapps_create_or_patch = CircuitID::DeveloperappsCreateOrPatch.new({name: 'name_example', type: 'events', visibility: 'private', integration_type: 'webhook', services: ['calendarevents'], user: 'user_example'}) # DeveloperappsCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_developer_app(id, developerapps)
+  result = api_instance.patch_developer_app(id, developerapps_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling DeveloperAppsApi->patch_developer_app: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetDeveloperApp200Response>, Integer, Hash)> patch_developer_app_with_http_info(id, developerapps)
+> <Array(<GetDeveloperApp200Response>, Integer, Hash)> patch_developer_app_with_http_info(id, developerapps_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_developer_app_with_http_info(id, developerapps)
+  data, status_code, headers = api_instance.patch_developer_app_with_http_info(id, developerapps_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetDeveloperApp200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **developerapps** | [**Developerapps**](Developerapps.md) | The request data. |  |
+| **developerapps_create_or_patch** | [**DeveloperappsCreateOrPatch**](DeveloperappsCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

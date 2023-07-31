@@ -7,7 +7,7 @@
 | **total** | **Integer** |  |  |
 | **limit** | **Integer** |  |  |
 | **skip** | **Integer** |  |  |
-| **data** | [**Array&lt;Phoneinboundruleactions&gt;**](Phoneinboundruleactions.md) |  |  |
+| **data** | [**Array&lt;GetPhoneInboundRuleAction200Response&gt;**](GetPhoneInboundRuleAction200Response.md) |  |  |
 
 ## Example
 

@@ -19,12 +19,12 @@
 | **terms_of_service_url** | **String** |  | [optional] |
 | **privacy_policy_url** | **String** |  | [optional] |
 | **permissions** | **Object** |  | [optional] |
-| **status** | **String** |  | [default to &#39;pending&#39;] |
 | **webhook_auth_type** | **String** |  | [optional] |
 | **webhook_username** | **String** |  | [optional] |
 | **webhook_password** | **String** |  | [optional] |
 | **webhook_token_name** | **String** |  | [optional] |
 | **webhook_token** | **String** |  | [optional] |
+| **_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **updated_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_at** | **Time** |  | [optional] |
@@ -51,12 +51,12 @@ instance = CircuitID::GetDeveloperApp200Response.new(
   terms_of_service_url: null,
   privacy_policy_url: null,
   permissions: null,
-  status: null,
   webhook_auth_type: null,
   webhook_username: null,
   webhook_password: null,
   webhook_token_name: null,
   webhook_token: null,
+  _id: null,
   created_by_user_id: null,
   updated_by_user_id: null,
   created_at: null,

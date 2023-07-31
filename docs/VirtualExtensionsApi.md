@@ -13,7 +13,7 @@ All URIs are relative to *https://rest.circuitid.com*
 
 ## create_virtual_extension
 
-> <GetVirtualExtension200Response> create_virtual_extension(virtualextensions)
+> <GetVirtualExtension200Response> create_virtual_extension(virtualextensions_create_or_patch)
 
 Create a new object
 
@@ -33,11 +33,11 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::VirtualExtensionsApi.new
-virtualextensions = CircuitID::Virtualextensions.new({name: 'name_example', extension: 37}) # Virtualextensions | The JSON object that will be posted to the REST API endpoint.
+virtualextensions_create_or_patch = CircuitID::VirtualextensionsCreateOrPatch.new({name: 'name_example', extension: 37}) # VirtualextensionsCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
-  result = api_instance.create_virtual_extension(virtualextensions)
+  result = api_instance.create_virtual_extension(virtualextensions_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling VirtualExtensionsApi->create_virtual_extension: #{e}"
@@ -48,12 +48,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetVirtualExtension200Response>, Integer, Hash)> create_virtual_extension_with_http_info(virtualextensions)
+> <Array(<GetVirtualExtension200Response>, Integer, Hash)> create_virtual_extension_with_http_info(virtualextensions_create_or_patch)
 
 ```ruby
 begin
   # Create a new object
-  data, status_code, headers = api_instance.create_virtual_extension_with_http_info(virtualextensions)
+  data, status_code, headers = api_instance.create_virtual_extension_with_http_info(virtualextensions_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetVirtualExtension200Response>
@@ -66,7 +66,7 @@ end
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **virtualextensions** | [**Virtualextensions**](Virtualextensions.md) | The JSON object that will be posted to the REST API endpoint. |  |
+| **virtualextensions_create_or_patch** | [**VirtualextensionsCreateOrPatch**](VirtualextensionsCreateOrPatch.md) | The JSON object that will be posted to the REST API endpoint. |  |
 
 ### Return type
 
@@ -240,7 +240,7 @@ end
 
 ## patch_virtual_extension
 
-> <GetVirtualExtension200Response> patch_virtual_extension(id, virtualextensions)
+> <GetVirtualExtension200Response> patch_virtual_extension(id, virtualextensions_create_or_patch)
 
 Patch object's data
 
@@ -261,11 +261,11 @@ end
 
 api_instance = CircuitID::VirtualExtensionsApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-virtualextensions = CircuitID::Virtualextensions.new({name: 'name_example', extension: 37}) # Virtualextensions | The request data.
+virtualextensions_create_or_patch = CircuitID::VirtualextensionsCreateOrPatch.new({name: 'name_example', extension: 37}) # VirtualextensionsCreateOrPatch | The request data.
 
 begin
   # Patch object's data
-  result = api_instance.patch_virtual_extension(id, virtualextensions)
+  result = api_instance.patch_virtual_extension(id, virtualextensions_create_or_patch)
   p result
 rescue CircuitID::ApiError => e
   puts "Error when calling VirtualExtensionsApi->patch_virtual_extension: #{e}"
@@ -276,12 +276,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<GetVirtualExtension200Response>, Integer, Hash)> patch_virtual_extension_with_http_info(id, virtualextensions)
+> <Array(<GetVirtualExtension200Response>, Integer, Hash)> patch_virtual_extension_with_http_info(id, virtualextensions_create_or_patch)
 
 ```ruby
 begin
   # Patch object's data
-  data, status_code, headers = api_instance.patch_virtual_extension_with_http_info(id, virtualextensions)
+  data, status_code, headers = api_instance.patch_virtual_extension_with_http_info(id, virtualextensions_create_or_patch)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <GetVirtualExtension200Response>
@@ -295,7 +295,7 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **id** | **String** | The ObjectId (unique 12 bytes ID) of record you would like to GET. |  |
-| **virtualextensions** | [**Virtualextensions**](Virtualextensions.md) | The request data. |  |
+| **virtualextensions_create_or_patch** | [**VirtualextensionsCreateOrPatch**](VirtualextensionsCreateOrPatch.md) | The request data. |  |
 
 ### Return type
 

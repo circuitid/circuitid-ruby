@@ -11,6 +11,7 @@
 | **destination** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **ref** | **String** |  | [optional] |
 | **call_forwarding_destination** | **String** |  | [optional] |
+| **_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **updated_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_at** | **Time** |  | [optional] |
@@ -29,6 +30,7 @@ instance = CircuitID::GetMenuOption200Response.new(
   destination: null,
   ref: null,
   call_forwarding_destination: null,
+  _id: null,
   created_by_user_id: null,
   updated_by_user_id: null,
   created_at: null,
