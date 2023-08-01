@@ -35,8 +35,8 @@ module CircuitID
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'start' => :'String',
-        :'_end' => :'String'
+        :'start' => :'Time',
+        :'_end' => :'Time'
       }
     end
 
