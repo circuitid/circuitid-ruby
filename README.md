@@ -12,7 +12,7 @@ We are excited to have you on board and are confident that this documentation si
 Happy coding!
 
 
-- API version: 0.47.21
+- API version: 0.47.22
 - Package version: 1.0.0
 
 For more information, please visit [https://www.circuitid.com/](https://www.circuitid.com/)
@@ -86,7 +86,7 @@ end
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://rest.circuitid.com*
+All URIs are relative to *https://cloud9.circuitid.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -455,9 +455,12 @@ Class | Method | HTTP request | Description
  - [CircuitID::ServersCreateOrPatch](docs/ServersCreateOrPatch.md)
  - [CircuitID::Timeschedules](docs/Timeschedules.md)
  - [CircuitID::TimeschedulesCreateOrPatch](docs/TimeschedulesCreateOrPatch.md)
+ - [CircuitID::TimeschedulesSunday](docs/TimeschedulesSunday.md)
+ - [CircuitID::TimeschedulesSundaySchedulesInner](docs/TimeschedulesSundaySchedulesInner.md)
  - [CircuitID::Users](docs/Users.md)
- - [CircuitID::UsersCommunicationValue](docs/UsersCommunicationValue.md)
- - [CircuitID::UsersCommunicationValueNotifications](docs/UsersCommunicationValueNotifications.md)
+ - [CircuitID::UsersCommunication](docs/UsersCommunication.md)
+ - [CircuitID::UsersCommunicationNotifications](docs/UsersCommunicationNotifications.md)
+ - [CircuitID::UsersCommunicationWeb](docs/UsersCommunicationWeb.md)
  - [CircuitID::UsersCreateOrPatch](docs/UsersCreateOrPatch.md)
  - [CircuitID::Usertokens](docs/Usertokens.md)
  - [CircuitID::UsertokensCreateOrPatch](docs/UsertokensCreateOrPatch.md)

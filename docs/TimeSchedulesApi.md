@@ -1,6 +1,6 @@
 # CircuitID::TimeSchedulesApi
 
-All URIs are relative to *https://rest.circuitid.com*
+All URIs are relative to *https://cloud9.circuitid.com*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
@@ -33,7 +33,7 @@ CircuitID.configure do |config|
 end
 
 api_instance = CircuitID::TimeSchedulesApi.new
-timeschedules_create_or_patch = CircuitID::TimeschedulesCreateOrPatch.new({name: 'name_example', timezone: 'Europe/Andorra', sunday: { key: [3.56]}, monday: { key: [3.56]}, tuesday: { key: [3.56]}, wednesday: { key: [3.56]}, thursday: { key: [3.56]}, friday: { key: [3.56]}, saturday: { key: [3.56]}}) # TimeschedulesCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
+timeschedules_create_or_patch = CircuitID::TimeschedulesCreateOrPatch.new({name: 'name_example', timezone: 'Europe/Andorra', sunday: CircuitID::TimeschedulesSunday.new, monday: CircuitID::TimeschedulesSunday.new, tuesday: , wednesday: , thursday: , friday: , saturday: }) # TimeschedulesCreateOrPatch | The JSON object that will be posted to the REST API endpoint.
 
 begin
   # Create a new object
@@ -261,7 +261,7 @@ end
 
 api_instance = CircuitID::TimeSchedulesApi.new
 id = 'id_example' # String | The ObjectId (unique 12 bytes ID) of record you would like to GET.
-timeschedules_create_or_patch = CircuitID::TimeschedulesCreateOrPatch.new({name: 'name_example', timezone: 'Europe/Andorra', sunday: { key: [3.56]}, monday: { key: [3.56]}, tuesday: { key: [3.56]}, wednesday: { key: [3.56]}, thursday: { key: [3.56]}, friday: { key: [3.56]}, saturday: { key: [3.56]}}) # TimeschedulesCreateOrPatch | The request data.
+timeschedules_create_or_patch = CircuitID::TimeschedulesCreateOrPatch.new({name: 'name_example', timezone: 'Europe/Andorra', sunday: CircuitID::TimeschedulesSunday.new, monday: CircuitID::TimeschedulesSunday.new, tuesday: , wednesday: , thursday: , friday: , saturday: }) # TimeschedulesCreateOrPatch | The request data.
 
 begin
   # Patch object's data

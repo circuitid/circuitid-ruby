@@ -33,7 +33,7 @@
 | **phone_permission** | **String** |  | [optional] |
 | **timezone** | **String** |  | [default to &#39;America/New_York&#39;] |
 | **vm_transcription** | **Integer** |  | [optional][default to VM_TRANSCRIPTION::N0] |
-| **communication** | [**Hash&lt;String, UsersCommunicationValue&gt;**](UsersCommunicationValue.md) |  | [optional] |
+| **communication** | [**UsersCommunication**](UsersCommunication.md) |  | [optional] |
 | **_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **created_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |
 | **updated_by_user_id** | **String** | ObjectId (unique 12 bytes ID) | [optional] |

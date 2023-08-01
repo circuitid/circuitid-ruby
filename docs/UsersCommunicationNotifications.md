@@ -1,4 +1,4 @@
-# CircuitID::UsersCommunicationValueNotifications
+# CircuitID::UsersCommunicationNotifications
 
 ## Properties
 
@@ -13,7 +13,7 @@
 ```ruby
 require 'circuitid-ruby'
 
-instance = CircuitID::UsersCommunicationValueNotifications.new(
+instance = CircuitID::UsersCommunicationNotifications.new(
   email: null,
   sms: null,
   sound: null
